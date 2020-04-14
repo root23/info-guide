@@ -1,0 +1,258 @@
+/*
+Main styles
+ */
+
+.cities-title h1 {
+    font-weight: bold;
+    font-size: 19px;
+    padding-left: 3px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #ececf6;
+}
+
+.cities-title p {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.block-info {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.block-title {
+    border-bottom: 3px solid #ececf6;;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.3;
+    color: #6a6a5b;
+    margin-bottom: 15px;
+}
+
+.block-title span {
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -3px;
+    border-bottom: 3px solid #FEBB1B;
+    font-weight: normal;
+}
+
+.block-content {
+    padding: 14px 18px;
+    background: #f7f7f7;
+    border: 2px solid #ececf6;
+}
+
+.block-content li {
+    display: block;
+    position: relative;
+    margin: 0 0 20px -20px;
+}
+
+.block-content ul li a {
+    display: block;
+    color: #36362f;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.block-content ul li a:hover {
+    color: #FF8400;
+}
+
+.cities-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    background: #FFF;
+    -webkit-box-shadow: 0 0 8px rgba(0,0,0,.15);
+    box-shadow: 0 0 8px rgba(0,0,0,.15);
+    border-radius: 5px;
+    margin-bottom: 29px;
+}
+
+.cities-list li {
+    -webkit-box-flex: 0;
+    width: 25%;
+    border-bottom: 1px solid #EEE;
+    border-left: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+    height: 98px;
+}
+
+.cities-list li:hover {
+    background: #edecec;
+}
+
+.cities-list li a {
+    display: block;
+    padding: 25px 20px 25px 20px;
+    text-decoration: none;
+    height: 100%;
+    color: #36362f;
+    background: #f1f1f1;
+}
+
+.cities-list li a .city-title {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #36362f;
+}
+
+.cities-list li a:hover {
+    border: none;
+    /*background: #09cc81;*/
+    background: #FEBB1B;;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+.cities-list li a:hover .city-title {
+    color: #fff;
+}
+
+.city-filter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.city-filter .city-input {
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+.top-menu-wrap, #menu {
+    background: #FEBB1B;
+}
+.top-menu {
+    padding: inherit;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top-menu li {
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+.top-menu li a {
+    padding: 15px 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+.top-menu li:hover {
+    background: #FF8400;
+}
+
+
+/*
+DETAIL CITY PAGE
+ */
+.item-company {
+    border: 1px dotted #8c8a8a;
+    padding: 13px 18px;
+    margin-bottom: 12px;
+}
+.item-company .review {
+    color: #1d2124;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #feecc2;
+    border-radius: 4px;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.item-company .review:hover {
+    color: #FF8400;
+}
+.item-company .order-taxi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #FEBB1B;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #FEC33A;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    height: 55px;
+    transition: 0.2s linear;
+    padding: 10px;
+}
+.item-company .order-taxi:hover {
+    background: #FF8400;
+}
+.item-company .title {
+    font-size: 18px;
+    color: #ff8400;
+    display: block;
+    text-transform: uppercase;
+}
+.item-company-right-col .info {
+    margin-top: 20px;
+}
+
+/*
+RESPONSIVE
+ */
+@media only screen and (max-width: 960px) {
+    .cities-list li {
+        width: 33%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cities-list > li {
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .cities-list > li {
+        width: 33%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .cities-list > li {
+        width: 50%;
+    }
+    .cities-list li a {
+        padding: 25px 20px 25px 0;
+    }
+
+    .item-company-right-col .title {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
