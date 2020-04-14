@@ -16,4 +16,7 @@ $(document).ready(function () {
         fetch_data(1, query);
     });
 
+    $('.pagination').addClass('justify-content-center');
+    $('.pagination').addClass('flex-wrap');
+
 });

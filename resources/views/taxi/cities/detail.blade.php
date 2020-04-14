@@ -64,23 +64,7 @@
 
             </div>
             <div class="col-md-3">
-                <div class="block-info">
-                    <a href="/taxi/cities/" target="_blank">
-                        <img src="https://picsum.photos/250/300?random=2">
-                    </a>
-                </div>
-
-                <div class="block-title">
-                    <span>Статьи</span>
-                </div>
-                <div class="block-content">
-                    <ul>
-                        <li><a href="/blog/post/natus-laboriosam-quisquam-voluptatem-maxime-cumque">Статья 1</a></li>
-                        <li><a href="/blog/post/sit-veniam-non-aut-dolores">Статья 2</a></li>
-                        <li><a href="/blog/post/natus-laboriosam-quisquam-voluptatem-maxime-cumque">Статья 3</a></li>
-                        <li><a href="/blog/post/sit-veniam-non-aut-dolores">Статья 4</a></li>
-                    </ul>
-                </div>
+                @include('taxi.cities.includes.right-col-default')
             </div>
         </div>
 

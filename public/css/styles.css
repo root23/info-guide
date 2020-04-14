@@ -42,6 +42,7 @@ Main styles
     padding: 14px 18px;
     background: #f7f7f7;
     border: 2px solid #ececf6;
+    margin-bottom: 15px;
 }
 
 .block-content li {
@@ -60,6 +61,53 @@ Main styles
 
 .block-content ul li a:hover {
     color: #FF8400;
+}
+
+.btn-add-taxi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #FEBB1B;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #FEC33A;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    height: 55px;
+    transition: 0.2s linear;
+    padding: 10px;
+}
+.btn-add-taxi:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #FF8400;
+}
+
+.stats-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #eee;
+    height: 96px;
+    align-items: center;
+    font-size: 24px;
+}
+.stats-item b {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 70px;
+    height: 100%;
+    color: #36362f;
+    background: #eee;
+    margin-right: 15px;
 }
 
 .cities-list {
@@ -219,6 +267,11 @@ DETAIL CITY PAGE
 .item-company-right-col .info {
     margin-top: 20px;
 }
+
+/*
+ADAPTIVE PAGINATION
+
+ */
 
 /*
 RESPONSIVE

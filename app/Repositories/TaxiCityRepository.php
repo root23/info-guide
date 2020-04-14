@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\City;
 use App\Models\City as Model;
 //use Your Model
 
@@ -31,7 +32,7 @@ class TaxiCityRepository extends CoreRepository
             ->startConditions()
             ->select($columns)
             ->orderBy('id', 'ASC')
-            ->paginate(50);
+            ->paginate(52);
 
         return $result;
     }
@@ -53,7 +54,7 @@ class TaxiCityRepository extends CoreRepository
             ->startConditions()
             ->select($columns)
             ->where('name', 'LIKE', '%'.$query.'%')
-            ->paginate(50);
+            ->paginate(52);
 
         return $result;
     }
