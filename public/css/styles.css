@@ -220,6 +220,9 @@ Main styles
 /*
 DETAIL CITY PAGE
  */
+.company-list p {
+    text-align: justify;
+}
 .item-company {
     border: 1px dotted #8c8a8a;
     padding: 13px 18px;
@@ -274,9 +277,60 @@ DETAIL CITY PAGE
 }
 
 /*
-ADAPTIVE PAGINATION
-
+FOOTER
  */
+
+footer {
+    background: #676565;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #FF8400;
+    text-decoration: none;
+}
+
+footer p {
+    text-align: justify;
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+footer .footer-block-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 17px;
+    border-bottom: 2px solid #b1b1b1;
+    font-weight: 600;
+}
+
+footer .footer-menu {
+    display: block;
+    list-style: none;
+    margin-bottom: 6px;
+    padding: 0;
+}
+footer .footer-menu li {
+    display: block;
+    margin-bottom: 9px;
+    position: relative;
+}
+
+footer .footer-cities {
+    padding: 0;
+}
+footer .footer-cities li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
+    margin-bottom: 9px;
+    position: relative;
+}
 
 /*
 RESPONSIVE
