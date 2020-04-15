@@ -170,6 +170,11 @@ Main styles
     color: #fff;
 }
 
+.cities-list li  a .taxi-count {
+    color: #777575;
+    display: block;
+}
+
 .city-filter {
     margin-bottom: 20px;
     text-align: center;

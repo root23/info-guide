@@ -32,10 +32,6 @@ class CityController extends BaseController
         $paginator = $this->taxiCityRepository->getAllWithPaginate();
         return view('taxi.cities.index')
             ->with('paginator', $paginator);
-
-//        $cities = City::all();
-//        return view('taxi.cities.index')
-//            ->with('cities', $cities);
     }
 
     /**
@@ -68,8 +64,10 @@ class CityController extends BaseController
     public function show($slug)
     {
         $city = City::where('slug', $slug)->first();
+        $taxis = $this->taxiCityRepository->getAllTaxisForCity($city->id);
         return view('taxi.cities.detail')
-            ->with('city', $city);
+            ->with('city', $city)
+            ->with('taxis', $taxis);
     }
 
     /**
@@ -115,4 +113,5 @@ class CityController extends BaseController
                 ->with('paginator', $paginator)->render();
         }
     }
+
 }

@@ -2,6 +2,7 @@
     @foreach($paginator as $city)
         <li class="item-city"><a href="/taxi/cities/{{ $city->slug }}/">
                 <span class="city-title">{{ $city->name }}</span>
+                <span class="taxi-count"> {{ $city->taxiCount }} такси</span>
             </a></li>
     @endforeach
 </ul>

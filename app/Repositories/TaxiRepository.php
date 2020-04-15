@@ -2,14 +2,15 @@
 
 namespace App\Repositories;
 
-use App\Models\Taxi;
-use App\Models\City as Model;
+use App\Models\City;
+use App\Models\Taxi as Model;
+
 //use Your Model
 
 /**
- * Class TaxiCityRepository.
+ * Class TaxiRepository.
  */
-class TaxiCityRepository extends CoreRepository
+class TaxiRepository extends CoreRepository
 {
     protected function getModelClass() {
         return Model::class;
@@ -59,10 +60,13 @@ class TaxiCityRepository extends CoreRepository
         return $result;
     }
 
-    public function getAllTaxisForCity($id) {
-        $taxis = Taxi::where('city_id', $id)
-            ->orderBy('id', 'ASC')
-            ->paginate(10);
-        return $taxis;
-    }
+    /**
+     * Получить модель для редактирования
+     *
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+//    public function getEdit($id) {
+//        return $this->startConditions()->find($id);
+//    }
 }
