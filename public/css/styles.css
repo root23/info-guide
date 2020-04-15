@@ -277,6 +277,27 @@ DETAIL CITY PAGE
 }
 
 /*
+TAXI DETAIL PAGE
+ */
+.taxi-info {
+    padding: 15px 15px 0;
+}
+.taxi-info .info-block {
+    border-bottom: 2px solid #FEBB1B;
+}
+.taxi-info .info-block:nth-child(1), .taxi-info .info-block:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+#map {
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+}
+
+/*
 FOOTER
  */
 

@@ -106,7 +106,6 @@ class CityController extends BaseController
 
     public function search(Request $request) {
         if ($request->ajax()) {
-
             $query = $request->get('query');
             $paginator = $this->taxiCityRepository->getSearchCities($query);
             return view('taxi.cities.includes.loaded')

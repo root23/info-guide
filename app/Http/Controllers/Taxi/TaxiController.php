@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers\Taxi;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Blog\BaseController;
+use App\Repositories\TaxiRepository;
 use Illuminate\Http\Request;
 
-class TaxiController extends Controller
+class TaxiController extends BaseController
 {
+    /**
+     * @var TaxiRepository
+     */
+    private $taxiRepository;
+
+    public function __construct() {
+        parent::__construct();
+
+        $this->taxiRepository = app(TaxiRepository::class);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -46,7 +57,12 @@ class TaxiController extends Controller
      */
     public function show($id)
     {
-        //
+        $taxi = $this->taxiRepository->getTaxi($id);
+        $city = $this->taxiRepository->getCity($taxi->city_id);
+
+        return view('taxi.taxi.detail')
+            ->with('taxi', $taxi)
+            ->with('city', $city);
     }
 
     /**

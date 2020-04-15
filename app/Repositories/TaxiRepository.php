@@ -12,61 +12,36 @@ use App\Models\Taxi as Model;
  */
 class TaxiRepository extends CoreRepository
 {
-    protected function getModelClass() {
+    protected function getModelClass()
+    {
         return Model::class;
     }
 
-    /**
-     * Получить список городов для вывода.
-     *
-     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
-     */
-    public function getAllWithPaginate() {
+    public function getTaxi($id) {
         $columns = [
             'id',
-            'name',
-            'slug',
-            'name_for_display',
+            'title',
+            'phone_number',
+            'description',
+            'city_id',
+            'mark_x',
+            'mark_y',
         ];
 
         $result = $this
             ->startConditions()
             ->select($columns)
-            ->orderBy('id', 'ASC')
-            ->paginate(52);
+            ->where('id', $id)
+            ->get()->first();
 
         return $result;
     }
 
-    /**
-     * Метод для живого поиска.
-     *
-     * @param string $query
-     */
-    public function getSearchCities($query) {
-        $columns = [
-            'id',
-            'name',
-            'slug',
-            'name_for_display',
-        ];
-
-        $result = $this
-            ->startConditions()
-            ->select($columns)
-            ->where('name', 'LIKE', '%'.$query.'%')
-            ->paginate(52);
-
-        return $result;
+    public function getCityNameForDisplay($city_id) {
+        return City::where('id', $city_id)->get()->first()->name_for_display;
     }
 
-    /**
-     * Получить модель для редактирования
-     *
-     * @param int $id
-     * @return \Illuminate\Database\Eloquent\Model
-     */
-//    public function getEdit($id) {
-//        return $this->startConditions()->find($id);
-//    }
+    public function getCity($city_id) {
+        return City::where('id', $city_id)->get()->first();
+    }
 }

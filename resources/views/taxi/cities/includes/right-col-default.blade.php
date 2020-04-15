@@ -27,7 +27,7 @@
     <span>Статистика</span>
 </div>
 <div class="block-content">
-    <span class="stats-item"><b><i class="fa fa-map-marker"></i></b> 1234</span>
+    <span class="stats-item"><b><i class="fa fa-map-marker"></i></b> 1094</span>
     <span class="stats-item"><b><i class="fa fa-taxi"></i></b> 12670</span>
-    <span class="stats-item"><b><i class="fa fa-comments"></i></b> 245</span>
+    <span class="stats-item"><b><i class="fa fa-comments"></i></b> 0</span>
 </div>

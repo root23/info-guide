@@ -27,6 +27,11 @@ Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
 });
 Route::get('taxi/search_city', 'Taxi\CityController@search');
 
+// Taxis
+Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
+    Route::resource('taxis', 'TaxiController')->names('taxi.taxis');
+});
+
 // Admin Panel
 $groupData = [
     'namespace' => 'Blog\Admin',

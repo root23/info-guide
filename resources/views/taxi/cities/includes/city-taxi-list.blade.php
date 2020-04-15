@@ -2,7 +2,7 @@
     <div class="item-company">
         <div class="row justify-content-center">
             <div class="col-md-9 item-company-right-col">
-                <a target="_blank" href="#" class="title">{{ $taxi->title }}</a>
+                <a href="/taxi/taxis/{{ $taxi->id }}/" class="title">{{ $taxi->title }}</a>
                 <div class="info">
                     {{ $taxi->description }}
                 </div>
