@@ -11,7 +11,7 @@
                 <a href="#" class="review">
                     <i class="fa fa-comments"></i> Отзывы (0)
                 </a>
-                <a href="tel:+88005553535" class="order-taxi">Заказать такси</a>
+                <a href="tel:{{ $taxi->phoneNumbers[0] }}" class="order-taxi">Заказать такси</a>
             </div>
         </div>
     </div>
