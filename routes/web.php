@@ -33,6 +33,16 @@ Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
 });
 
 // Contacts
+$groupData = [
+  'namespace' => 'Taxi',
+  'prefix' => 'taxi',
+];
+Route::group($groupData, function () {
+    $methods = ['index', 'store',];
+    Route::resource('contacts', 'ContactController')
+        ->only($methods)
+        ->names('taxi.contacts');
+});
 
 // Admin Panel
 $groupData = [

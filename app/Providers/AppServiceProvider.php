@@ -32,5 +32,7 @@ class AppServiceProvider extends ServiceProvider
         BlogPost::observe(BlogPostObserver::class);
         BlogCategory::observe(BlogCategoryObserver::class);
         User::observe(UserObserver::class);
+
+        \Validator::extend('recaptcha', 'App\Validators\ReCaptcha@validate');
     }
 }
