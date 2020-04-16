@@ -1,8 +1,8 @@
-<div class="block-info">
-    <a href="/taxi/cities/" target="_blank">
-        <img src="https://picsum.photos/250/300?random=2">
-    </a>
-</div>
+{{--<div class="block-info">--}}
+{{--    <a href="/taxi/cities/" target="_blank">--}}
+{{--        <img src="/img/cars.jpg">--}}
+{{--    </a>--}}
+{{--</div>--}}
 
 <div class="block-title">
     <span>Статьи</span>

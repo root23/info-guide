@@ -32,6 +32,8 @@ Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
     Route::resource('taxis', 'TaxiController')->names('taxi.taxis');
 });
 
+// Contacts
+
 // Admin Panel
 $groupData = [
     'namespace' => 'Blog\Admin',

@@ -357,6 +357,40 @@ footer .footer-cities li {
     position: relative;
 }
 
+
+/*
+Main Page
+ */
+.main-title p, li {
+    font-size: 16px;
+}
+.main-title h1 {
+    margin-bottom: 20px;
+}
+
+.btn-start-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #FEBB1B;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #FEC33A;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    height: 55px;
+    transition: 0.2s linear;
+    padding: 10px;
+}
+.btn-start-search:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #FF8400;
+}
+
+
 /*
 RESPONSIVE
  */
