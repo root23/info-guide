@@ -50,4 +50,27 @@ class BlogPostRepository extends CoreRepository
     public function getEdit($id) {
         return $this->startConditions()->find($id);
     }
+
+    public function getAllForIndexPage() {
+        $columns = [
+            'id',
+            'title',
+            'excert',
+            'slug',
+            'is_published',
+            'published_at',
+            'user_id',
+            'category_id',
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->where('is_published', 1)
+            ->orderBy('id', 'DESC')
+            ->with(['category', 'user'])
+            ->paginate(5);
+
+        return $result;
+    }
 }

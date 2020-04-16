@@ -38,11 +38,14 @@ $groupData = [
   'prefix' => 'taxi',
 ];
 Route::group($groupData, function () {
-    $methods = ['index', 'store',];
+    $methods = ['index', 'store'];
     Route::resource('contacts', 'ContactController')
         ->only($methods)
         ->names('taxi.contacts');
 });
+
+// About page
+Route::get('taxi/about', 'Taxi\ContactController@about');
 
 // Admin Panel
 $groupData = [

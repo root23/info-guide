@@ -37,4 +37,8 @@ class ContactController extends Controller
                 ->withInput();
         }
     }
+
+    public function about() {
+        return view('taxi.contacts.about');
+    }
 }

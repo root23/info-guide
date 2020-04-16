@@ -23,6 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    @yield('css-section')
 </head>
 <body>
     <div id="app">
@@ -84,9 +85,9 @@
                 <div id="menu">
                     <ul class="top-menu">
                         <li><a href="/taxi/cities/">Города</a></li>
-                        <li><a href="#">Статьи</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="/blog/posts/">Статьи</a></li>
+                        <li><a href="/taxi/about/">О нас</a></li>
+                        <li><a href="/taxi/contacts/">Контакты</a></li>
                     </ul>
                 </div>
             </div>

@@ -4,10 +4,29 @@ namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPost;
+use App\Repositories\BlogCategoryRepository;
+use App\Repositories\BlogPostRepository;
 use Illuminate\Http\Request;
 
 class PostController extends BaseController
 {
+    /**
+     * @var BlogPostRepository
+     */
+    private $blogPostRepository;
+
+    /**
+     * @var BlogCategoryRepository
+     */
+    private $blogCategoryRepository;
+
+    public function __construct() {
+        parent::__construct();
+
+        $this->blogPostRepository = app(BlogPostRepository::class);
+        $this->blogCategoryRepository = app(BlogCategoryRepository::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +34,8 @@ class PostController extends BaseController
      */
     public function index()
     {
-        $items = BlogPost::all();
-        return view('blog.posts.index', compact('items'));
+        $paginator = $this->blogPostRepository->getAllForIndexPage();
+        return view('blog.posts.index', compact('paginator'));
     }
 
     /**
