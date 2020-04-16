@@ -17,7 +17,11 @@
             <div class="col-md-9">
                 <h1>{{ $taxi->title }}</h1>
                 <p>{{ $taxi->title }} работает круглосуточно в городе {{ $taxi->city->name_for_display }}. Ниже представлена детальная информация о перевозчике.
-                    Работает по адресу {{ $taxi->description }}. Телефон(ы) для связи: {{ $taxi->phone_number }}.</p>
+                    Работает по адресу {{ $taxi->description }}. Телефон(ы) для связи:
+                    @foreach($taxi->phoneNumbers as $number)
+                        <a href="tel:{{ $number }}">{{ $number }}</a>
+                    @endforeach
+                </p>
 
 
                 <div class="taxi-info">
@@ -27,7 +31,11 @@
                     </div>
                     <div class="row justify-content-center info-block">
                         <div class="col-md-6"><span><i class="fa fa-phone"></i>Телефон(ы): </span></div>
-                        <div class="col-md-6">{{ $taxi->phone_number }}</div>
+                        <div class="col-md-6">
+                            @foreach($taxi->phoneNumbers as $number)
+                                <a href="tel:{{ $number }}">{{ $number }}</a> <br />
+                            @endforeach
+                        </div>
                     </div>
                     <div class="row justify-content-center info-block">
                         <div class="col-md-3"><span><i class="fa fa-map"></i>Расположение: </span></div>
@@ -38,6 +46,7 @@
                 </div>
 
                 <p>Заказать такси можно круглосуточно по телефону, указанному в информации.</p>
+
 
             </div>
             <div class="col-md-3">
