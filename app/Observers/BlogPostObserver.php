@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Models\BlogPost;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class BlogPostObserver
 {
@@ -40,6 +41,7 @@ class BlogPostObserver
     public function updating(BlogPost $blogPost) {
         $this->setPublishedAt($blogPost);
         $this->setSlug($blogPost);
+        $this->setHtml($blogPost);
     }
 
     /**
@@ -71,8 +73,7 @@ class BlogPostObserver
      */
     protected function setHtml(BlogPost $blogPost) {
         if ($blogPost->isDirty('content_raw')) {
-            // TODO: Конвертация из MD в HTML
-            $blogPost->content_html = $blogPost->content_raw;
+            $blogPost->content_html = Markdown::convertToHtml($blogPost->content_raw);
         }
     }
 

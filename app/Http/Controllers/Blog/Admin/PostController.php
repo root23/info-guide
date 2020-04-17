@@ -7,7 +7,6 @@ use App\Http\Requests\BlogPostUpdateRequest;
 use App\Models\BlogPost;
 use App\Repositories\BlogCategoryRepository;
 use App\Repositories\BlogPostRepository;
-use Symfony\Component\Console\Input\Input;
 
 /**
  * Class PostController
@@ -67,11 +66,13 @@ class PostController extends BaseController
     public function store(BlogPostCreateRequest $request)
     {
         $data = $request->input();
+
+        // Post image
         $fileName = time() . '.' . $request->file('img')->extension();
         $data['img'] = $fileName;
+        $request->file('img')->move(public_path('uploads'), $fileName);
 
         $item = (new BlogPost())->create($data);
-        $request->file('img')->move(public_path('uploads'), $fileName);
         if ($item) {
             return redirect()->route('blog.admin.posts.edit', [$item->id])
                 ->with(['success' => "Успешно сохранено"])

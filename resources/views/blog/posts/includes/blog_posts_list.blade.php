@@ -4,7 +4,9 @@
 
         <div class="card-body">
             <h4>{{ $item->title }}</h4>
-            <p class="card-text">{{ $item->excert }}</p>
+            <p class="card-text">
+                {{ $item->excert }}
+            </p>
             <a href="#" class="btn btn-primary">Подробнее</a>
         </div>
         <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
