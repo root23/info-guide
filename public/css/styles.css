@@ -4,7 +4,7 @@ Main styles
 
 .cities-title h1 {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 2.25rem;
     padding-left: 3px;
     padding-bottom: 6px;
     border-bottom: 3px solid #ececf6;
@@ -388,6 +388,10 @@ Main Page
     text-decoration: none;
     color: #fff;
     background: #FF8400;
+}
+
+.post-content img {
+    max-width: 100%;
 }
 
 

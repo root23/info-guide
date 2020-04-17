@@ -16,8 +16,9 @@
 
         <div class="row justify-content-center">
             <div class="col-md-9">
-                {!! $item->content_html !!}
-
+                <div class="post-content">
+                    {!! $item->content_html !!}
+                </div>
             </div>
             <div class="col-md-3">
                 @include('taxi.cities.includes.right-col-default')
