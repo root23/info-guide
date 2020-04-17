@@ -2,6 +2,10 @@
 @section('page-title')
     <title>{{ $item->title }} - {{ config('app.name', 'Laravel') }}</title>
 @endsection
+@section('page-meta')
+    <meta name="description" content="{{ $item->meta_description }}"/>
+    <meta name="keywords" content="{{ $item->meta_keywords }}" />
+@endsection
 @section('content')
     <div class="container cities-title">
         <ul class="breadcrumb">
@@ -13,6 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 {!! $item->content_html !!}
+
             </div>
             <div class="col-md-3">
                 @include('taxi.cities.includes.right-col-default')
