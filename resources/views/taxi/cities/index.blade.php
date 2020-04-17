@@ -4,6 +4,11 @@
 <title>&#127747; Все города - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
+@section('page-meta')
+    <meta name="descrition" content="Телефоны такси в городах России. Заказать такси, узнать цены. Отзывы о таксистах"/>
+    <meta name="keywords" content="заказать такси, телефоны такси, номера такси, справочник такси, заказать такси онлайн, такси в России, дешевое такси заказать" />
+@endsection
+
 @section('content')
     <div class="container cities-title">
         <ul class="breadcrumb">

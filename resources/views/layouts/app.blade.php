@@ -10,6 +10,10 @@
     <!-- Page Title -->
     @yield('page-title')
 
+    <!-- Page Meta -->
+    <meta name="robots" content="index, follow">
+    @yield('page-meta')
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/scripts.js') }}" defer></script>
@@ -24,6 +28,22 @@
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     @yield('css-section')
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(56915689, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/56915689" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
 </head>
 <body>
     <div id="app">
@@ -86,7 +106,6 @@
                     <ul class="top-menu">
                         <li><a href="/taxi/cities/">Города</a></li>
                         <li><a href="/blog/posts/">Статьи</a></li>
-                        <li><a href="/taxi/about/">О нас</a></li>
                         <li><a href="/taxi/contacts/">Контакты</a></li>
                     </ul>
                 </div>

@@ -4,6 +4,11 @@
 <title>&#128661; Главная - {{ config('app.name', 'Laravel') }} </title>
 @endsection
 
+@section('page-meta')
+<meta name="descrition" content="Актуальные телефоны такси в регионах России. Заказать такси, адреса, телефоны и цены. Отзывы о такси."/>
+<meta name="keywords" content="заказать такси, телефоны такси, номера такси, справочник такси, заказать такси онлайн" />
+@endsection
+
 @section('title', 'Main')
 
 @section('content')

@@ -4,6 +4,11 @@
     <title>Такси «{{ $taxi->title }}» в г. {{ $taxi->city->name }} номер телефона, цены, отзывы &#128661; - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
+@section('page-meta')
+    <meta name="descrition" content="Такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}. Цены, отзывы, заказать такси онлайн."/>
+    <meta name="keywords" content="такси {{ $taxi->title }}, телефоны такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}, номера такси {{ $taxi->title }}, справочник такси, заказать такси онлайн" />
+@endsection
+
 @section('js-section')
     <script>
         window.mark_x = {{ $taxi->mark_x }};
