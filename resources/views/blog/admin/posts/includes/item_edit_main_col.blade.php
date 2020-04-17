@@ -36,13 +36,23 @@
                                    required>
                         </div>
                         <div class="form-group">
-                            <label for="content_raw">Текст статьи</label>
+                            <label for="excert">Краткое описание</label>
+                            <textarea name="excert"
+                                      id="excert"
+                                      rows="3"
+                                      class="form-control"
+                                      rows="20"
+                                      style="height: 160px;">{{ old('excert', $item->excert) }}
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="content_raw">Текст статьи (в формате markdown)</label>
                             <textarea name="content_raw"
                                       id="content_raw"
                                       rows="3"
                                       class="form-control"
                                       rows="20"
-                                      style="min-height: 260px;">{{ old('content_raw', $item->content_raw) }}
+                                      style="min-height: 360px;">{{ old('content_raw', $item->content_raw) }}
                             </textarea>
                         </div>
                         <div class="form-group">
@@ -73,6 +83,20 @@
                             <label for="slug">Идентификатор</label>
                             <input name="slug" value="{{ $item->slug }}"
                                    id="slug"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="meta_description">Мета-описание</label>
+                            <input name="meta_description" value="{{ $item->meta_description }}"
+                                   id="meta_description"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="meta_keywords">Ключевые слова</label>
+                            <input name="meta_keywords" value="{{ $item->meta_keywords }}"
+                                   id="meta_keywords"
                                    type="text"
                                    class="form-control">
                         </div>

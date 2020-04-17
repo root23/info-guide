@@ -6,6 +6,27 @@
     border-bottom-right-radius: 0px;
 }
 
+.card-body h4 a {
+    color: #36362f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card-body h4 a:hover {
+    color: #FF8400;
+}
+
+.card-body .btn-show {
+    color: #fff;
+    background-color: #FEBB1B;
+    text-decoration: none;
+    border: 1px solid #FEC33A;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+.card-body .btn-show:hover {
+    background: #FF8400;
+}
+
 .card-title {
     margin-bottom: 0.3rem;
 }

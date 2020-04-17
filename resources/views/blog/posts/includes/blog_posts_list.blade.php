@@ -3,19 +3,19 @@
         <img class="card-img" src="/uploads/{{ $item->img }}" alt="post image">
 
         <div class="card-body">
-            <h4>{{ $item->title }}</h4>
+            <h4><a href="{{ $item->slug }}">{{ $item->title }}</a></h4>
             <p class="card-text">
                 {{ $item->excert }}
             </p>
-            <a href="#" class="btn btn-primary">Подробнее</a>
+            <a href="/blog/posts/{{ $item->slug }}" class="btn btn-show">Подробнее</a>
         </div>
         <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
             <div class="views">
                 <i class="fa fa-calendar text-info"></i> {{ $item->published_at }}
             </div>
             <div class="stats">
-                <i class="fa fa-eye"></i> 1347
-                <i class="fa fa-comment"></i> 12
+                <i class="fa fa-eye"></i> {{$item->view_count}}
+{{--                <i class="fa fa-comment"></i> 12--}}
             </div>
         </div>
     </div>

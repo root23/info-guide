@@ -65,9 +65,21 @@ class PostController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $item = $this->blogPostRepository->getOnePost($slug);
+        if (empty($item)) {
+            abort(404);
+        }
+
+        $key = 'blog_' . $item->id;
+        if (!session()->has($key)) {
+            $item->increment('view_count');
+            $item->save();
+            session()->put($key, 1);
+        }
+
+        return view('blog.posts.detail', compact('item'));
     }
 
     /**

@@ -14,6 +14,31 @@ class BlogPostRepository extends CoreRepository
         return Model::class;
     }
 
+    public function getOnePost($slug) {
+        $columns = [
+            'id',
+            'title',
+            'content_html',
+            'is_published',
+            'published_at',
+            'img',
+            'deleted_at',
+            'meta_description',
+            'meta_keywords',
+        ];
+
+        $result = $this->startConditions()
+            ->select($columns)
+            ->where([
+                'slug' => $slug,
+                'is_published' => 1,
+            ])
+            ->with(['category',])
+            ->get()->first();
+
+        return $result;
+    }
+
     /**
      * Получить список статей для вывода в списке
      * Админ-панель
@@ -62,7 +87,8 @@ class BlogPostRepository extends CoreRepository
             'published_at',
             'user_id',
             'category_id',
-            'img'
+            'img',
+            'view_count',
         ];
 
         $result = $this
