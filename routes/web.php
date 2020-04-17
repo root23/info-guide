@@ -67,4 +67,9 @@ Route::group($groupData, function () {
         ->middleware(['auth', 'can:manage-posts']);
 });
 
+
+// Sitemap
+Route::get('sitemap.xml', 'Taxi\ContactController@sitemap');
+Route::get('/sitemap', 'SitemapController@sitemap');
+
 //Route::resource('rest', 'RestTestController')->names('restTest');

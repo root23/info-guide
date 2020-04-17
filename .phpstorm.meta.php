@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-17 07:55:49.
+    * Generated on 2020-04-17 14:46:30.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -139,6 +139,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -293,6 +294,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -447,6 +449,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -601,6 +604,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -755,6 +759,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -909,6 +914,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -1063,6 +1069,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
@@ -1217,6 +1224,7 @@ namespace PHPSTORM_META {
         'flare.logger' => \Monolog\Logger::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
+        'image' => \Intervention\Image\ImageManager::class,
         'log' => \Illuminate\Log\LogManager::class,
         'mail.manager' => \Illuminate\Mail\MailManager::class,
         'mailer' => \Illuminate\Mail\Mailer::class,
