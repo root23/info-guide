@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-meta')
-    <meta name="descrition" content="Телефоны такси в {{ $city->name_for_display }}, отзывы, цены. Качественные услуги такси в городах России."/>
+    <meta name="description" content="Телефоны такси в {{ $city->name_for_display }}, отзывы, цены. Качественные услуги такси в городах России."/>
     <meta name="keywords" content="заказать такси в {{ $city->name_for_display }}, телефоны такси в {{ $city->name_for_display }},
     номера такси {{ $city->name }}, справочник такси {{ $city->name }}, заказать такси онлайн {{ $city->name }}, такси в {{ $city->name_for_display }}" />
 @endsection
