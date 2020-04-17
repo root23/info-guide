@@ -8,10 +8,10 @@
         @include('blog.admin.posts.includes.result_messages')
 
     @if ($item->exists)
-        <form method="POST" action="{{ route('blog.admin.posts.update', $item->id) }}">
+        <form method="POST" action="{{ route('blog.admin.posts.update', $item->id) }}" enctype="multipart/form-data">
         @method('PATCH')
     @else
-        <form method="POST" action="{{ route('blog.admin.posts.store') }}">
+        <form method="POST" action="{{ route('blog.admin.posts.store') }}" enctype="multipart/form-data">
     @endif
         @csrf
             <div class="row justify-content-center">

@@ -29,6 +29,7 @@ class BlogPostUpdateRequest extends FormRequest
             'excert' => 'max:500',
             'content_raw' =>'string|max:10000|min:5',
             'category_id' => 'required|integer|exists:blog_categories,id',
+            'img' => 'file|mimes:png,jpg,jpeg',
         ];
     }
 }

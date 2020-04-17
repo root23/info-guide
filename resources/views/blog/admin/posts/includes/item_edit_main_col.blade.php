@@ -45,6 +45,13 @@
                                       style="min-height: 260px;">{{ old('content_raw', $item->content_raw) }}
                             </textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="img">Изображение</label>
+                            @if ($item->img)
+                                <img src="/uploads/{{ $item->img }}" width="400px" height="180px">
+                            @endif
+                            <input name="img" type="file" id="img" class="form-control">
+                        </div>
                     </div>
                     <div class="tab-pane" id="adddata" role="tabpanel">
                         <div class="form-group">

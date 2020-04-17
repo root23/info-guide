@@ -29,6 +29,7 @@ class BlogPostRepository extends CoreRepository
             'published_at',
             'user_id',
             'category_id',
+            'img',
         ];
 
         $result = $this
@@ -61,6 +62,7 @@ class BlogPostRepository extends CoreRepository
             'published_at',
             'user_id',
             'category_id',
+            'img'
         ];
 
         $result = $this
@@ -70,7 +72,6 @@ class BlogPostRepository extends CoreRepository
             ->orderBy('id', 'DESC')
             ->with(['category', 'user'])
             ->paginate(5);
-
         return $result;
     }
 }

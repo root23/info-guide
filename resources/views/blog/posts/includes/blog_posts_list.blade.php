@@ -1,6 +1,6 @@
 @foreach($paginator as $item)
     <div class="card">
-        <img class="card-img" src="https://media-cdn.tripadvisor.com/media/photo-s/16/3a/47/cf/taxi-in-goa.jpg" alt="post image">
+        <img class="card-img" src="/uploads/{{ $item->img }}" alt="post image">
 
         <div class="card-body">
             <h4>{{ $item->title }}</h4>
