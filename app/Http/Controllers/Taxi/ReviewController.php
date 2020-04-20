@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Taxi;
 
 use App\Http\Controllers\Blog\BaseController;
+use App\Http\Requests\ReviewCreateRequest;
 use App\Models\Review;
 use App\Repositories\ReviewRepository;
 use Illuminate\Http\Request;
@@ -35,15 +36,17 @@ class ReviewController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReviewCreateRequest $request)
     {
-        // TODO:
-        // Обработка запроса
-        $item = new Review();
-        dd($request);
-//        $categoryList = $this->reviewRepository->getForComboBox();
+        $data = $request->input();
+        $item = (new Review())->create($data);
 
-        //return view('blog.admin.posts.edit', compact('item', 'categoryList'));
+        if ($item) {
+            return ['success' => "Успешно сохранено"];
+        } else {
+            return back()->withErrors(['msg' => 'Ошибка сохранения'])
+                ->withInput();
+        }
     }
 
     /**
@@ -54,9 +57,8 @@ class ReviewController extends BaseController
     public function search(Request $request) {
         if ($request->ajax()) {
             $taxi_id = $request->get('taxi_id');
-            $paginator = $this->reviewRepository->getReviewsForTaxi($taxi_id);
-            return view('taxi.reviews.taxi-reviews')
-                ->with('paginator', $paginator)->render();
+            $reviews = $this->reviewRepository->getReviewsForTaxi($taxi_id);
+            return view('taxi.reviews.taxi-reviews', ['reviews' => $reviews])->render();
         }
     }
 

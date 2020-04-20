@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    load_comments(window.taxi_id);
+
+
 
     function load_comments(taxi_id) {
         $.ajax({
@@ -10,23 +11,28 @@ $(document).ready(function () {
             }
         })
     }
+    load_comments(window.taxi_id);
 
-    // function fetch_data(page, query) {
-    //     $.ajax({
-    //         url:"/taxi/search_city?page=" + page + "&query=" + query,
-    //         success: function (data) {
-    //             $('.cities-list-wrap').html('');
-    //             $('.cities-list-wrap').html(data);
-    //         }
-    //     });
-    // }
-    //
-    // $('.city-input').keyup(function () {
-    //     var query = $(this).val();
-    //     fetch_data(1, query);
-    // });
-    //
+    $('.form-group .btn-primary').click(function (e) {
+        // e.preventDefault();
+        $.ajax({
+            url:"/taxi/reviews",
+            type: 'POST',
+            data: $('#comment_form').serialize(),
+            success: function (data) {
+                load_comments(window.taxi_id);
+                getRecaptcha();
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("h2").offset().top
+                }, 2000);
+            }
+
+        })
+    })
+
     // $('.pagination').addClass('justify-content-center');
     // $('.pagination').addClass('flex-wrap');
 
 });
+
+

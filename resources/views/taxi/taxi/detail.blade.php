@@ -22,12 +22,15 @@
     <script src="{{ asset('js/ajax/comments.js') }}"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LemMuoUAAAAAL7NRjBrt95YbDrSspYIzr6rg7VX"></script>
     <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LemMuoUAAAAAL7NRjBrt95YbDrSspYIzr6rg7VX', { action: 'contact' }).then(function (token) {
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
+        function getRecaptcha() {
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6LemMuoUAAAAAL7NRjBrt95YbDrSspYIzr6rg7VX', { action: 'contact' }).then(function (token) {
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
             });
-        });
+        }
+        getRecaptcha();
     </script>
 @endsection
 
@@ -79,7 +82,8 @@
                 <p>Заказать такси можно круглосуточно по телефону, указанному в информации.</p>
 
                 <h2>Отзывы</h2>
-                @include('taxi.reviews.taxi-reviews')
+                <div class="reviews-wrap">
+                </div>
                 @include('taxi.reviews.add-review-form')
 
             </div>

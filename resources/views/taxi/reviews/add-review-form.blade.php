@@ -1,6 +1,6 @@
 <h3 style="margin-top: 20px;">Оставить отзыв о {{ $taxi->title }}</h3>
 
-<form method="POST" action="{{ route('taxi.reviews.store') }}">
+<form method="POST" id="comment_form" action="javascript:void(0)">
     @csrf
 
     <div class="form-group">
@@ -30,6 +30,7 @@
                   rows="5"
                   style=""></textarea>
         <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+        <input type="hidden" name="taxi_id" id="taxi_id" value="{{ $taxi->id }}">
         <button type="submit" class="btn btn-primary">Отправить</button>
     </div>
 </form>

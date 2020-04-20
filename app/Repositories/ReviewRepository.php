@@ -28,9 +28,9 @@ class ReviewRepository extends CoreRepository
         $result = $this
             ->startConditions()
             ->select($columns)
-            ->orderBy('id', 'ASC')
+            ->orderBy('created_at', 'DESC')
             ->where('taxi_id', $taxi_id)
-            ->paginate(15);
+            ->paginate(5);
 
         return $result;
     }

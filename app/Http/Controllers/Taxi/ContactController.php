@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Taxi;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TaxiContactCreateRequest;
 use App\Models\Contact;
-use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
