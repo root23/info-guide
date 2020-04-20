@@ -57,23 +57,18 @@
                     @endforeach
                 </p>
 
-
-                <div class="taxi-info">
-                    <div class="row justify-content-center info-block">
-                        <div class="col-md-6"><span><i class="fa fa-map-marker"></i>Адрес: </span></div>
-                        <div class="col-md-6">{{ $taxi->description }}</div>
-                    </div>
-                    <div class="row justify-content-center info-block">
-                        <div class="col-md-6"><span><i class="fa fa-phone"></i>Телефон(ы): </span></div>
-                        <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fa fa-map-marker"></i> Адрес:</h4>
+                        <p class="card-text">{{ $taxi->description }}</p>
+                        <h4 class="card-title"><i class="fa fa-phone"></i> Телефоны:</h4>
+                        <p class="card-text">
                             @foreach($taxi->phoneNumbers as $number)
                                 <a href="tel:{{ $number }}">{{ $number }}</a> <br />
                             @endforeach
-                        </div>
-                    </div>
-                    <div class="row justify-content-center info-block">
-                        <div class="col-md-3"><span><i class="fa fa-map"></i>Расположение: </span></div>
-                        <div class="col-md-9" style="height: 400px;">
+                        </p>
+                        <h4 class="card-title"><i class="fa fa-map"></i> На карте:</h4>
+                        <div class="map-wrapper" style="height: 400px">
                             @include('taxi.taxi.includes.map-block')
                         </div>
                     </div>
@@ -81,7 +76,7 @@
 
                 <p>Заказать такси можно круглосуточно по телефону, указанному в информации.</p>
 
-                <h2>Отзывы</h2>
+                <h2 id="reviews-title">Отзывы</h2>
                 <div class="reviews-wrap">
                 </div>
                 @include('taxi.reviews.add-review-form')

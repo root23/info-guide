@@ -24,7 +24,7 @@ $(document).ready(function () {
                 getRecaptcha();
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $("h2").offset().top
-                }, 2000);
+                }, 1000);
             }
 
         })

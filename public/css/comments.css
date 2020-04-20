@@ -5,3 +5,27 @@
     display: block;
     margin-top: 10px;
 }
+
+#comment_form .btn {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #FEBB1B;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #FEC33A;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    height: 55px;
+    transition: 0.2s linear;
+    padding: 10px 0;
+}
+#comment_form .btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #FF8400;
+}

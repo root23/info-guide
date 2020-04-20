@@ -284,7 +284,7 @@ DETAIL CITY PAGE
 TAXI DETAIL PAGE
  */
 .taxi-info {
-    padding: 15px 15px 0;
+
 }
 .taxi-info .info-block {
     border-bottom: 2px solid #FEBB1B;
@@ -295,10 +295,9 @@ TAXI DETAIL PAGE
 
 #map {
     margin: auto;
-    margin-top: 20px;
     justify-content: center;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 /*
@@ -409,10 +408,26 @@ RESPONSIVE
     .cities-list > li {
         width: 25%;
     }
+
+    .taxi-info .stats-item #map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 15px;
+    }
 }
 @media only screen and (max-width: 640px) {
     .cities-list > li {
         width: 33%;
+    }
+    .taxi-info .stats-item {
+        flex-flow: column;
+    }
+    .taxi-info .stats-item b {
+        display: none;
+    }
+    .taxi-info .stats-item #map {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 480px) {

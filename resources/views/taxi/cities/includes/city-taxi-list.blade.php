@@ -8,8 +8,8 @@
                 </div>
             </div>
             <div class="col-md-3 item-company-left-col">
-                <a href="#" class="review">
-                    <i class="fa fa-comments"></i> Отзывы (0)
+                <a href="/taxi/taxis/{{ $taxi->id }}/#reviews-title" class="review">
+                    <i class="fa fa-comments"></i> Отзывы
                 </a>
                 <a href="tel:{{ $taxi->phoneNumbers[0] }}" class="order-taxi">Заказать такси</a>
             </div>
