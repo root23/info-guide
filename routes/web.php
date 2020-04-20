@@ -87,6 +87,6 @@ Route::get('sitemap.xml', 'SitemapController@sitemap');
 Route::get('/sitemaps/main.xml', 'SitemapController@main');
 route::get('/sitemaps/cities.xml', 'SitemapController@cities');
 route::get('/sitemaps/posts.xml', 'SitemapController@posts');
-route::get('/sitemaps/taxis.xml', 'SitemapController@taxis');
+route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
 
 //Route::resource('rest', 'RestTestController')->names('restTest');

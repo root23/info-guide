@@ -33,8 +33,10 @@ class SitemapController extends Controller
             ->header('Content-Type', 'text/xml');
     }
 
-    public function taxis() {
-        $taxis = Taxi::select('id', 'updated_at')->orderBy('updated_at', 'desc')->get();
+    public function taxis($i) {
+        $taxis = Taxi::select('id', 'updated_at')->orderBy('updated_at', 'desc')
+            ->offset($i * 1000)->limit(1000)
+            ->get();
         return response()->view('sitemaps.taxis', compact('taxis'))
             ->header('Content-Type', 'text/xml');
     }

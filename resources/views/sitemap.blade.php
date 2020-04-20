@@ -13,8 +13,11 @@
         <loc>https://info-guide.ru/sitemaps/posts.xml</loc>
         <lastmod>{{ $blog_posts->updated_at->tz('UTC')->toAtomString() }}</lastmod>
     </sitemap>
-    <sitemap>
-        <loc>https://info-guide.ru/sitemaps/taxis.xml</loc>
-        <lastmod>{{ $taxi->updated_at->tz('UTC')->toAtomString() }}</lastmod>
-    </sitemap>
+    @for($i = 0; $i <= 12; $i++)
+        <sitemap>
+            <loc>https://info-guide.ru/sitemaps/taxis{{ $i }}.xml</loc>
+            <lastmod>{{ $taxi->updated_at->tz('UTC')->toAtomString() }}</lastmod>
+        </sitemap>
+    @endfor
+
 </sitemapindex>
