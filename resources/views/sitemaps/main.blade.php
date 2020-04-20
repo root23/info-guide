@@ -4,7 +4,7 @@
         <lastmod>2020-04-19</lastmod>
     </url>
     <url>
-        <loc>https://info-guide.ru/contacts/</loc>
+        <loc>https://info-guide.ru/taxi/contacts/</loc>
         <lastmod>2020-04-19</lastmod>
     </url>
 
