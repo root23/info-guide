@@ -14,8 +14,14 @@ class CreateReviewsTable extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email');
+            $table->text('message');
+            $table->bigInteger('taxi_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('taxi_id')->references('id')->on('taxis');
         });
     }
 

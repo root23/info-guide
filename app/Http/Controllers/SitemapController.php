@@ -2,14 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use App\Models\City;
+use App\Models\Taxi;
 use Illuminate\Http\Request;
-use Spatie\Sitemap\SitemapGenerator;
 
 class SitemapController extends Controller
 {
     public function sitemap() {
-        $pages = City::get();
-        dd($pages);
+        $blog_posts = BlogPost::select('*')->orderBy('updated_at', 'desc')->first();
+        $taxi = Taxi::select('*')->orderBy('updated_at', 'desc')->first();
+        return response()->view('sitemap', compact(['blog_posts', 'taxi']))
+            ->header('Content-Type', 'text/xml');
+    }
+
+    public function main() {
+        return response()->view('sitemaps.main')
+            ->header('Content-Type', 'text/xml');
+    }
+
+    public function cities() {
+        $cities = City::select('slug', 'updated_at')->orderBy('updated_at', 'desc')->get();
+        return response()->view('sitemaps.cities', compact('cities'))
+            ->header('Content-Type', 'text/xml');
+    }
+
+    public function posts() {
+        $posts = BlogPost::select('slug', 'updated_at')->orderBy('updated_at', 'desc')->get();
+        return response()->view('sitemaps.posts', compact('posts'))
+            ->header('Content-Type', 'text/xml');
+    }
+
+    public function taxis() {
+        $taxis = Taxi::select('id', 'updated_at')->orderBy('updated_at', 'desc')->get();
+        return response()->view('sitemaps.taxis', compact('taxis'))
+            ->header('Content-Type', 'text/xml');
     }
 }

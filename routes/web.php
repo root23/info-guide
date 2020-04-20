@@ -25,11 +25,25 @@ Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function() {
 Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
     Route::resource('cities', 'CityController')->names('taxi.cities');
 });
+// Cities live search
 Route::get('taxi/search_city', 'Taxi\CityController@search');
 
 // Taxis
 Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
     Route::resource('taxis', 'TaxiController')->names('taxi.taxis');
+});
+
+// Taxi reviews
+Route::get('taxi/get_reviews', 'Taxi\ReviewController@search');
+$groupData = [
+    'namespace' => 'Taxi',
+    'prefix' => 'taxi',
+];
+Route::group($groupData, function () {
+    $methods = ['index', 'store'];
+    Route::resource('reviews', 'ReviewController')
+        ->only($methods)
+        ->names('taxi.reviews');
 });
 
 // Contacts
@@ -69,7 +83,10 @@ Route::group($groupData, function () {
 
 
 // Sitemap
-Route::get('sitemap.xml', 'Taxi\ContactController@sitemap');
-Route::get('/sitemap', 'SitemapController@sitemap');
+Route::get('sitemap.xml', 'SitemapController@sitemap');
+Route::get('/sitemaps/main.xml', 'SitemapController@main');
+route::get('/sitemaps/cities.xml', 'SitemapController@cities');
+route::get('/sitemaps/posts.xml', 'SitemapController@posts');
+route::get('/sitemaps/taxis.xml', 'SitemapController@taxis');
 
 //Route::resource('rest', 'RestTestController')->names('restTest');
