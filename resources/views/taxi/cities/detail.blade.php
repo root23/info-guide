@@ -1,19 +1,25 @@
 @extends('layouts.app')
 
 @section('page-title')
-    <title>📞 Телефоны такси в {{ $city->name_for_display }}, номера, цены, отзывы - {{ config('app.name', 'Laravel') }}</title>
+    <title itemprop="headline">📞 Телефоны такси в {{ $city->name_for_display }}, номера, цены, отзывы - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
 @section('page-meta')
-    <meta name="description" content="Телефоны такси в {{ $city->name_for_display }}, отзывы, цены. Качественные услуги такси в городах России."/>
+    <meta name="description" itemprop="description" content="Телефоны такси в {{ $city->name_for_display }}, отзывы, цены. Качественные услуги такси в городах России."/>
 @endsection
 
 @section('content')
     <div class="container cities-title">
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item"><a href="/taxi/cities/">Все города</a></li>
-            <li class="breadcrumb-item active">{{ $city->name }}</li>
+        <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/taxi/cities/"><span itemprop="name">Все города</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+                <span itemprop="name">{{ $city->name }}</span>
+            </li>
         </ul>
         <div class="row justify-content-center">
             <div class="col-md-9">

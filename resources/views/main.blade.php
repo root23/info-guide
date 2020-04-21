@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('page-title')
-<title>&#128661; Справочник телефонов такси в Россиии - {{ config('app.name', 'Laravel') }} </title>
+<title itemprop="headline">&#128661; Справочник телефонов такси в Россиии - {{ config('app.name', 'Laravel') }} </title>
 @endsection
 
 @section('page-meta')
-<meta name="description" content="Актуальные телефоны такси в регионах России. Заказать такси, адреса, телефоны и цены. Отзывы о такси."/>
+<meta name="description" itemprop="description" content="Актуальные телефоны такси в регионах России. Заказать такси, адреса, телефоны и цены. Отзывы о такси."/>
 @endsection
 
 @section('title', 'Main')

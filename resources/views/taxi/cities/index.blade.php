@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('page-title')
-<title>&#127747; Все города - {{ config('app.name', 'Laravel') }}</title>
+<title itemprop="headline">&#127747; Все города - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
 @section('page-meta')
-    <meta name="description" content="Телефоны такси в городах России. Заказать такси, узнать цены. Отзывы о таксистах"/>
+    <meta name="description" itemprop="description" content="Телефоны такси в городах России. Заказать такси, узнать цены. Отзывы о таксистах"/>
 @endsection
 
 @section('content')
     <div class="container cities-title">
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item active">Все города</li>
+        <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+                <span itemprop="name">Все города</span>
+                <meta itemprop="position" content="2" />
+            </li>
         </ul>
         <div class="row justify-content-center">
             <div class="col-md-9">

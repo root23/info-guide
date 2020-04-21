@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('page-title')
-    <title>Такси «{{ $taxi->title }}» в г. {{ $taxi->city->name }} номер телефона, цены, отзывы &#128661; - {{ config('app.name', 'Laravel') }}</title>
+    <title itemprop="headline">Такси «{{ $taxi->title }}» в г. {{ $taxi->city->name }} номер телефона, цены, отзывы &#128661; - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
 @section('page-meta')
-    <meta name="description" content="Такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}. Цены, отзывы, заказать такси онлайн."/>
+    <meta name="description" itemprop="description" content="Такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}. Цены, отзывы, заказать такси онлайн."/>
 @endsection
 
 @section('js-section')
@@ -39,16 +39,24 @@
 
 @section('content')
     <div class="container cities-title">
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item"><a href="/taxi/cities/">Все города</a></li>
-            <li class="breadcrumb-item"><a href="/taxi/cities/{{ $taxi->city->slug }}/">{{ $taxi->city->name }}</a></li>
-            <li class="breadcrumb-item active">{{ $taxi->title }}</li>
+        <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/taxi/cities/"><span itemprop="name">Все города</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/taxi/cities/{{ $taxi->city->slug }}/"><span itemprop="name">{{ $taxi->city->name }}</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+                <span itemprop="name">{{ $taxi->title }}</span>
+            </li>
         </ul>
 
         <div class="row justify-content-center">
-            <div class="col-md-9">
-                <h1>{{ $taxi->title }}</h1>
+            <div class="col-md-9" itemscope itemtype="http://schema.org/Organization">
+                <h1 itemprop="name">{{ $taxi->title }}</h1>
                 <p>{{ $taxi->title }} работает круглосуточно в городе {{ $taxi->city->name_for_display }}. Ниже представлена детальная информация о перевозчике.
                     Работает по адресу {{ $taxi->description }}. Телефон(ы) для связи:
                     @foreach($taxi->phoneNumbers as $number)
@@ -59,9 +67,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title"><i class="fa fa-map-marker"></i> Адрес:</h4>
-                        <p class="card-text">{{ $taxi->description }}</p>
+                        <p class="card-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ $taxi->description }}</p>
                         <h4 class="card-title"><i class="fa fa-phone"></i> Телефоны:</h4>
-                        <p class="card-text">
+                        <p class="card-text" itemprop="telephone">
                             @foreach($taxi->phoneNumbers as $number)
                                 <a href="tel:{{ $number }}">{{ $number }}</a> <br />
                             @endforeach

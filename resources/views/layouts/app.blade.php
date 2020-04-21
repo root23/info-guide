@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ru">
-<head>
+<head itemscope itemtype="http://schema.org/WPHeader">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ URL::asset('/img/favicon.png') }}" type="image/x-icon"/>
@@ -115,10 +115,10 @@
         <div class="top-menu-wrap">
             <div class="container">
                 <div id="menu">
-                    <ul class="top-menu">
-                        <li><a href="/taxi/cities/">Города</a></li>
-                        <li><a href="/blog/posts/">Статьи</a></li>
-                        <li><a href="/taxi/contacts/">Контакты</a></li>
+                    <ul class="top-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <li><a itemprop="url" href="/taxi/cities/">Города</a></li>
+                        <li><a itemprop="url" href="/blog/posts/">Статьи</a></li>
+                        <li><a itemprop="url" href="/taxi/contacts/">Контакты</a></li>
                     </ul>
                 </div>
             </div>
