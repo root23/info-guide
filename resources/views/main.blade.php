@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('page-title')
-<title>&#128661; Главная - {{ config('app.name', 'Laravel') }} </title>
+<title>&#128661; Справочник телефонов такси в Россиии - {{ config('app.name', 'Laravel') }} </title>
 @endsection
 
 @section('page-meta')
 <meta name="description" content="Актуальные телефоны такси в регионах России. Заказать такси, адреса, телефоны и цены. Отзывы о такси."/>
-<meta name="keywords" content="заказать такси, телефоны такси, номера такси, справочник такси, заказать такси онлайн, как заказать такси, заказ такси с сайта, онлайн заказ такси" />
 @endsection
 
 @section('title', 'Main')

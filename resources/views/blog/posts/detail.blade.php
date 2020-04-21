@@ -4,7 +4,6 @@
 @endsection
 @section('page-meta')
     <meta name="description" content="{{ $item->meta_description }}"/>
-    <meta name="keywords" content="{{ $item->meta_keywords }}" />
 @endsection
 @section('content')
     <div class="container cities-title">

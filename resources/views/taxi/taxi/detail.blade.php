@@ -6,7 +6,6 @@
 
 @section('page-meta')
     <meta name="description" content="Такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}. Цены, отзывы, заказать такси онлайн."/>
-    <meta name="keywords" content="такси {{ $taxi->title }}, телефоны такси {{ $taxi->title }} в {{ $taxi->city->name_for_display }}, номера такси {{ $taxi->title }}, справочник такси, заказать такси онлайн" />
 @endsection
 
 @section('js-section')
