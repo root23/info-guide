@@ -14,7 +14,8 @@
         "guzzlehttp/guzzle": "^6.5",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.2",
-        "spatie/laravel-sitemap": "^5.7"
+        "spatie/laravel-sitemap": "^5.7",
+        "vkcom/vk-php-sdk": "^5.101"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
