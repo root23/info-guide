@@ -90,3 +90,4 @@ route::get('/sitemaps/posts.xml', 'SitemapController@posts');
 route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
 
 //Route::resource('rest', 'RestTestController')->names('restTest');
+

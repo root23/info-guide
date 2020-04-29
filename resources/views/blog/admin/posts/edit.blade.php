@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@section('css-section')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css" rel="stylesheet">
+@endsection
+
+@section('js-section')
+    <script>
+        $(document).ready(function() {
+            $('#content_raw').summernote();
+        });
+    </script>
+@endsection
+
 @section('content')
     @php
         /** @var \App\Models\BlogPost $item */

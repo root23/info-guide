@@ -12,10 +12,10 @@
         "fideloper/proxy": "^4.0",
         "graham-campbell/markdown": "^12.0",
         "guzzlehttp/guzzle": "^6.5",
+        "jeroennoten/laravel-adminlte": "^3.2",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.2",
-        "spatie/laravel-sitemap": "^5.7",
-        "vkcom/vk-php-sdk": "^5.101"
+        "spatie/laravel-sitemap": "^5.7"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",

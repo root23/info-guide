@@ -27,7 +27,7 @@
                 <li><a href="/taxi/cities/nizhnii-novgorod/">Нижний Новгород</a> </li>
                 <li><a href="/taxi/cities/kazan/">Казань</a> </li>
             </ul>
-            <!--LiveInternet counter--><script type="text/javascript">
+            <!--LiveInternet counter--><script type="application/javascript">
                 document.write('<a href="//www.liveinternet.ru/click" '+
                     'target="_blank"><img src="//counter.yadro.ru/hit?t14.6;r'+
                     escape(document.referrer)+((typeof(screen)=='undefined')?'':
