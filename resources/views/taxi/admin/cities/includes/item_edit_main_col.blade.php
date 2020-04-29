@@ -59,6 +59,13 @@
                                    class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="seo_title">СЕО-заголовок</label>
+                            <input name="seo_title" value="{{ $item->seo_title }}"
+                                   id="seo_title"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label for="meta_description">Мета-описание</label>
                             <input name="meta_description" value="{{ $item->meta_description }}"
                                    id="meta_description"

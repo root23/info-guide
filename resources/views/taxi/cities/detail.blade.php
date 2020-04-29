@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('page-title')
-    <title itemprop="headline">📞 Телефоны такси в {{ $city->name_for_display }}, номера, цены, отзывы - {{ config('app.name', 'Laravel') }}</title>
+    @if($city->seo_title)
+        <title itemprop="headline">{{ $city->seo_title }}</title>
+    @else
+        <title itemprop="headline">📞 Телефоны такси в {{ $city->name_for_display }}, номера, цены, отзывы - {{ config('app.name', 'Laravel') }}</title>
+    @endif
+
 @endsection
 
 @section('page-meta')
