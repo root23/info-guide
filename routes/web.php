@@ -80,6 +80,18 @@ Route::group($groupData, function () {
         ->names('blog.admin.posts')
         ->middleware(['auth', 'can:manage-posts']);
 });
+// Admin cities
+$groupData = [
+    'namespace' => 'Taxi\Admin',
+    'prefix' => 'admin/',
+];
+Route::group($groupData, function (){
+    $methods = ['index', 'edit', 'store', 'update', 'create', 'destroy',];
+    Route::resource('cities', 'CityController')
+        ->only($methods)
+        ->names('admin.cities')
+        ->middleware(['auth', 'can:manage-cities']);
+});
 
 
 // Sitemap
@@ -88,6 +100,3 @@ Route::get('/sitemaps/main.xml', 'SitemapController@main');
 route::get('/sitemaps/cities.xml', 'SitemapController@cities');
 route::get('/sitemaps/posts.xml', 'SitemapController@posts');
 route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
-
-//Route::resource('rest', 'RestTestController')->names('restTest');
-

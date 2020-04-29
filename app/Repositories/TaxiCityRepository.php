@@ -65,4 +65,14 @@ class TaxiCityRepository extends CoreRepository
             ->paginate(10);
         return $taxis;
     }
+
+    /**
+     * Получить модель для редактирования
+     *
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function getEdit($id) {
+        return $this->startConditions()->find($id);
+    }
 }

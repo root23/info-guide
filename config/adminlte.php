@@ -219,6 +219,7 @@ return [
             'icon'        => 'far fa-fw fa-map',
 //            'label'       => 4,
             'label_color' => 'success',
+            'can'         => 'manage-cities',
         ],
         [
             'text'        => 'Такси',

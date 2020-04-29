@@ -7,6 +7,7 @@ use App\Models\Taxi;
 
 class City extends Model
 {
+    protected $fillable = ['name', 'name_for_display', 'description', 'updated_at', 'meta_description', 'meta_keywords', 'slug',];
     protected $appends = [
         'taxiCount',
     ];
