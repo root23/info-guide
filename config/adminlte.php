@@ -227,6 +227,7 @@ return [
             'icon'        => 'far fa-fw fa-cab',
 //            'label'       => 4,
             'label_color' => 'success',
+            'can'         => 'manage-taxis',
         ],
         [
             'text'        => 'Отзывы',
@@ -234,6 +235,7 @@ return [
             'icon'        => 'far fa-fw fa-bell',
 //            'label'       => 4,
             'label_color' => 'success',
+            'can'         => 'manage-reviews',
         ],
         ['header' => 'Статьи'],
         [
