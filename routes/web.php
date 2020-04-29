@@ -92,7 +92,18 @@ Route::group($groupData, function (){
         ->names('admin.cities')
         ->middleware(['auth', 'can:manage-cities']);
 });
-
+// Admin taxis
+$groupData = [
+    'namespace' => 'Taxi\Admin',
+    'prefix' => 'admin/',
+];
+Route::group($groupData, function (){
+    $methods = ['index', 'edit', 'store', 'update', 'create', 'destroy',];
+    Route::resource('taxis', 'TaxiController')
+        ->only($methods)
+        ->names('admin.taxis')
+        ->middleware(['auth', 'can:manage-taxis']);
+});
 
 // Sitemap
 Route::get('sitemap.xml', 'SitemapController@sitemap');

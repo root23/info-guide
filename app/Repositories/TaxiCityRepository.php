@@ -36,6 +36,25 @@ class TaxiCityRepository extends CoreRepository
 
         return $result;
     }
+    /**
+     * Получить список городов для вывода.
+     *
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getAll() {
+        $columns = [
+            'id',
+            'name',
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->orderBy('id', 'ASC')
+            ->get();
+
+        return $result;
+    }
 
     /**
      * Метод для живого поиска.

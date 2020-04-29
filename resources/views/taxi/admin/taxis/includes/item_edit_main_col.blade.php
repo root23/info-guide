@@ -1,5 +1,5 @@
 @php
-    /** @var \App\Models\BlogPost $item */
+    /** @var \App\Models\Taxi $item */
 @endphp
 
 <div class="row justify-content-center">
@@ -23,41 +23,34 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="maindata" role="tabpanel">
                         <div class="form-group">
-                            <label for="name">Заголовок</label>
-                            <input name="name" value="{{ $item->name }}"
-                                   id="name"
+                            <label for="title">Заголовок</label>
+                            <input name="title" value="{{ $item->title }}"
+                                   id="title"
                                    type="text"
                                    class="form-control"
                                    minlength="3"
                                    required>
                         </div>
                         <div class="form-group">
-                            <label for="name_for_display">Имя для отображения</label>
-                            <input name="name_for_display" value="{{ $item->name_for_display }}"
-                                   id="name_for_display"
+                            <label for="description">Адрес</label>
+                            <input name="description" value="{{ $item->description }}"
+                                   id="description"
                                    type="text"
                                    class="form-control"
                                    minlength="3"
                                    required>
                         </div>
                         <div class="form-group">
-                            <label for="description">Описание</label>
-                            <textarea name="description"
-                                      id="description"
+                            <label for="phone_number">Телефоны</label>
+                            <textarea name="phone_number"
+                                      id="phone_number"
                                       rows="3"
                                       class="form-control"
                                       rows="20"
-                                      style="min-height: 560px;">{{ old('description', $item->description) }}</textarea>
+                                      style="min-height: 560px;">{{ old('phone_number', $item->phone_number) }}</textarea>
                         </div>
                     </div>
                     <div class="tab-pane" id="adddata" role="tabpanel">
-                        <div class="form-group">
-                            <label for="slug">Идентификатор</label>
-                            <input name="slug" value="{{ $item->slug }}"
-                                   id="slug"
-                                   type="text"
-                                   class="form-control">
-                        </div>
                         <div class="form-group">
                             <label for="meta_description">Мета-описание</label>
                             <input name="meta_description" value="{{ $item->meta_description }}"

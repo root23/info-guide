@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Taxi extends Model
 {
+    protected $fillable = ['title', 'description', 'updated_at', 'phone_number', 'meta_keywords', 'meta_description',];
+
     protected $appends = [
         'phoneNumbers',
     ];

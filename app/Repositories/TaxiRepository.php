@@ -44,4 +44,35 @@ class TaxiRepository extends CoreRepository
     public function getCity($city_id) {
         return City::where('id', $city_id)->get()->first();
     }
+
+    /**
+     * Получить список городов для вывода.
+     *
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function getAllWithPaginate() {
+        $columns = [
+            'id',
+            'title',
+            'updated_at',
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->orderBy('id', 'ASC')
+            ->paginate(40);
+
+        return $result;
+    }
+
+    /**
+     * Получить модель для редактирования
+     *
+     * @param int $id
+     * @return \Illuminate\Database\Eloquent\Model
+     */
+    public function getEdit($id) {
+        return $this->startConditions()->find($id);
+    }
 }
