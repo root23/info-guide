@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('css-section')
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css" rel="stylesheet">
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Записи в блоге</h1>
 @endsection
 
-@section('js-section')
+@section('js')
+    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#content_raw').summernote();
@@ -12,7 +16,28 @@
     </script>
 @endsection
 
+@section('css')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
+    <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+            <a itemprop="item" href="/home"><span itemprop="name">Панель Управления</span></a>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+            <a itemprop="item" href="/admin/blog/posts/"><span itemprop="name">Блог</span></a>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+            <span itemprop="name">
+                @if ($item->title)
+                    {{ $item->title }}
+                @else
+                    Добавление новой записи
+                @endif
+            </span>
+        </li>
+    </ul>
     @php
         /** @var \App\Models\BlogPost $item */
     @endphp

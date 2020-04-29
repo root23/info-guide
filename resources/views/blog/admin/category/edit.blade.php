@@ -1,4 +1,20 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Категории в блоге</h1>
+@endsection
+
+@section('js')
+    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#content_raw').summernote();
+        });
+    </script>
+@endsection
 
 @section('content')
     @php /** @var \App\Models\BlogCategory $item */@endphp

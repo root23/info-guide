@@ -1,6 +1,20 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Блог</h1>
+@stop
 
 @section('content')
+    <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+            <a itemprop="item" href="/home"><span itemprop="name">Панель Управления</span></a>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+            <span itemprop="name">Блог</span>
+        </li>
+    </ul>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
