@@ -9,6 +9,31 @@
 
 @endsection
 
+@section('js-section')
+    <script type="application/javascript" defer="defer" async="async">
+        var kiwitaxiSearchFormOptions = {
+            target: 'kiwitaxi_search_form_wrapper',
+            country: "Russia",
+            language: 'ru',
+            currency: 'RUB',
+            theme: '0',
+            place_from: null,
+            place_to: null,
+            partner_id: '5eac64e8e406c',
+            banner_id: 'c15407d4'
+
+        };
+        (function () {
+            var kw = document.createElement('script');
+            kw.type = 'text/javascript';
+            kw.async = true;
+            kw.src = '//widget.kiwitaxi.com/search_form.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(kw, s);
+        })();
+    </script>
+@endsection
+
 @section('page-meta')
     <meta name="description" itemprop="description" content="Телефоны такси в {{ $city->name_for_display }}, отзывы, цены. Качественные услуги такси в городах России."/>
 @endsection
@@ -27,7 +52,7 @@
             </li>
         </ul>
         <div class="row justify-content-center">
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <h1>Телефоны такси в {{ $city->name_for_display }}</h1>
                 <p>Заказ такси в {{ $city->name_for_display }}: лучшие такси, номера телефонов, сайты, цены, отзывы.</p>
 
@@ -43,7 +68,7 @@
 
 
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 @include('taxi.cities.includes.right-col-default')
             </div>
         </div>

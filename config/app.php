@@ -175,7 +175,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \Torann\GeoIP\GeoIPServiceProvider::class,
+
+        /*
+         * Custom Service Providers
+         */
         App\Providers\UserGeoServiceProvider::class,
+        App\Providers\SiteStatsProvider::class,
 
     ],
 

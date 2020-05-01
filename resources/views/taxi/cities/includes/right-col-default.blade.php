@@ -1,19 +1,8 @@
-{{--<div class="block-info">--}}
-{{--    <a href="/taxi/cities/" target="_blank">--}}
-{{--        <img src="/img/cars.jpg">--}}
-{{--    </a>--}}
-{{--</div>--}}
-
 <div class="block-title">
-    <span>Статьи</span>
+    <span>Поиск трансфера</span>
 </div>
 <div class="block-content">
-    <ul>
-        <li><a href="/blog/post/natus-laboriosam-quisquam-voluptatem-maxime-cumque">Статья 1</a></li>
-        <li><a href="/blog/post/sit-veniam-non-aut-dolores">Статья 2</a></li>
-        <li><a href="/blog/post/natus-laboriosam-quisquam-voluptatem-maxime-cumque">Статья 3</a></li>
-        <li><a href="/blog/post/sit-veniam-non-aut-dolores">Статья 4</a></li>
-    </ul>
+    <div id="kiwitaxi_search_form_wrapper" style="display: block; width: 100%;"></div>
 </div>
 
 <div class="block-title">
@@ -27,7 +16,7 @@
     <span>Статистика</span>
 </div>
 <div class="block-content">
-    <span class="stats-item"><b><i class="fa fa-map-marker"></i></b> 1094</span>
-    <span class="stats-item"><b><i class="fa fa-taxi"></i></b> 12670</span>
-    <span class="stats-item"><b><i class="fa fa-comments"></i></b> 0</span>
+    <span class="stats-item"><b><i class="fa fa-map-marker"></i></b> {{ $cities_count }}</span>
+    <span class="stats-item"><b><i class="fa fa-taxi"></i></b> {{ $taxis_count }}</span>
+    <span class="stats-item"><b><i class="fa fa-comments"></i></b> {{ $reviews_count }}</span>
 </div>
