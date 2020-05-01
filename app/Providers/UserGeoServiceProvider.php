@@ -2,8 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\City;
 use Illuminate\Support\ServiceProvider;
-use App\Http\Controllers\GeoIPController as geo_controller;
+use Illuminate\Support\Facades\View;
 
 class UserGeoServiceProvider extends ServiceProvider
 {
@@ -12,8 +13,7 @@ class UserGeoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
+    public function register()  {
 
     }
 
@@ -22,8 +22,15 @@ class UserGeoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot()  {
+        $this->geo_tool();
+    }
 
+    public function geo_tool() {
+        View::composer('layouts.app', function($view){
+            $loc = geoip()->getLocation(geoip()->getClientIP());
+            $geo_city = City::where('name', $loc->city)->first();
+            $view->with('geo_city', $geo_city);
+        });
     }
 }
