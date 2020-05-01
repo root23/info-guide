@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ URL::asset('/img/favicon.png') }}" type="image/x-icon"/>
     <meta name="yandex-verification" content="1c39173a03f7c309" />
+    <meta name="description" itemprop="description" content="Актуальные телефоны такси в регионах России. Заказать такси, адреса, телефоны и цены. Отзывы о такси."/>
+
+    <title itemprop="headline">&#128661; Справочник телефонов такси в Россиии - {{ config('app.name', 'Laravel') }} </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
