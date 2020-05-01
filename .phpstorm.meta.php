@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-28 15:40:24.
+    * Generated on 2020-05-01 16:11:52.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -138,6 +138,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -298,6 +299,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -458,6 +460,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -618,6 +621,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -778,6 +782,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -938,6 +943,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -1098,6 +1104,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,
@@ -1258,6 +1265,7 @@ namespace PHPSTORM_META {
         'flare.client' => \Facade\FlareClient\Flare::class,
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
+        'geoip' => \Torann\GeoIP\GeoIP::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
         'image' => \Intervention\Image\ImageManager::class,

@@ -17,10 +17,6 @@
     @yield('page-meta')
 
     <!-- Scripts -->
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/scripts.js') }}" defer></script>
     @yield('js-section')
@@ -80,6 +76,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/taxi/cities/{{ $geo_city->slug }}"><i class="fa fa-map-pin"></i> {{ $geo_city->name }}</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

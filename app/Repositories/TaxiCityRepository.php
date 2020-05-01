@@ -94,4 +94,14 @@ class TaxiCityRepository extends CoreRepository
     public function getEdit($id) {
         return $this->startConditions()->find($id);
     }
+
+    public function searchCityFromGeoIP($name) {
+        $columns = [
+          'name',
+          'slug',
+        ];
+        return $this->startConditions()->where('name', $name)
+            ->select($columns)
+            ->first();
+    }
 }

@@ -15,7 +15,8 @@
         "jeroennoten/laravel-adminlte": "^3.2",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.2",
-        "spatie/laravel-sitemap": "^5.7"
+        "spatie/laravel-sitemap": "^5.7",
+        "torann/geoip": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
