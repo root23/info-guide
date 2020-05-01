@@ -25,6 +25,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "jquery": "^3.4.1",
+    "owl.carousel": "^2.3.4",
     "summernote": "^0.8.16"
   }
 }

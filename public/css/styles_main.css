@@ -1,0 +1,173 @@
+.header {
+    position: relative;
+    background: #ffcc4f;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.logo-block span {
+    display: block;
+    font-size: 3.2rem;
+    color: #fefefe;
+    text-transform: uppercase;
+}
+.logo-block img {
+    width: 140px;
+    display: inline-block;
+}
+
+.block-info {
+    text-align: center;
+}
+h2 {
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -3px;
+    border-bottom: 3px solid #FEBB1B;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.block-info p {
+    margin-bottom: 2px;
+    color: #838383;
+    font-weight: 400;
+}
+
+
+.card {
+    min-height: 320px;
+}
+.card-header {
+    border: none;
+    background: inherit;
+    text-align: center;
+    font-size: 6rem;
+}
+.card-body {
+    padding-top: 0;
+    text-align: center;
+}
+h3 {
+    color: #fbc318;
+    font-size: 1.35rem;
+}
+.card-body span {
+    color: #838383;
+}
+
+.search-block {
+    margin-top: 50px;
+    position: relative;
+    background: #ffcc4f;
+    text-align: center;
+}
+.search-block span {
+    display: block;
+    font-size: 3.2em;
+    margin-bottom: 1em;
+}
+.btn-start-search {
+    padding: 20px;
+    min-width: 300px;
+    background: #1e2d39;
+    color: #fefefe;
+    font-size: 16px;
+}
+.btn-start-search:hover {
+    color: #ffcc4f;;
+}
+
+.text-block p {
+    text-align: justify;
+}
+
+.img-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.thumbnail-default img {
+    display: block;
+    max-width: 100%;
+    height: 200px;
+}
+.post-date span {
+    color: #b7b7b7;
+}
+.post-title a {
+    color: #fbc318;
+    text-decoration: none;
+    transition: .3s all ease;
+}
+.post-title a:hover {
+    color: #1e2d39;
+}
+
+@media only screen and (max-width: 640px) {
+    .card {
+        margin-bottom: 1em;
+    }
+
+}
+
+/*
+FOOTER
+ */
+
+footer {
+    background: #676565;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #FF8400;
+    text-decoration: none;
+}
+
+footer p {
+    text-align: justify;
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+footer .footer-block-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 17px;
+    border-bottom: 2px solid #b1b1b1;
+    font-weight: 600;
+}
+
+footer .footer-menu {
+    display: block;
+    list-style: none;
+    margin-bottom: 6px;
+    padding: 0;
+}
+footer .footer-menu li {
+    display: block;
+    margin-bottom: 9px;
+    position: relative;
+}
+
+footer .footer-cities {
+    padding: 0;
+}
+footer .footer-cities li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
+    margin-bottom: 9px;
+    position: relative;
+}
