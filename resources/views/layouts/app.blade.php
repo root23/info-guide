@@ -76,9 +76,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/taxi/cities/{{ $geo_city->slug }}"><i class="fa fa-map-pin"></i> {{ $geo_city->name }}</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="/taxi/cities/{{ $geo_city->slug }}"><i class="fa fa-map-pin"></i> {{ $geo_city->name }}</a>--}}
+{{--                        </li>--}}
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

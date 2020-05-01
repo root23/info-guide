@@ -24,10 +24,6 @@ class UserGeoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function($view) {
-            $geoTool = new geo_controller();
-            $geo_city = $geoTool->get_location();
-            return $view->with('geo_city', $geo_city);
-        });
+
     }
 }
