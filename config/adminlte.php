@@ -224,7 +224,16 @@ return [
         [
             'text'        => 'Такси',
             'url'         => 'admin/taxis',
-            'icon'        => 'far fa-fw fa-cab',
+            'icon'        => 'fa fa-car',
+//            'label'       => 4,
+            'label_color' => 'success',
+            'can'         => 'manage-taxis',
+        ],
+        ['header' => 'Организации'],
+        [
+            'text'        => 'Категории',
+            'url'         => 'admin/organizations/categories/',
+            'icon'        => 'fa fa-sitemap',
 //            'label'       => 4,
             'label_color' => 'success',
             'can'         => 'manage-taxis',

@@ -94,6 +94,21 @@ Route::group($groupData, function (){
         ->names('admin.cities')
         ->middleware(['auth', 'can:manage-cities']);
 });
+
+// OrganizationCategories
+$groupData = [
+    'namespace' => 'Organization\Admin',
+    'prefix' => 'admin/organizations/',
+];
+
+Route::group($groupData, function (){
+    $methods = ['index', 'edit', 'store', 'update', 'create', 'destroy',];
+    Route::resource('categories', 'OrganizationCategoryController')
+        ->only($methods)
+        ->names('organization.admin.categories')
+        ->middleware(['auth', 'can:manage-organizations']);
+});
+
 // Admin taxis
 $groupData = [
     'namespace' => 'Taxi\Admin',
