@@ -1,7 +1,17 @@
 @extends('layouts.app')
 
+@section('js-section')
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/main_slider.js') }}"></script>
+@endsection
+@section('css-section')
+    <link href="{{ asset('css/styles_main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+@endsection
+
 @section('page-title')
-<title itemprop="headline">&#128661; Справочник телефонов такси в Россиии - {{ config('app.name', 'Laravel') }} </title>
+<title itemprop="headline">&#128661; Городской гид - {{ config('app.name', 'Laravel') }} </title>
 @endsection
 
 @section('page-meta')
@@ -12,38 +22,206 @@
 
 @section('content')
     <div class="container main-title">
-        <h1 class="title">Телефоны такси в Вашем городе</h1>
-        <h2>Быстрый поиск перевозчиков по всей России</h2>
-        <p>Ни один мегаполис в мире не обходиться без услуг такси. В некоторых странах жители полностью отказываются от личного транспорта,
-            предпочитая ему поездки в комфортабельном автомобиле. На общественном транспорте время поездки может достигать больше часа, в то время,
-            как на такси можно добраться до конечного пункта за 15-20 минут.</p>
-        <p>Такси приходит на помощь тогда, когда нужно срочно куда-то доехать, и нет времени ждать городской транспорт или когда транспорт не ходит вообще.
-            Для деловых людей транспорт является отличной альтернативой в городе, куда они приехали в командировку &ndash; не нужно запоминать расположение улиц и маршруты автобусов,
-            достаточно просто сообщить адрес.</p>
-        <p>info-guide - это сервис, предназначенный для поиск службы такси во всех городах России.</p>
-        <p>Преимущества сервиса:</p>
-        <ul>
-            <li><b>Актуальная база данных</b>, которая пополняется при взаимодействии с перевозчиками.</li>
-            <li>Удобная навигация и <b>живой поиск по сайту</b>.</li>
-            <li>Возможность оставлять <b>отзывы о компаниях</b>.</li>
-            <li><b>Вызов такси онлайн</b> в один клик</li>
-        </ul>
-
-
-        <h2>Как заказать такси?</h2>
-        <p>На сайте можно удобно выбрать необходимый город, используя функцию живого поиска. Заказав в один клик такси, далее по телефону можно будет обговорить
-        особые условия поездки.</p>
-
-        <a href="/taxi/cities/" class="btn-start-search"><span>Перейти к поиску</span></a>
-
-        <p style="margin-top: 10px;">Если раньше такси было прерогативой только больших городов, то сегодня в любом городе есть, как частные таксисты, так и компании, занимающиеся перевозками. У компаний больше преимуществ: это и большой таксопарк, и выгодные расценки, и круглосуточная работа. С каждым годом потребность в услугах такси растет, поэтому таксопарки всегда пополняются новыми автомобилями. Отсутствие свободных машин может стать причиной отказа клиенту, что не очень хорошо отражается на репутации компании.</p>
-        <p>Каждый звонок принимает диспетчер, после чего он осуществляет поиск ближайшего автомобиля от клиента. Это экономит время на ожидании, поэтому такси так часто используются в экстренных ситуациях. Сделать заказ такси можно не только по телефону, но и по интернету, оставив онлайн-заявку.</p>
-        <p>Тарификация рассчитывается разными способами. Компании, предоставляющие услуги перевозки, определяют самый короткий маршрут и вычисляют километраж. Метод тарификации по километражу остался еще со времен СССР, когда стоимость поездки рассчитывалась на точке отправления. В час пик диспетчер ориентируется на карту пробок, чтобы избежать простоя машины на шоссе. Стоимость, рассчитанная вначале, не должна изменяться водителем, основываясь на время или изменение маршрута по его усмотрению. В противном случае сумма может быть оспорена.</p>
-        <p>В Москве каждый район имеет свой таксопарк, это дает возможность быстро среагировать на заказ клиента. Например, такси коньково быстро доставит клиента в другой район, аэропорт или вокзал. Также можно заранее заказать такси для своих гостей из других городов. Некоторые компании предоставляют дополнительные услуги, как такси на свадьбу или курьерская доставка.</p>
-
+        <h1 class="title">Справочник городских услуг в городах России</h1>
+        <h2>Быстрый поиск городских услуг</h2>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-city"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>1094 ГОРОДА</h3>
+                        <span>по всей России</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-building"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>12620 КОМПАНИЙ</h3>
+                        <span>собрано в нашей базе, которая постоянно актуализируется</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>30 ОТЗЫВОВ</h3>
+                        <span>оставленных посетителями нашего сайта</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-nav">
+                <a class="btn-visitors" href="#visitors">Для жителей города</a>
+                <a class="btn-business" href="#business">Для бизнеса</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="for-citizen">Для жителей города</h2>
+        <h4 class="h4-centered">Выберите категорию</h4>
+    </div>
+
+    <div class="container">
+        <div class="categories">
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-taxi"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Такси
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-wrench"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        СТО
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-user-md"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Медицина
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-utensils"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Рестораны
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-running"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Спорт
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-shopping-bag"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Магазины
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-film"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Кинотеатры
+                    </span>
+                </a>
+            </div>
+            <div class="categories-item_card">
+                <a href="#" class="categories-item_card_container">
+                    <span class="categories-icon">
+                        <i class="fa fa-glass-cheers"></i>
+                    </span>
+                    <span class="categories-item_name">
+                        Бары и клубы
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-4">
+        <div class="container">
+            <h2>Последние статьи</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <a href="/blog/posts/kupony-kupony-na-transport-i-uslugi" class="thumbnail-default">
+                            <figure>
+                                <img src="https://info-guide.ru/uploads/1587578286.png" alt="Купоны. Купоны на транспорт и услуги">
+                            </figure>
+                        </a>
+                        <h5 class="post-title"><a href="/blog/posts/kupony-kupony-na-transport-i-uslugi">Купоны. Купоны на транспорт и услуги</a></h5>
+                        <div class="post-date">
+                            <span><i class="fa fa-calendar"></i> 2020-04-22</span>
+                        </div>
+                        <p>
+                            С текущим состоянием экономики, потребители начинают тенденцию использования купонов со скидками в большинстве своих покупок. Начиная с наиболее распространенных продуктовых товаров, и продуктов даже для различных видов услуг, потребители теперь используют скидку, когда это возможно.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <a href="/blog/posts/top-10-vybiraem-avtomobil-dlya-raboty-v-taksi" class="thumbnail-default">
+                            <figure>
+                                <img src="https://info-guide.ru/uploads/1587576710.jpeg" alt="ТОП 10: Выбираем автомобиль для работы в такси">
+                            </figure>
+                        </a>
+                        <h5 class="post-title"><a href="/blog/posts/top-10-vybiraem-avtomobil-dlya-raboty-v-taksi">ТОП 10: Выбираем автомобиль для работы в такси</a></h5>
+                        <div class="post-date">
+                            <span><i class="fa fa-calendar"></i> 2020-04-22</span>
+                        </div>
+                        <p>
+                            Несмотря на кризис и самоизоляцию, пассажирские перевозки не остановились.
+                            А значит, это хороший вариант для заработка: достаточно водительского удостоверения и навыков.
+                            Но какую машину выбрать?
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="blog-post">
+                        <a href="/blog/posts/servis-yandekstaksi-dobavil-kurerskuyu-dostavku-v-prilozenie" class="thumbnail-default">
+                            <figure>
+                                <img src="https://info-guide.ru/uploads/1587233929.jpeg" alt="Сервис «Яндекс.Такси» добавил курьерскую доставку в приложение">
+                            </figure>
+                        </a>
+                        <h5 class="post-title"><a href="/blog/posts/servis-yandekstaksi-dobavil-kurerskuyu-dostavku-v-prilozenie">Сервис «Яндекс.Такси» добавил курьерскую доставку в приложение</a></h5>
+                        <div class="post-date">
+                            <span><i class="fa fa-calendar"></i> 2020-04-18</span>
+                        </div>
+                        <p>
+                            Теперь пользователи «Яндекс.Такси» смогут пользоваться услугами курьерской доставки посылок весом до 10 кг. Сама доставка займет от 2 до 3 часов.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection
 
 @section('js')
-
+    <script src="{{ asset('js/main_slider.js') }}"></script>
 @endsection

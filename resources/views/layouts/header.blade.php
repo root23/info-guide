@@ -11,7 +11,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <span>Справочник номеров такси в городах России</span>
+                    <span>Справочник городских услуг в городах России</span>
                 </li>
             </ul>
 
@@ -61,7 +61,7 @@
         <div id="menu">
             <ul class="top-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <li><a itemprop="url" href="/taxi/cities/">Города</a></li>
-                <li><a itemprop="url" href="/blog/posts/">Статьи</a></li>
+                <li><a itemprop="url" href="/blog/posts/">Новости</a></li>
                 <li><a itemprop="url" href="/taxi/contacts/">Контакты</a></li>
             </ul>
         </div>

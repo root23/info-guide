@@ -28,7 +28,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     @yield('css-section')
 
     <!-- Yandex.Metrika counter -->
@@ -54,6 +53,7 @@
 
         gtag('config', 'UA-155358984-1');
     </script>
+
 </head>
 <body>
     <div id="app">

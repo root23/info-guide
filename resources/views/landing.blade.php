@@ -71,9 +71,9 @@
     <div class="header">
         <div class="container">
             <div class="logo-block">
-                <span>Твое Такси</span>
+                <span>Городской Гид</span>
                 <img src="/img/logo.png" alt="Справочник телефонов такси в России - логотип">
-                <h1>Справочник телефонов такси в городах России</h1>
+                <h1>Справочник городских услуг в городах России</h1>
             </div>
         </div>
     </div>
