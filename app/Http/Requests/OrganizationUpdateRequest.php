@@ -27,6 +27,8 @@ class OrganizationUpdateRequest extends FormRequest
             'title' =>'required|min:3|max:200',
             'slug' => 'max:200',
             'category_id' => 'required|integer|exists:organization_categories,id',
+            'content_raw' =>'string|max:10000|min:5',
+            'img' => 'file|mimes:png,jpg,jpeg',
         ];
     }
 }

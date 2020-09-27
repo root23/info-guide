@@ -7,6 +7,7 @@ use App\Http\Requests\OrganizationCreateRequest;
 use App\Models\Organization;
 use App\Repositories\OrganizationCategoryRepository;
 use App\Repositories\OrganizationRepository;
+use App\Repositories\TaxiCityRepository;
 
 /**
  * Class OrganizationController
@@ -25,11 +26,17 @@ class OrganizationController extends BaseController
      */
     private $organizationCategoryRepository;
 
+    /**
+     * @var TaxiCityRepository
+     */
+    private $taxiCityRepository;
+
     public function __construct() {
         parent::__construct();
 
         $this->organizationRepository = app(OrganizationRepository::class);
         $this->organizationCategoryRepository = app(OrganizationCategoryRepository::class);
+        $this->taxiCityRepository = app(TaxiCityRepository::class);
     }
 
     /**
@@ -53,8 +60,9 @@ class OrganizationController extends BaseController
     {
         $item = new Organization();
         $categoryList = $this->organizationCategoryRepository->getForComboBox();
+        $cityList = $this->taxiCityRepository->getForComboBox();
 
-        return view('organization.admin.organization.edit', compact('item', 'categoryList'));
+        return view('organization.admin.organization.edit', compact('item', 'categoryList', 'cityList'));
     }
 
     /**
@@ -67,12 +75,16 @@ class OrganizationController extends BaseController
     {
         $data = $request->input();
 
-        $item = new Organization($data);
-        $item->save();
+        // Organization image
+        $fileName = time() . '.' . $request->file('img')->extension();
+        $data['img'] = $fileName;
+        $request->file('img')->move(public_path('uploads'), $fileName);
 
+        $item = (new Organization())->create($data);
         if ($item) {
             return redirect()->route('organization.admin.organization.edit', [$item->id])
-                ->with(['success' => 'Организация успешно создана']);
+                ->with(['success' => "Успешно сохранено"])
+                ->with(['img' => $fileName]);
         } else {
             return back()->withErrors(['msg' => 'Ошибка сохранения'])
                 ->withInput();
@@ -104,8 +116,9 @@ class OrganizationController extends BaseController
         }
 
         $categoryList = $this->organizationCategoryRepository->getForComboBox();
+        $cityList = $this->taxiCityRepository->getForComboBox();
 
-        return view('organization.admin.organization.edit', compact('item', 'categoryList'));
+        return view('organization.admin.organization.edit', compact('item', 'categoryList', 'cityList'));
     }
 
     /**
@@ -126,6 +139,14 @@ class OrganizationController extends BaseController
         }
 
         $data = $request->all();
+
+        if ($request->hasFile('img')) {
+            $fileName = time() . '.' . $request->file('img')->extension();
+            $data['img'] = $fileName;
+            $request->file('img')->move(public_path('uploads'), $fileName);
+        } else {
+            $data['img'] = $item->img;
+        }
 
         $result = $item->update($data);
 

@@ -42,6 +42,37 @@
                                    type="text"
                                    class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input name="phone" value="{{ $item->phone }}"
+                                   id="phone"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Адрес</label>
+                            <input name="address" value="{{ $item->address }}"
+                                   id="address"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="content_raw">Описание организации</label>
+                            <textarea name="content_raw"
+                                      id="content_raw"
+                                      rows="3"
+                                      class="form-control"
+                                      rows="20"
+                                      style="min-height: 360px;">{{ old('content_raw', $item->content_raw) }}
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="img">Изображение</label>
+                            @if ($item->img)
+                                <img src="/uploads/{{ $item->img }}" width="150px" height="150px">
+                            @endif
+                            <input name="img" type="file" id="img" class="form-control">
+                        </div>
                     </div>
                     <div class="tab-pane" id="adddata" role="tabpanel">
                         <div class="form-group">
@@ -58,6 +89,35 @@
                                     </option>
                                 @endforeach
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city_id">Город</label>
+                            <select name="city_id"
+                                    id="city_id"
+                                    class="form-control"
+                                    placeholder="Выберите категорию"
+                                    required>
+                                @foreach ($cityList as $cityOption)
+                                    <option value="{{ $cityOption->id }}"
+                                            @if ($cityOption->id == $item->city_id) selected @endif>
+                                        {{ $cityOption->title }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mark_x">Координаты X</label>
+                            <input name="mark_x" value="{{ $item->mark_x }}"
+                                   id="mark_x"
+                                   type="text"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="mark_y">Координаты Y</label>
+                            <input name="mark_y" value="{{ $item->mark_y }}"
+                                   id="mark_y"
+                                   type="text"
+                                   class="form-control">
                         </div>
                         <div class="form-check">
                             <input name="is_published"

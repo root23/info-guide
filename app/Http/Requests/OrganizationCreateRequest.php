@@ -27,6 +27,8 @@ class OrganizationCreateRequest extends FormRequest
             'title' =>'required|min:3|max:200|unique:organizations',
             'slug' => 'max:200',
             'category_id' => 'required|integer|exists:organization_categories,id',
+            'content_raw' =>'string|max:10000|min:5',
+            'img' => 'file|mimes:png,jpg,jpeg',
         ];
     }
 
@@ -36,6 +38,7 @@ class OrganizationCreateRequest extends FormRequest
     public function messages() {
         return [
             'title.required' => 'Введите название организации',
+            'content_raw.min' => 'Минимальная длина описания [:min] символов',
         ];
     }
 

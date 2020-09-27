@@ -46,7 +46,7 @@
                             </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="content_raw">Текст статьи (в формате markdown)</label>
+                            <label for="content_raw">Текст статьи</label>
                             <textarea name="content_raw"
                                       id="content_raw"
                                       rows="3"

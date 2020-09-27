@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property \App\Models\Organization $organization
  * @property \App\Models\User $user
+ * @property \App\Models\City $city
  *
  */
 
@@ -21,7 +22,10 @@ class Organization extends Model
 
     const UNKNOWN_USER = 1;
 
-    protected $fillable = ['category_id', 'slug', 'title', 'is_published', 'published_at',];
+    protected $fillable = ['category_id', 'slug', 'title',
+        'is_published', 'published_at', 'user_id', 'city_id',
+        'content_html', 'content_raw', 'img', 'mark_x', 'mark_y',
+        'address', 'phone',];
 
     /**
      * Категория организации
@@ -39,5 +43,14 @@ class Organization extends Model
      */
     public function user() {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Город организации
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function city() {
+        return $this->belongsTo(City::class);
     }
 }

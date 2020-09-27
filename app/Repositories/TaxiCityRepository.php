@@ -95,4 +95,23 @@ class TaxiCityRepository extends CoreRepository
         return $this->startConditions()->find($id);
     }
 
+    /**
+     * @return Collection
+     */
+    public function getForComboBox() {
+        $columns = implode(', ', [
+            'id',
+            'name AS title',
+            'CONCAT (id, ".", name) AS id_title',
+        ]);
+
+        $result = $this
+            ->startConditions()
+            ->selectRaw($columns)
+            ->toBase()
+            ->get();
+
+        return $result;
+    }
+
 }
