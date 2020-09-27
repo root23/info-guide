@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\Organization;
 use App\Models\Organization as Model;
 
 /**
@@ -92,5 +93,12 @@ class OrganizationRepository extends CoreRepository
             ->with(['category', 'user'])
             ->paginate(5);
         return $result;
+    }
+
+    public function getAllOrganizationsForCity($city_id, $category_id) {
+        $organizations = Organization::where(['city_id' => $city_id, 'category_id' => $category_id])
+            ->orderBy('id', 'ASC')
+            ->paginate(10);
+        return $organizations;
     }
 }

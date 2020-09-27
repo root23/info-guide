@@ -23,6 +23,23 @@ Route::group(['namespace' => 'Blog', 'prefix' => 'blog'], function() {
     Route::resource('posts', 'PostController')->names('blog.posts');
 });
 
+// Organizations by category and city -- START --
+Route::get('kompanii/{city}/{category}', 'Organization\OrganizationCategoryController@show')
+    ->name('organizations.show');
+
+
+//$groupData = [
+//    'namespace' => 'Organization',
+//    'prefix' => 'kompanii',
+//];
+//Route::group($groupData, function () {
+//    $methods = ['show'];
+//    Route::resource('city.category', 'OrganizationCategoryController')
+//        ->only($methods)
+//        ->names('organizations');
+//});
+// Organizations by category and city -- END --
+
 // Cities
 Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
     Route::resource('cities', 'CityController')->names('taxi.cities');
