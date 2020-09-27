@@ -236,7 +236,15 @@ return [
             'icon'        => 'fa fa-sitemap',
 //            'label'       => 4,
             'label_color' => 'success',
-            'can'         => 'manage-taxis',
+            'can'         => 'manage-organizations',
+        ],
+        [
+            'text'        => 'Организации',
+            'url'         => 'admin/organizations/organization/',
+            'icon'        => 'fa fa-fire',
+//            'label'       => 4,
+            'label_color' => 'success',
+            'can'         => 'manage-organizations',
         ],
         [
             'text'        => 'Отзывы',
