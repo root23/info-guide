@@ -9,6 +9,7 @@ window._ = require('lodash');
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
+    window.lazyload = require('lazyload');
 
     require('bootstrap');
     require('summernote');

@@ -8,6 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 window.$ = window.jQuery = require('jquery');
+window.lazyload = require('lazyload');
+window.lazy = new lazyload();
 
 /**
  * The following block of code may be used to automatically register your

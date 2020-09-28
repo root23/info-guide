@@ -32,6 +32,7 @@
             s.parentNode.insertBefore(kw, s);
         })();
     </script>
+    <script src="{{ asset('js/lazyload.js') }}" defer></script>
 @endsection
 
 @section('page-meta')

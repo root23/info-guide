@@ -444,7 +444,9 @@ RESPONSIVE
 }
 
 
-
-
-
-
+/* COMPANY LIST -- START -- */
+.item-company-image-col img {
+    width: 100%;
+    max-height: 140px;
+}
+/* COMPANY LIST -- END -- */

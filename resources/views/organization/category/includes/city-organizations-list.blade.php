@@ -1,7 +1,10 @@
 @foreach($organizations as $item)
     <div class="item-company">
         <div class="row justify-content-center">
-            <div class="col-md-9 item-company-right-col">
+            <div class="col-md-3 item-company-image-col">
+                <img class="lazyload" data-src="/uploads/{{ $item->img }}" alt="">
+            </div>
+            <div class="col-md-6 item-company-right-col">
                 <a href="/taxi/taxis/{{ $item->id }}/" class="title">{{ $item->title }}</a>
                 <div class="info">
                     {{ $item->description }}

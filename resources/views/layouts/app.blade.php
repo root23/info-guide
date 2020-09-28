@@ -16,10 +16,7 @@
     <meta name="robots" content="index, follow">
     @yield('page-meta')
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/scripts.js') }}" defer></script>
-    @yield('js-section')
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -66,5 +63,10 @@
             @include('layouts.footer')
         </footer>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/scripts.js') }}" defer></script>
+    @yield('js-section')
 </body>
 </html>
