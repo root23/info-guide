@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Models\City;
 use App\Models\Organization;
 use App\Models\Organization as Model;
 
@@ -32,6 +33,32 @@ class OrganizationRepository extends CoreRepository
                 'is_published' => 1,
             ])
             ->with(['category',])
+            ->get()->first();
+
+        return $result;
+    }
+
+    public function getOrganizationById($id) {
+        $columns = [
+            'id',
+            'title',
+            'phone',
+            'category_id',
+            'user_id',
+            'is_published',
+            'content_raw',
+            'img',
+            'mark_x',
+            'mark_y',
+            'address',
+            'city_id',
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->where('id', $id)
+            ->where('is_published', true)
             ->get()->first();
 
         return $result;
@@ -100,5 +127,9 @@ class OrganizationRepository extends CoreRepository
             ->orderBy('id', 'ASC')
             ->paginate(10);
         return $organizations;
+    }
+
+    public function getCity($city_id) {
+        return City::where('id', $city_id)->get()->first();
     }
 }
