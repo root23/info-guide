@@ -9,7 +9,7 @@
     <span>Добавить</span>
 </div>
 <div class="block-content">
-    <a href="/register/" class="btn-add-taxi"><span><i class="fa fa-taxi"></i>  Добавить такси</span></a>
+    <a href="/register/" class="btn-add-taxi"><span><i class="fa fa-plus-square"></i>  Добавить организацию</span></a>
 </div>
 
 <div class="block-title">

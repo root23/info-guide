@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-md-3 item-company-left-col">
-                <a href="/taxi/taxis/{{ $item->id }}/#reviews-title" class="review">
+                <a href="/kompanii/{{ $item->city->slug }}/{{ $item->category->slug }}/{{ $item->id }}/#reviews-title" class="review">
                     <i class="fa fa-comments"></i> Отзывы
                 </a>
                 <a href="tel:{{ $item->phone }}" class="order-taxi">Позвонить</a>

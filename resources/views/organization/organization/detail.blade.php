@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('page-title')
-    <title itemprop="headline">Такси «{{ $organization->title }}» в г. {{ $city->name }} номер телефона, цены, отзывы &#128661; - {{ config('app.name', 'Laravel') }}</title>
+    <title itemprop="headline">{{ $organization->title }} в г. {{ $city->name }} номер телефона, цены, отзывы &#128661; - {{ config('app.name', 'Laravel') }}</title>
 @endsection
 
 @section('page-meta')
-    <meta name="description" itemprop="description" content="Такси {{ $organization->title }} в {{ $city->name_for_display }}. Цены, отзывы, заказать такси онлайн."/>
+    <meta name="description" itemprop="description" content="{{ $organization->title }} в {{ $city->name_for_display }}. Цены, отзывы."/>
 @endsection
 
 @section('js-section')
@@ -80,7 +80,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8" itemscope itemtype="http://schema.org/Organization">
                 <h1 itemprop="name">{{ $organization->title }}</h1>
-                <p>{{ $organization->title }} работает круглосуточно в городе {{ $city->name_for_display }}. Ниже представлена детальная информация о перевозчике.
+                <p>{{ $organization->title }} в городе {{ $city->name_for_display }}. Ниже представлена детальная информация об организации.
                     Работает по адресу {{ $organization->address }}. Телефон(ы) для связи:
                     <a href="tel:{{ $organization->phone }}">{{ $organization->phone }}</a>
                 </p>
@@ -101,8 +101,6 @@
                         </div>
                     </div>
                 </div>
-
-                <p>Заказать такси можно круглосуточно по телефону, указанному в информации.</p>
 
                 <h2 id="reviews-title">Отзывы</h2>
                 <div class="reviews-wrap">
