@@ -32,6 +32,10 @@ class OrganizationController extends BaseController
         $category = OrganizationCategory::where('slug', $category_slug)->first();
         $city = City::where('slug', $city_slug)->first();
 
+        if (!$organization || !$category || !$city) {
+            abort(404);
+        }
+
         return view('organization.organization.detail')
             ->with('organization', $organization)
             ->with('category', $category)
