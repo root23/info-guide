@@ -58,6 +58,19 @@ Route::group($groupData, function () {
         ->names('taxi.reviews');
 });
 
+// Organization reviews
+Route::get('organization/get_reviews', 'Organization\OrganizationReviewController@search');
+$groupData = [
+    'namespace' => 'Organization',
+    'prefix' => 'organization',
+];
+Route::group($groupData, function () {
+    $methods = ['index', 'store'];
+    Route::resource('reviews', 'OrganizationReviewController')
+        ->only($methods)
+        ->names('organization.reviews');
+});
+
 // Contacts
 $groupData = [
   'namespace' => 'Taxi',

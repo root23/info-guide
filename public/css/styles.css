@@ -450,3 +450,42 @@ RESPONSIVE
     max-height: 140px;
 }
 /* COMPANY LIST -- END -- */
+
+/* Company review rating stars */
+.rating-area {
+    overflow: hidden;
+    margin: 0 auto;
+    float: left;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    padding: 0;
+    cursor: pointer;
+    font-size: 36px;
+    line-height: 50px;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+    content: '';
+}
+.rating-area > input:checked ~ label {
+    color: #FEBB1B;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: #FEBB1B;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+    color: #FEBB1B;
+}
+.rate-area > label:active {
+    position: relative;
+}
