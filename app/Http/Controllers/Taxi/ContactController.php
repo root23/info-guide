@@ -30,9 +30,9 @@ class ContactController extends Controller
 
         if ($item) {
             return redirect()->route('contacts.index', [$item->id])
-                ->with(['success' => "Успешно сохранено"]);
+                ->with(['success' => "Ваше сообщение было успешно отправлено!"]);
         } else {
-            return back()->withErrors(['msg' => 'Ошибка сохранения'])
+            return back()->withErrors(['msg' => 'Ошибка отправки сообщения!'])
                 ->withInput();
         }
     }

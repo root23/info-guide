@@ -7,7 +7,7 @@
             <div class="col-md-6 item-company-right-col">
                 <a href="/kompanii/{{ $item->city->slug }}/{{ $item->category->slug }}/{{ $item->id }}/" class="title">{{ $item->title }}</a>
                 <div class="info">
-                    {{ $item->description }}
+                    {{ strip_tags(Str::limit($item->content_raw, 90)) }}
                 </div>
             </div>
             <div class="col-md-3 item-company-left-col">

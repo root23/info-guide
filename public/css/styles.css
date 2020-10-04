@@ -165,12 +165,14 @@ Main styles
     font-weight: 600;
     text-transform: uppercase;
     color: #36362f;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
 }
 
 .cities-list li a:hover {
     border: none;
-    /*background: #09cc81;*/
-    background: #FEBB1B;;
+    background: #FF6655;
     -webkit-transition: 0.2s linear;
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
@@ -183,6 +185,12 @@ Main styles
 .cities-list li  a .taxi-count {
     color: #777575;
     display: block;
+    -webkit-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+.cities-list li a:hover .taxi-count {
+    color: #36362f;
 }
 
 .city-filter {
@@ -240,6 +248,9 @@ Main styles
     border-color: #FF6655;
     color: #fff;
 }
+.btn-send-contact:hover {
+    color: #fff;
+}
 .confid-politics {
     display: block;
     margin-top: 15px;
@@ -259,6 +270,7 @@ DETAIL CITY PAGE
     border: 1px dotted #8c8a8a;
     padding: 13px 18px;
     margin-bottom: 12px;
+    transition: all .4s;
 }
 .item-company .review {
     color: #1d2124;
@@ -284,10 +296,10 @@ DETAIL CITY PAGE
     align-items: center;
     justify-content: center;
     color: #fff;
-    background-color: #FEBB1B;
+    background-color: #BB8866;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid #FEC33A;
+    border: 1px solid #BB8866;
     border-radius: 5px;
     font-size: 13px;
     font-weight: 700;
@@ -296,11 +308,12 @@ DETAIL CITY PAGE
     padding: 10px;
 }
 .item-company .order-taxi:hover {
-    background: #FF8400;
+    background: #FFF;
+    color: #BB8866;
 }
 .item-company .title {
     font-size: 18px;
-    color: #ff8400;
+    color: #FF6655;
     display: block;
     text-transform: uppercase;
 }
