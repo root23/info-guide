@@ -74,13 +74,13 @@ Route::group($groupData, function () {
 // Contacts
 $groupData = [
   'namespace' => 'Taxi',
-  'prefix' => 'taxi',
+  'prefix' => '',
 ];
 Route::group($groupData, function () {
     $methods = ['index', 'store'];
     Route::resource('contacts', 'ContactController')
         ->only($methods)
-        ->names('taxi.contacts');
+        ->names('contacts');
 });
 
 // About page

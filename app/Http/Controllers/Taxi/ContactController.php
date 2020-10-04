@@ -29,7 +29,7 @@ class ContactController extends Controller
         $item = (new Contact())->create($data);
 
         if ($item) {
-            return redirect()->route('taxi.contacts.index', [$item->id])
+            return redirect()->route('contacts.index', [$item->id])
                 ->with(['success' => "Успешно сохранено"]);
         } else {
             return back()->withErrors(['msg' => 'Ошибка сохранения'])

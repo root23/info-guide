@@ -37,7 +37,7 @@
         @endif
 
         <!-- Форма обратной связи -->
-        <form method="POST" action="{{ route('taxi.contacts.store') }}">
+        <form method="POST" action="{{ route('contacts.store') }}">
             @csrf
             <div class="form-group">
                 <label for="name">Ваше имя</label>

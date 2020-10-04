@@ -10,9 +10,9 @@
                 Разделы
             </div>
             <ul class="footer-menu">
-                <li><a href="#">Контакты</a></li>
+                <li><a href="{{ route('contacts.index') }}/">Контакты</a></li>
                 <li><a href="#">Соглашение</a></li>
-                <li><a href="#">Карта сайта</a></li>
+                <li><a href="/sitemap.xml">Карта сайта</a></li>
             </ul>
         </div>
         <div class="col-md-4">

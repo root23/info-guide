@@ -60,9 +60,9 @@
     <div class="container">
         <div id="menu">
             <ul class="top-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                <li><a itemprop="url" href="/taxi/cities/">Города</a></li>
-                <li><a itemprop="url" href="/blog/posts/">Новости</a></li>
-                <li><a itemprop="url" href="/taxi/contacts/">Контакты</a></li>
+                <li><a itemprop="url" href="/cities/">Города</a></li>
+                <li><a itemprop="url" href="{{ route('blog.posts.index') }}/">Новости</a></li>
+                <li><a itemprop="url" href="{{ route('contacts.index') }}/">Контакты</a></li>
             </ul>
         </div>
     </div>
