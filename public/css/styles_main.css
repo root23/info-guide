@@ -28,7 +28,7 @@ h2 {
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: -3px;
-    border-bottom: 3px solid #FEBB1B;
+    border-bottom: 3px solid #F65;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -54,7 +54,7 @@ h2 {
     text-align: center;
 }
 h3 {
-    color: #fbc318;
+    color: #BB8866;
     font-size: 1.35rem;
 }
 .card-body span {
@@ -79,21 +79,24 @@ h3 {
     width: 50%;
 }
 .btn-business {
-    background: #08c;
+    background: #F0CA05;
+    transition: all .5s;
 }
 .btn-business:hover {
-    background: #069;
+    background: #dab90e;
 }
 .btn-visitors {
-    background: #f60;
+    background: #FF6655;
+    transition: all .5s;
 }
 .btn-visitors:hover {
-    background: #cc5200;
+    background: #B23A2D;
 }
 
 .for-citizen {
     display: block;
     text-align: center;
+    margin-bottom: 20px;
 }
 .h4-centered {
     text-align: center;
@@ -103,6 +106,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
     grid-gap: 15px;
+    margin-top: 20px;
 }
 .categories-item_card_container {
     display: grid;
@@ -128,7 +132,7 @@ h3 {
     text-align: center;
     line-height: 100px;
     font-size: 60px;
-    color: #F65;
+    color: #BB8866;
 }
 .categories-item_name {
     font-size: 16px;
@@ -163,6 +167,9 @@ h3 {
     text-align: justify;
 }
 
+.last-posts {
+    margin-top: 20px;
+}
 .img-thumbnail {
     position: relative;
     display: inline-block;
@@ -177,7 +184,7 @@ h3 {
     color: #b7b7b7;
 }
 .post-title a {
-    color: #fbc318;
+    color: #BB8866;
     text-decoration: none;
     transition: .3s all ease;
 }

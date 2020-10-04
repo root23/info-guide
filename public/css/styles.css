@@ -192,7 +192,7 @@ Main styles
 }
 
 .top-menu-wrap, #menu {
-    background: #FEBB1B;
+    background: #F65;
 }
 .top-menu {
     padding: inherit;
@@ -208,16 +208,19 @@ Main styles
 }
 .top-menu li a {
     padding: 15px 10px;
-    color: white;
     text-transform: uppercase;
     font-weight: 500;
     text-decoration: none;
     width: 100%;
     display: block;
+    color: rgba(255,255,255,0.5);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-.top-menu li:hover {
-    background: #FF8400;
+.top-menu li:hover a{
+    color: #fff;
 }
 
 

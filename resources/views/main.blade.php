@@ -65,13 +65,13 @@
 
     <div class="container">
         <div class="page-nav">
-                <a class="btn-visitors" href="#visitors">Для жителей города</a>
-                <a class="btn-business" href="#business">Для бизнеса</a>
+                <a class="btn-visitors" href="#">Для жителей города</a>
+                <a class="btn-business" href="{{ route('contacts.index') }}/">Для бизнеса</a>
         </div>
     </div>
 
     <div class="container">
-        <h2 class="for-citizen">Для жителей города</h2>
+        <h2 class="for-citizen" id="for-citizen">Для жителей города</h2>
         <h4 class="h4-centered">Выберите категорию</h4>
     </div>
 
@@ -161,7 +161,7 @@
     </div>
 
     <div class="py-4">
-        <div class="container">
+        <div class="container last-posts">
             <h2>Последние статьи</h2>
 
             <div class="row">
