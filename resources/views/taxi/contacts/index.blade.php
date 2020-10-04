@@ -71,8 +71,9 @@
                             </textarea>
             </div>
             <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-            <button type="submit" class="btn btn-primary">Сохранить</button>
-            <a href="#" class="confid-link">Политика конфиденциальности</a>
+            <button type="submit" class="btn btn-send-contact">Отправить</button>
+            <a href="#" class="confid-politics">Политика конфиденциальности</a>
+
         </form>
     </div>
 

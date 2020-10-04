@@ -11,7 +11,7 @@
         </div>
         <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
             <div class="views" itemprop="datePublished">
-                <i class="fa fa-calendar text-info"></i> {{ $item->published_at }}
+                <i class="far fa-calendar text-info"></i> {{ $item->published_at }}
             </div>
             <div class="stats">
                 <i class="fa fa-eye"></i> {{$item->view_count}}

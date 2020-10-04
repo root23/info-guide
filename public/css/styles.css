@@ -18,6 +18,12 @@ Main styles
 .breadcrumb {
     margin-bottom: 25px;
 }
+.breadcrumb-item a {
+    color: #212529 !important;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #F65;
+}
 
 .block-info {
     margin-top: 10px;
@@ -38,7 +44,7 @@ Main styles
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: -3px;
-    border-bottom: 3px solid #FEBB1B;
+    border-bottom: 3px solid #FF6655;
     font-weight: normal;
 }
 
@@ -72,10 +78,10 @@ Main styles
     align-items: center;
     justify-content: center;
     color: #fff;
-    background-color: #FEBB1B;
+    background-color: #F0CA05;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid #FEC33A;
+    border: 1px solid #F0CA05;
     border-radius: 5px;
     font-size: 13px;
     font-weight: 700;
@@ -223,6 +229,25 @@ Main styles
     color: #fff;
 }
 
+/* CONTACTS PAGE */
+.btn-send-contact {
+    width: 50%;
+    height: 60px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #FF6655;
+    border-color: #FF6655;
+    color: #fff;
+}
+.confid-politics {
+    display: block;
+    margin-top: 15px;
+    color: #BB8866;
+}
+.confid-politics:hover {
+    color: #212529;
+}
 
 /*
 DETAIL CITY PAGE
@@ -303,6 +328,21 @@ TAXI DETAIL PAGE
     height: 100%;
 }
 
+/* PAGER */
+.page-item.active .page-link {
+    background-color: #FF6655;
+    color: #fff;
+    border-color: #dee2e6;
+}
+.page-link {
+    color: #b7b7b7;
+    transition: .5s;
+}
+.page-link:hover {
+    background-color: #FF6655;
+    color: #fff;
+}
+
 /*
 FOOTER
  */
@@ -317,7 +357,7 @@ footer a {
     text-decoration: none;
 }
 footer a:hover {
-    color: #FF8400;
+    color: #f9b98e;
     text-decoration: none;
 }
 
@@ -417,6 +457,9 @@ RESPONSIVE
         height: 100%;
         margin: 0;
         padding: 15px;
+    }
+    .btn-send-contact {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 640px) {

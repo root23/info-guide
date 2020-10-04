@@ -174,7 +174,7 @@
                         </a>
                         <h5 class="post-title"><a href="/blog/posts/kupony-kupony-na-transport-i-uslugi">Купоны. Купоны на транспорт и услуги</a></h5>
                         <div class="post-date">
-                            <span><i class="fa fa-calendar"></i> 2020-04-22</span>
+                            <span><i class="far fa-calendar"></i> 2020-04-22</span>
                         </div>
                         <p>
                             С текущим состоянием экономики, потребители начинают тенденцию использования купонов со скидками в большинстве своих покупок. Начиная с наиболее распространенных продуктовых товаров, и продуктов даже для различных видов услуг, потребители теперь используют скидку, когда это возможно.
@@ -190,7 +190,7 @@
                         </a>
                         <h5 class="post-title"><a href="/blog/posts/top-10-vybiraem-avtomobil-dlya-raboty-v-taksi">ТОП 10: Выбираем автомобиль для работы в такси</a></h5>
                         <div class="post-date">
-                            <span><i class="fa fa-calendar"></i> 2020-04-22</span>
+                            <span><i class="far fa-calendar"></i> 2020-04-22</span>
                         </div>
                         <p>
                             Несмотря на кризис и самоизоляцию, пассажирские перевозки не остановились.
@@ -208,7 +208,7 @@
                         </a>
                         <h5 class="post-title"><a href="/blog/posts/servis-yandekstaksi-dobavil-kurerskuyu-dostavku-v-prilozenie">Сервис «Яндекс.Такси» добавил курьерскую доставку в приложение</a></h5>
                         <div class="post-date">
-                            <span><i class="fa fa-calendar"></i> 2020-04-18</span>
+                            <span><i class="far fa-calendar"></i> 2020-04-18</span>
                         </div>
                         <p>
                             Теперь пользователи «Яндекс.Такси» смогут пользоваться услугами курьерской доставки посылок весом до 10 кг. Сама доставка займет от 2 до 3 часов.
