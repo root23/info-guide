@@ -72,13 +72,27 @@
 
     <div class="container">
         <h2 class="for-citizen" id="for-citizen">Для жителей города</h2>
+    </div>
+
+    @if (empty($geo_city))
+        <div class="container">
+            <h4 class="h4-centered">Выберите город</h4>
+            <a href="/cities/" class="search_city">Поиск</a>
+        </div>
+    @endif
+
+    <div class="container">
         <h4 class="h4-centered">Выберите категорию</h4>
     </div>
 
     <div class="container">
         <div class="categories">
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/taxi/cities/{{ $geo_city->slug }}/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-taxi"></i>
                     </span>
@@ -88,7 +102,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/sto/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-wrench"></i>
                     </span>
@@ -98,7 +116,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/medicina/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-user-md"></i>
                     </span>
@@ -108,7 +130,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/restorany/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-utensils"></i>
                     </span>
@@ -118,7 +144,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/sport/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-running"></i>
                     </span>
@@ -128,7 +158,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/magaziny/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-shopping-bag"></i>
                     </span>
@@ -138,7 +172,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/kinoteatry/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-film"></i>
                     </span>
@@ -148,7 +186,11 @@
                 </a>
             </div>
             <div class="categories-item_card">
-                <a href="#" class="categories-item_card_container">
+                @if (!empty($geo_city))
+                    <a href="/kompanii/{{ $geo_city->slug }}/bary-i-kluby/" class="categories-item_card_container">
+                @else
+                    <a href="#" class="categories-item_card_container">
+                @endif
                     <span class="categories-icon">
                         <i class="fa fa-glass-cheers"></i>
                     </span>

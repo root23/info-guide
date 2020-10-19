@@ -420,7 +420,7 @@ Main Page
     font-size: 16px;
 }
 .main-title h1 {
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 .btn-start-search {
@@ -450,6 +450,24 @@ Main Page
     display: block;
     margin: 0 auto;
 }
+.search_city {
+    display: block;
+    line-height: 60px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background: #FF6655;
+    transition: all .5s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.search_city:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #B23A2D;
+}
 
 
 /*
@@ -473,6 +491,12 @@ RESPONSIVE
     }
     .btn-send-contact {
         width: 100%;
+    }
+    .page-nav {
+        flex-direction: column;
+    }
+    .page-nav a {
+        width: 100% !important;
     }
 }
 @media only screen and (max-width: 640px) {
