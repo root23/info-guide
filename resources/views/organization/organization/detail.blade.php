@@ -67,7 +67,10 @@
                 <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-                <a itemprop="item" href="/kompanii/{{ $city->slug }}/"><span itemprop="name">{{ $city->name }}</span></a>
+                <a itemprop="item" href="/cities/"><span itemprop="name">Все города</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/cities/{{ $city->slug }}"><span itemprop="name">{{ $city->name }}</span></a>
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/kompanii/{{ $city->slug }}/{{ $category->slug }}/"><span itemprop="name">{{ $category->title }}</span></a>

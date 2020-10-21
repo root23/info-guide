@@ -46,10 +46,13 @@
                 <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-                <a itemprop="item" href="/taxi/cities/"><span itemprop="name">Все города</span></a>
+                <a itemprop="item" href="/cities/"><span itemprop="name">Все города</span></a>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/cities/{{ $city->slug }}"><span itemprop="name">{{ $city->name }}</span></a>
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
-                <span itemprop="name">{{ $city->name }}</span>
+                <span itemprop="name">{{ $category->title }}</span>
             </li>
         </ul>
         <div class="row justify-content-center">
