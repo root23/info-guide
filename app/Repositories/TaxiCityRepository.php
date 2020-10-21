@@ -57,6 +57,30 @@ class TaxiCityRepository extends CoreRepository
     }
 
     /**
+     * Получить список городов, в которых есть организации
+     * Для страницы /cities/
+     *
+     */
+    public function getAllCitiesWithCompaniesPaginated() {
+        $columns = [
+            'id',
+            'name',
+            'is_for_company',
+            'slug',
+            'name_for_display'
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->where('is_for_company', true)
+            ->orderBy('id', 'ASC')
+            ->paginate(52);
+
+        return $result;
+    }
+
+    /**
      * Метод для живого поиска.
      *
      * @param string $query

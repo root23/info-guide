@@ -50,37 +50,15 @@ class CityController extends BaseController
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Вывод списка городов (для компаний)
+     * @param string $slug
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    public function showCities($slug) {
+        $cities = $this->taxiCityRepository->getAllCitiesWithCompaniesPaginated();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        // TODO:
+        // return view
     }
 
     public function search(Request $request) {
