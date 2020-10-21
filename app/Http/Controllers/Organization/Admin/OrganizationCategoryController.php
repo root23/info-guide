@@ -28,7 +28,7 @@ class OrganizationCategoryController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $paginator = $this->organizationCategoryRepository->getAllWithPaginate(5);
+        $paginator = $this->organizationCategoryRepository->getAllWithPaginate(15);
         return view('organization.admin.category.index', compact('paginator'));
     }
 
