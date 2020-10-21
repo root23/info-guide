@@ -1,17 +1,19 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'AdminLTE')
 
 @section('content_header')
-    <h1>Личный Кабинет</h1>
+    <h1 class="m-0 text-dark">Dashboard</h1>
 @stop
 
 @section('content')
-    <p>Добро пожаловать в панель управления</p>
-@stop
-
-@section('css')
-@stop
-
-@section('js')
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <p class="mb-0">You are logged in!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
