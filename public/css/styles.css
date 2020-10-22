@@ -577,6 +577,8 @@ RESPONSIVE
 /* CITY DETAIL PAGE -- START -- */
 .h4-centered {
     text-align: center;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
 }
 .categories {
     display: grid;
@@ -614,5 +616,9 @@ RESPONSIVE
     font-size: 16px;
     line-height: 100px;
     padding-left: 16px;
+}
+.company-list {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 /* CITY DETAIL PAGE -- END -- */

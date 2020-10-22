@@ -22,4 +22,12 @@ class City extends Model
         $count = Organization::where('city_id', $this->id)->count();
         return $count;
     }
+
+    public function organizationTypeCount($slug) {
+        $category_id = OrganizationCategory::where('slug', $slug)->first()->id;
+        $count = Organization::where('city_id', $this->id)
+            ->where('category_id', $category_id)
+            ->count();
+        return $count;
+    }
 }

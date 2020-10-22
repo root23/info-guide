@@ -65,49 +65,49 @@
                         <div class="categories-item_card">
                             <a href="/taxi/cities/{{ $city->slug }}/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-taxi"></i></span>
-                                <span class="categories-item_name">Такси</span>
+                                <span class="categories-item_name">Такси ({{ $city->taxiCount }})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/sto/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-wrench"></i></span>
-                                <span class="categories-item_name">СТО</span>
+                                <span class="categories-item_name">СТО ({{$city->organizationTypeCount('sto')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/medicina/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-user-md"></i></span>
-                                <span class="categories-item_name">Медицина</span>
+                                <span class="categories-item_name">Медицина ({{$city->organizationTypeCount('medicina')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/restorany/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-utensils"></i></span>
-                                <span class="categories-item_name">Рестораны</span>
+                                <span class="categories-item_name">Рестораны ({{$city->organizationTypeCount('restorany')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/sport/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-running"></i></span>
-                                <span class="categories-item_name">Спорт</span>
+                                <span class="categories-item_name">Спорт ({{$city->organizationTypeCount('sport')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/magaziny/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-shopping-bag"></i></span>
-                                <span class="categories-item_name">Магазины</span>
+                                <span class="categories-item_name">Магазины ({{$city->organizationTypeCount('magaziny')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/kinoteatry/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-film"></i></span>
-                                <span class="categories-item_name">Кинотеатры</span>
+                                <span class="categories-item_name">Кинотеатры ({{$city->organizationTypeCount('kinoteatry')}})</span>
                             </a>
                         </div>
                         <div class="categories-item_card">
                             <a href="/kompanii/{{ $city->slug }}/bary-i-kluby/" class="categories-item_card_container">
                                 <span class="categories-icon"><i class="fa fa-glass-cheers"></i></span>
-                                <span class="categories-item_name">Бары и клубы</span>
+                                <span class="categories-item_name">Бары и клубы ({{$city->organizationTypeCount('bary-i-kluby')}})</span>
                             </a>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
 
                 <div class="company-list">
 
-{{--                    @include('cities.includes.city-companies-list')--}}
+                    <h4 class="h4-centered">Популярные компании в {{ $city->name_for_display }}</h4>
 
                     {!! $city->description !!}
 

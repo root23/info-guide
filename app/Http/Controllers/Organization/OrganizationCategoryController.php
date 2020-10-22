@@ -66,7 +66,7 @@ class OrganizationCategoryController extends BaseController
         $city = City::where('slug', $city_slug)->first();
         $category = OrganizationCategory::where('slug', $category_slug)->first();
 
-        if (!$city || !$category) {
+        if (!$city || !$category || !$city->is_for_company) {
             abort(404);
         }
 
