@@ -70,7 +70,12 @@ class CityController extends BaseController
             ->where('is_for_company', true)
             ->first();
 
-        return view('');
+        if (!$city) {
+            abort(404);
+        }
+
+        return view('cities.detail')
+            ->with('city', $city);
     }
 
     /**

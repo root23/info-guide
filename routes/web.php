@@ -34,7 +34,7 @@ Route::get('kompanii/{city}/{category}/{organization}', 'Organization\Organizati
 // Organization and city -- END --
 
 // Cities with organizations -- START --
-    Route::get('/cities/{city}/', 'Taxi\CityController@showCities')
+    Route::get('/cities/{city}/', 'Taxi\CityController@showCity')
         ->name('city.show');
     Route::get('/cities/', 'Taxi\CityController@showCities')
         ->name('cities.show');
