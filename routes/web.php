@@ -33,6 +33,13 @@ Route::get('kompanii/{city}/{category}/{organization}', 'Organization\Organizati
     ->name('organization.show');
 // Organization and city -- END --
 
+// Cities with organizations -- START --
+    Route::get('/cities/{city}/', 'Taxi\CityController@showCities')
+        ->name('city.show');
+    Route::get('/cities/', 'Taxi\CityController@showCities')
+        ->name('cities.show');
+// Cities with organizations -- END --
+
 // Cities
 Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
     Route::resource('cities', 'CityController')->names('taxi.cities');
@@ -165,9 +172,3 @@ Route::get('/sitemaps/main.xml', 'SitemapController@main');
 route::get('/sitemaps/cities.xml', 'SitemapController@cities');
 route::get('/sitemaps/posts.xml', 'SitemapController@posts');
 route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
-
-Auth::routes();
-
-Route::get('/home', function() {
-    return view('home');
-})->name('home')->middleware('auth');

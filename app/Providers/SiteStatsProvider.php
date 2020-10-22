@@ -31,7 +31,7 @@ class SiteStatsProvider extends ServiceProvider
     }
 
     public function get_stats() {
-        View::composer(['taxi.cities.includes.right-col-default', 'organization.category.includes.right-col-default'], function($view) {
+        View::composer(['taxi.cities.includes.right-col-default', 'organization.category.includes.right-col-default', 'cities.includes.right-col-default'], function($view) {
             $cites_count = City::count();
             $taxis_count = Taxi::count();
             $reviews_count = Review::count();

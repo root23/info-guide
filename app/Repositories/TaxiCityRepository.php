@@ -85,19 +85,28 @@ class TaxiCityRepository extends CoreRepository
      *
      * @param string $query
      */
-    public function getSearchCities($query) {
+    public function getSearchCities($query, $is_for_company=false) {
         $columns = [
             'id',
             'name',
             'slug',
             'name_for_display',
+            'is_for_company',
         ];
-
-        $result = $this
-            ->startConditions()
-            ->select($columns)
-            ->where('name', 'LIKE', '%'.$query.'%')
-            ->paginate(52);
+        if ($is_for_company) {
+            $result = $this
+                ->startConditions()
+                ->select($columns)
+                ->where('name', 'LIKE', '%'.$query.'%')
+                ->where('is_for_company', $is_for_company)
+                ->paginate(52);
+        } else {
+            $result = $this
+                ->startConditions()
+                ->select($columns)
+                ->where('name', 'LIKE', '%'.$query.'%')
+                ->paginate(52);
+        }
 
         return $result;
     }

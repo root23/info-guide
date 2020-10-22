@@ -51,21 +51,42 @@ class CityController extends BaseController
 
     /**
      * Вывод списка городов (для компаний)
-     * @param string $slug
      *
      */
-    public function showCities($slug) {
-        $cities = $this->taxiCityRepository->getAllCitiesWithCompaniesPaginated();
-
-        // TODO:
-        // return view
+    public function showCities() {
+        $paginator = $this->taxiCityRepository->getAllCitiesWithCompaniesPaginated();
+        return view('cities.index')
+            ->with('paginator', $paginator);
     }
 
+    /**
+     * Детальная информация о городе (для компаний)
+     *
+     * @param $slug
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showCity($slug) {
+        $city = City::where('slug', $slug)
+            ->where('is_for_company', true)
+            ->first();
+
+        return view('');
+    }
+
+    /**
+     * @param Request $request
+     * @return array|string
+     * @throws \Throwable
+     */
     public function search(Request $request) {
         if ($request->ajax()) {
             $query = $request->get('query');
-            $paginator = $this->taxiCityRepository->getSearchCities($query);
-            return view('taxi.cities.includes.loaded')
+            $is_for_company = $request->get('is_for_company');
+            $paginator = $this->taxiCityRepository->getSearchCities($query, $is_for_company);
+
+            $view = $is_for_company ? 'cities.includes.loaded' : 'taxi.cities.includes.loaded';
+
+            return view($view)
                 ->with('paginator', $paginator)->render();
         }
     }
