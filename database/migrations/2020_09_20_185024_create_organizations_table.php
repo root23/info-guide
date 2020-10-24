@@ -19,7 +19,7 @@ class CreateOrganizationsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->integer('user_id')->unsigned();
 
-            $table->string('slug')->unique();
+            $table->string('slug');
             $table->string('title');
 
             $table->boolean('is_published')->default(false);

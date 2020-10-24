@@ -24,7 +24,7 @@ class OrganizationCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' =>'required|min:3|max:200|unique:organizations',
+            'title' =>'required|min:3|max:200',
             'slug' => 'max:200',
             'category_id' => 'required|integer|exists:organization_categories,id',
             'content_raw' =>'string|max:10000|min:5',

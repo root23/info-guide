@@ -37,7 +37,10 @@ class OrganizationObserver
      * @param Organization $organization
      */
     protected function setSlug(Organization $organization) {
-        $organization->slug = Str::slug($organization->title);
+        $slug = Str::slug($organization->title);
+        $count = Organization::where('slug', 'LIKE', "{$slug}%")->count();
+        $newCount = $count > 0 ? ++$count : '';
+        $organization->slug = $newCount > 0 ? "$slug-$newCount" : $slug;
     }
 
     /**
