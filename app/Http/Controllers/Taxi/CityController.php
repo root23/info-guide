@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Taxi;
 
 use App\Http\Controllers\Blog\BaseController;
 use App\Models\City;
+use App\Repositories\OrganizationRepository;
 use Illuminate\Http\Request;
 use App\Repositories\TaxiCityRepository;
 use Illuminate\Support\Facades\DB;
@@ -21,10 +22,16 @@ class CityController extends BaseController
      */
     private $taxiCityRepository;
 
+    /**
+     * @var OrganizationRepository
+     */
+    private $organizationRepository;
+
     public function __construct() {
         parent::__construct();
 
         $this->taxiCityRepository = app(TaxiCityRepository::class);
+        $this->organizationRepository = app(OrganizationRepository::class);
     }
 
     public function index()
@@ -70,12 +77,15 @@ class CityController extends BaseController
             ->where('is_for_company', true)
             ->first();
 
+        $top_organizations = $this->organizationRepository->getTopOrganizationsForCity($slug);
+
         if (!$city) {
             abort(404);
         }
 
         return view('cities.detail')
-            ->with('city', $city);
+            ->with('city', $city)
+            ->with('top_organizations', $top_organizations);
     }
 
     /**

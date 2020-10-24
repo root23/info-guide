@@ -53,4 +53,14 @@ class Organization extends Model
     public function city() {
         return $this->belongsTo(City::class);
     }
+
+    /**
+     * Отзывы об Организации
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function reviews() {
+        return $this->hasMany(OrganizationReview::class);
+    }
+
 }

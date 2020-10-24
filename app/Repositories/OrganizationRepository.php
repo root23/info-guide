@@ -101,6 +101,37 @@ class OrganizationRepository extends CoreRepository
         return $this->startConditions()->find($id);
     }
 
+    /**
+     * Возвращает топ-3 самых комментируемых организаций в городе (без зависимости от средней оценки)
+     *
+     * @param $city_slug
+     * @param int $limit
+     * @return mixed
+     */
+    public function getTopOrganizationsForCity($city_slug, $limit = 3) {
+        $columns = [
+            'id',
+            'slug',
+            'title',
+            'is_published',
+            'img',
+            'city_id',
+        ];
+
+        $city = City::where('slug', $city_slug)->first();
+
+        $result = $this->startConditions()
+            ->select($columns)
+            ->where('is_published', 1)
+            ->where('city_id', $city->id)
+            ->has('reviews')
+            ->withCount('reviews')
+            ->orderBy('reviews_count', 'desc')
+            ->take(3)
+            ->get();
+        return $result;
+    }
+
     public function getAllForIndexPage() {
         $columns = [
             'id',
