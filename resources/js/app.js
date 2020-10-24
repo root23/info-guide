@@ -11,6 +11,7 @@ window.$ = window.jQuery = require('jquery');
 window.lazyload = require('lazyload');
 window.lazy = new lazyload();
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

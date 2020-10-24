@@ -33,6 +33,7 @@
         })();
     </script>
     <script src="{{asset('js/city_detail.js')}}"></script>
+    <script src="{{asset('js/lazyload.js')}}"></script>
 @endsection
 
 @section('page-meta')
@@ -113,16 +114,15 @@
                     </div>
                 </div>
 
-                <div class="company-list">
-
+                <div class="container">
                     <h4 class="h4-centered">Популярные компании в {{ $city->name_for_display }}</h4>
 
+                    @include('cities.includes.top-organizations')
+
                     {!! $city->description !!}
-
                 </div>
-
-
             </div>
+
             <div class="col-md-4">
                 @include('cities.includes.right-col-default')
             </div>

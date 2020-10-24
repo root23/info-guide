@@ -621,4 +621,32 @@ RESPONSIVE
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
+
+.top-organizations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-bottom: 1.5em;
+    grid-gap: 5px;
+}
+.top-organizations > .organization-item {
+    border: 1px dotted #8c8a8a;
+    padding: 13px 18px;
+}
+.top-organizations > .organization-item > a {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+.top-organizations > .organization-item > a > img.lazyload {
+    display: inline-block;
+    width: 125px;
+}
+.top-organizations > .organization-item > a > span {
+    font-size: 14px;
+    color: #FF6655;
+    display: block;
+    text-transform: uppercase;
+}
+.top-organizations > .organization-item > a:hover {
+    color: #FF6655;
+}
 /* CITY DETAIL PAGE -- END -- */

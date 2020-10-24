@@ -17,3 +17,8 @@ mix.js('resources/js/app.js', 'public/js')
         jquery: ['$', 'window.jQuery', 'jQuery'],
     })
    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/lazyload.js', 'public/js')
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery'],
+        lazyload: ['lazyload', 'LazyLoad'],
+    });

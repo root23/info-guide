@@ -64,6 +64,33 @@ class OrganizationRepository extends CoreRepository
         return $result;
     }
 
+    public function getOrganizationBySlug($slug) {
+        $columns = [
+            'id',
+            'title',
+            'phone',
+            'category_id',
+            'user_id',
+            'is_published',
+            'content_raw',
+            'img',
+            'mark_x',
+            'mark_y',
+            'address',
+            'city_id',
+            'slug',
+        ];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->where('slug', $slug)
+            ->where('is_published', true)
+            ->get()->first();
+
+        return $result;
+    }
+
     /**
      * Получить список организаций для вывода в списке
      * Админ-панель
@@ -108,7 +135,7 @@ class OrganizationRepository extends CoreRepository
      * @param int $limit
      * @return mixed
      */
-    public function getTopOrganizationsForCity($city_slug, $limit = 3) {
+    public function getTopOrganizationsForCity($city_slug, $limit = 4) {
         $columns = [
             'id',
             'slug',
@@ -116,18 +143,18 @@ class OrganizationRepository extends CoreRepository
             'is_published',
             'img',
             'city_id',
+            'category_id',
         ];
 
         $city = City::where('slug', $city_slug)->first();
 
         $result = $this->startConditions()
             ->select($columns)
-            ->where('is_published', 1)
             ->where('city_id', $city->id)
             ->has('reviews')
             ->withCount('reviews')
             ->orderBy('reviews_count', 'desc')
-            ->take(3)
+            ->take($limit)
             ->get();
         return $result;
     }

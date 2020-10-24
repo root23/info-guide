@@ -26,9 +26,9 @@ class OrganizationController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($city_slug, $category_slug, $organization_id)
+    public function show($city_slug, $category_slug, $organization_slug)
     {
-        $organization = $this->organizationRepository->getOrganizationById($organization_id);
+        $organization = $this->organizationRepository->getOrganizationBySlug($organization_slug);
         $category = OrganizationCategory::where('slug', $category_slug)->first();
         $city = City::where('slug', $city_slug)->first();
 
