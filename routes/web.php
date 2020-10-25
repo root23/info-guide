@@ -46,6 +46,8 @@ Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {
 });
 // Cities live search
 Route::get('taxi/search_city', 'Taxi\CityController@search');
+// Cities set cookie
+Route::get('taxi/set_city_cookie', 'Taxi\CityController@setCityCookie');
 
 // Taxis
 Route::group(['namespace' => 'Taxi', 'prefix' => 'taxi'], function () {

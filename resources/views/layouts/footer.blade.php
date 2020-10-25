@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5">
-            <p> &copy 2020 Справочник номеров такси в городах России</p>
-            <p>Материалы на сайте могут не соответствовать действительности. Проект собирает актуальную базу телефонов такси в регионах России.</p>
+            <p> &copy 2020 Справочник городских услуг в городах России</p>
+            <p>Материалы на сайте могут не соответствовать действительности. Проект собирает актуальную базу об организациях в регионах России.</p>
             <p style="text-align: left !important;"> Размещение рекламы и актуализация данных: <a href="mailto:support@info-guide.ru">support@info-guide.ru</a> </p>
         </div>
         <div class="col-md-3">
@@ -20,12 +20,12 @@
                 Города
             </div>
             <ul class="footer-cities">
-                <li><a href="/taxi/cities/moskva/">Москва</a> </li>
-                <li><a href="/taxi/cities/sankt-peterburg/">Санкт-Петербург</a> </li>
-                <li><a href="/taxi/cities/ekaterinburg/">Екатеринбург</a> </li>
-                <li><a href="/taxi/cities/novosibirsk/">Новосибирск</a> </li>
-                <li><a href="/taxi/cities/nizhnii-novgorod/">Нижний Новгород</a> </li>
-                <li><a href="/taxi/cities/kazan/">Казань</a> </li>
+                <li><a href="/cities/moskva/">Москва</a> </li>
+                <li><a href="/cities/sankt-peterburg/">Санкт-Петербург</a> </li>
+                <li><a href="/cities/ekaterinburg/">Екатеринбург</a> </li>
+                <li><a href="/cities/novosibirsk/">Новосибирск</a> </li>
+                <li><a href="/cities/nizhnii-novgorod/">Нижний Новгород</a> </li>
+                <li><a href="/cities/kazan/">Казань</a> </li>
             </ul>
             <!--LiveInternet counter--><script type="application/javascript">
                 document.write('<a href="//www.liveinternet.ru/click" '+

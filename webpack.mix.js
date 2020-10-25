@@ -22,3 +22,7 @@ mix.js('resources/js/lazyload.js', 'public/js')
         jquery: ['$', 'window.jQuery', 'jQuery'],
         lazyload: ['lazyload', 'LazyLoad'],
     });
+mix.js('resources/js/city.js', 'public/js')
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery'],
+    });

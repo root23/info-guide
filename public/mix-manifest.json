@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/city.js": "/js/city.js",
     "/js/city_detail.js": "/js/city_detail.js",
     "/js/lazyload.js": "/js/lazyload.js"
 }

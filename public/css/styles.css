@@ -518,7 +518,7 @@ RESPONSIVE
         width: 50%;
     }
     .cities-list li a {
-        padding: 25px 20px 25px 0;
+        padding: 25px 20px 25px 20px;
     }
 
     .item-company-right-col .title {
@@ -650,3 +650,55 @@ RESPONSIVE
     color: #FF6655;
 }
 /* CITY DETAIL PAGE -- END -- */
+
+/* GEO POP-UP -- START -- */
+#geoApproveModal {
+    top: 15em;
+}
+#geoApproveModal .modal-header {
+    border-bottom: none;
+    padding: 0 1rem;
+}
+#geoApproveModal .modal-header > button > span {
+    font-size: 40px;
+}
+
+#geoApproveModal .modal-body {
+    text-align: center;
+}
+#geoApproveModal .modal-body > span {
+    display: block;
+    color: #616161;
+}
+#geoApproveModal .modal-body > .your_city-q {
+    font-size: 1.7em;
+}
+#geoApproveModal .modal-body > .your_city-n {
+    font-size: 1.9em;
+}
+
+#geoApproveModal .modal-footer {
+    border-top: none;
+}
+#geoApproveModal .modal-footer > button {
+    width: 100%;
+    text-transform: uppercase;
+    border-color: rgba(97, 97, 97, 0.2);
+    border-radius: 0;
+    font-size: 1.1em;
+}
+#geoApproveModal .modal-footer > button:hover {
+    border-color: rgba(97, 97, 97, 0.5);
+}
+#geoApproveModal .modal-footer > .btn-approve_city {
+    background: #F65;
+    color: #fff;
+}
+#geoApproveModal .modal-footer > .btn-show_city_list {
+    background: #fff;
+    color: #616161;
+}
+#geoApproveModal .modal-footer > .btn-show_city_list:hover {
+    color: #000000;
+}
+/* GEO POP-UP -- END -- */

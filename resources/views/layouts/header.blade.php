@@ -19,7 +19,7 @@
             <ul class="navbar-nav ml-auto">
                 @if (!empty($geo_city))
                     <li class="nav-item">
-                        <a class="nav-link" href="/taxi/cities/{{ $geo_city->slug }}"><i class="fa fa-map-pin"></i> {{ $geo_city->name }}</a>
+                        <a class="nav-link nav-city" id="nav-city" data-toggle="modal" data-target="#geoApproveModal" href="#"><i class="fa fa-map-pin"></i> {{ $geo_city->name }}</a>
                     </li>
                 @endif
             <!-- Authentication Links -->

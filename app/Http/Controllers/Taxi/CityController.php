@@ -8,6 +8,7 @@ use App\Repositories\OrganizationRepository;
 use Illuminate\Http\Request;
 use App\Repositories\TaxiCityRepository;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 
 class CityController extends BaseController
 {
@@ -103,6 +104,14 @@ class CityController extends BaseController
 
             return view($view)
                 ->with('paginator', $paginator)->render();
+        }
+    }
+
+    public function setCityCookie(Request $request) {
+        if ($request->ajax()) {
+            $cookie = $request->get('city_cookie');
+            Cookie::make('user_city_id', $cookie, 120);
+            dd(Cookie::get('user_city_id'));
         }
     }
 

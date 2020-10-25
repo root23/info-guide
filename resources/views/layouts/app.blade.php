@@ -49,9 +49,46 @@
         gtag('config', 'UA-155358984-1');
     </script>
 
+    <script>
+        @if (!empty($geo_city))
+            window.user_city_id = '{{ $geo_city->id }}';
+        @endif
+    </script>
+
+    <script src="{{ asset('js/city.js') }}"></script>
+
 </head>
 <body>
     <div id="app">
+        <div class="modal fade" id="geoApproveModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @if ($geo_city->is_for_company)
+                            <span class="your_city-q">Ваш город:</span>
+                            <span class="your_city-n"><b>{{ $geo_city->name }}</b></span>
+                        @else
+                            <span class="your_city-q">Не удалось автоматически определить Ваш город.</span>
+                            <span class="your_city-n"><b>Выберите из списка</b></span>
+                        @endif
+                    </div>
+                    <div class="modal-footer">
+                        @if ($geo_city->is_for_company)
+                            <button type="button" class="btn btn-secondary btn-approve_city" data-dismiss="modal">Да</button>
+                            <button type="button" class="btn btn-primary btn-show_city_list" onclick="window.location.href='/cities/';">Нет, выбрать из списка</button>
+                        @else
+                            <button type="button" class="btn btn-primary btn-show_city_list" onclick="window.location.href='/cities/';">Выбрать из списка</button>
+                        @endif
+
+                    </div>
+                </div>
+            </div>
+        </div>
         @include('layouts.header')
         <main class="py-4">
             @yield('content')
