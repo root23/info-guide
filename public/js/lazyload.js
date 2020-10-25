@@ -10979,6 +10979,8 @@ return jQuery;
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
   $('img.lazyload').lazyload;
+  $('.pagination').addClass('justify-content-center');
+  $('.pagination').addClass('flex-wrap');
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
