@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('js-section')
-    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/main_slider.js') }}"></script>
 @endsection
 @section('css-section')
@@ -260,8 +259,4 @@
     </div>
 
 
-@endsection
-
-@section('js')
-    <script src="{{ asset('js/main_slider.js') }}"></script>
 @endsection
