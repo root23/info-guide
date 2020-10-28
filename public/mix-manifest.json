@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/js/city.js": "/js/city.js",
     "/js/city_detail.js": "/js/city_detail.js",
-    "/js/lazyload.js": "/js/lazyload.js"
+    "/js/lazyload.js": "/js/lazyload.js",
+    "/js/main_slider.js": "/js/main_slider.js"
 }

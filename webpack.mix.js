@@ -26,3 +26,7 @@ mix.js('resources/js/city.js', 'public/js')
     .autoload({
         jquery: ['$', 'window.jQuery', 'jQuery'],
     });
+mix.js('resources/js/main_slider.js', 'public/js')
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery'],
+    });
