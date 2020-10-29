@@ -1,3 +1,5 @@
+<script type="application/javascript" src="{{ asset('js/city.js') }}"></script>
+
 <ul class="cities-list">
     @foreach($paginator as $city)
         <li class="item-city"><a href="/cities/{{ $city->slug }}/">
