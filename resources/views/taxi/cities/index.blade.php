@@ -31,6 +31,7 @@
             s.parentNode.insertBefore(kw, s);
         })();
     </script>
+    <script src="{{ asset('js/live_search.js') }}"></script>
 @endsection
 
 @section('content')

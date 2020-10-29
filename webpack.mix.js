@@ -30,3 +30,7 @@ mix.js('resources/js/main_slider.js', 'public/js')
     .autoload({
         jquery: ['$', 'window.jQuery', 'jQuery'],
     });
+mix.js('resources/js/live_search.js', 'public/js')
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery'],
+    });
