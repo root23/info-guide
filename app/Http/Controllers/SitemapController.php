@@ -6,14 +6,14 @@ use App\Models\BlogPost;
 use App\Models\City;
 use App\Models\Organization;
 use App\Models\Taxi;
-use Illuminate\Http\Request;
 
 class SitemapController extends Controller
 {
     public function sitemap() {
         $blog_posts = BlogPost::select('*')->orderBy('updated_at', 'desc')->first();
         $taxi = Taxi::select('*')->orderBy('updated_at', 'desc')->first();
-        return response()->view('sitemap', compact(['blog_posts', 'taxi']))
+        $organization = Organization::select('updated_at')->orderBy('updated_at', 'desc')->first();
+        return response()->view('sitemap', compact(['blog_posts', 'taxi', 'organization']))
             ->header('Content-Type', 'text/xml');
     }
 

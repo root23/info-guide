@@ -19,5 +19,11 @@
             <lastmod>{{ $taxi->updated_at->tz('UTC')->toAtomString() }}</lastmod>
         </sitemap>
     @endfor
+    @for ($i = 0; $i <=1; $i++)
+        <sitemap>
+            <loc>https://info-guide.ru/sitemaps/organizations{{ $i }}.xml</loc>
+            <lastmod>{{ $organization->updated_at->tz('UTC')->toAtomString() }}</lastmod>
+        </sitemap>
+    @endfor
 
 </sitemapindex>
