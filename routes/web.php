@@ -174,3 +174,4 @@ Route::get('/sitemaps/main.xml', 'SitemapController@main');
 route::get('/sitemaps/cities.xml', 'SitemapController@cities');
 route::get('/sitemaps/posts.xml', 'SitemapController@posts');
 route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
+route::get('/sitemaps/organizations{i}.xml', 'SitemapController@cityOrganizations');

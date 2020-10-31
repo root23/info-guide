@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
 use App\Models\City;
+use App\Models\Organization;
 use App\Models\Taxi;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,14 @@ class SitemapController extends Controller
             ->offset($i * 1000)->limit(1000)
             ->get();
         return response()->view('sitemaps.taxis', compact('taxis'))
+            ->header('Content-Type', 'text/xml');
+    }
+
+    public function cityOrganizations($i) {
+        $organizations = Organization::select('slug', 'updated_at', 'category_id', 'city_id')->orderBy('updated_at', 'desc')
+            ->offset($i * 1000)->limit(1000)
+            ->get();
+        return response()->view('sitemaps.organizations', compact('organizations'))
             ->header('Content-Type', 'text/xml');
     }
 }
