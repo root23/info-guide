@@ -62,6 +62,28 @@
 
                 <div class="company-list">
 
+                    @if ($category->title == 'Медицина')
+                        <div class="item-company">
+                            <div class="row justify-content-center">
+                                <div class="col-md-3 item-company-image-col">
+                                    <img class="lazyload" data-src="/img/docdoc.jpg" alt="">
+                                </div>
+                                <div class="col-md-6 item-company-right-col">
+                                    <a href="https://bit.ly/31Y2vtz" class="title">Docdoc</a>
+                                    <div class="info">
+                                        {{ strip_tags(Str::limit('DocDoc – это быстрый и удобный online-сервис по поиску врачей. Сервис DocDoc появился в декабре 2011 года в Москве. Портал оказывает услуги по подбору врачей из клиник Москвы, Московской области и Санкт-Петербурга. DocDoc помогает людям найти нужного специалиста, основываясь на отзывах и квалификации врача, а также оперативно записаться к нему на прием в удобное время.', 90)) }}
+                                    </div>
+                                </div>
+                                <div class="col-md-3 item-company-left-col">
+                                    <a href="https://docdoc.ru/about/press" class="review">
+                                        <i class="fa fa-comments"></i> Отзывы
+                                    </a>
+                                    <a href="tel:88001003598" class="order-taxi">Позвонить</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
                     @include('organization.category.includes.city-organizations-list')
                     {!! $city->description !!}
 
