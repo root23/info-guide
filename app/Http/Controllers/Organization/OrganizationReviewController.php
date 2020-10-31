@@ -20,18 +20,9 @@ class OrganizationReviewController extends BaseController
 
         $this->reviewRepository = app(OrganizationReviewRepository::class);
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
-     * Store a newly created resource in storage.
+     * Добавление нового отзыва
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -50,6 +41,8 @@ class OrganizationReviewController extends BaseController
     }
 
     /**
+     * Поиск отзывов для организации
+     *
      * @param Request $request
      * @return array|string
      * @throws \Throwable
