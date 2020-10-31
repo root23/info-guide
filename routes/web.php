@@ -172,6 +172,7 @@ Route::group($groupData, function (){
 Route::get('sitemap.xml', 'SitemapController@sitemap');
 Route::get('/sitemaps/main.xml', 'SitemapController@main');
 route::get('/sitemaps/cities.xml', 'SitemapController@cities');
+route::get('/sitemaps/detail_cities.xml', 'SitemapController@citiesDetail');
 route::get('/sitemaps/posts.xml', 'SitemapController@posts');
 route::get('/sitemaps/taxis{i}.xml', 'SitemapController@taxis');
 route::get('/sitemaps/organizations{i}.xml', 'SitemapController@cityOrganizations');

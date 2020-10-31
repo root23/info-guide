@@ -49,4 +49,13 @@ class SitemapController extends Controller
         return response()->view('sitemaps.organizations', compact('organizations'))
             ->header('Content-Type', 'text/xml');
     }
+
+    public function citiesDetail() {
+        $cities = City::select('slug', 'is_for_company', 'updated_at')
+            ->where('is_for_company', true)
+            ->get();
+        return response()->view('sitemaps.detail_cities', compact('cities'))
+            ->header('Content-Type', 'text/xml');
+    }
+
 }
