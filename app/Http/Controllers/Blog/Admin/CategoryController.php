@@ -6,7 +6,6 @@ use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Models\BlogCategory;
 use App\Repositories\BlogCategoryRepository;
-use Gate;
 
 /**
  * Управление категориями блога
@@ -26,14 +25,18 @@ class CategoryController extends BaseController
     }
 
     /**
+     * Вывод всех категорий
      * @return \Illuminate\Http\Response
      */
     public function index() {
-//        $paginator = BlogCategory::paginate(10);
         $paginator = $this->blogCategoryRepository->getAllWithPaginate(5);
         return view('blog.admin.category.index', compact('paginator'));
     }
 
+    /**
+     * Создание новой категории
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
         $item = new BlogCategory();
@@ -42,6 +45,12 @@ class CategoryController extends BaseController
         return view('blog.admin.category.edit', ['categoryList' => $categoryList, 'item' => $item]);
     }
 
+    /**
+     * Сохранение категории
+     *
+     * @param BlogCategoryCreateRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(BlogCategoryCreateRequest $request) {
         $data = $request->input();
 
@@ -57,12 +66,8 @@ class CategoryController extends BaseController
         }
     }
 
-    public function show($id)
-    {
-        dd(__METHOD__);
-    }
-
     /**
+     * Открывает категорию на редактирование
      * @param int $id
      * @param BlogCategoryRepository $categoryRepository
      * @return \Illuminate\Http\Response
@@ -79,6 +84,13 @@ class CategoryController extends BaseController
         compact('item', 'categoryList'));
     }
 
+    /**
+     * Обновление категории
+     *
+     * @param BlogCategoryUpdateRequest $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function update(BlogCategoryUpdateRequest $request, $id) {
         $item = BlogCategory::find($id);
         if (empty($item)) {
@@ -105,8 +117,4 @@ class CategoryController extends BaseController
         }
     }
 
-    public function destroy($id)
-    {
-        dd(__METHOD__);
-    }
 }

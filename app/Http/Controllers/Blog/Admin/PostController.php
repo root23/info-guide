@@ -33,7 +33,7 @@ class PostController extends BaseController
     }
 
     /**
-     * Display a listing of the resource.
+     * Вывод всех постов
      *
      * @return \Illuminate\Http\Response
      */
@@ -45,7 +45,7 @@ class PostController extends BaseController
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Вывод формы создания нового поста
      *
      * @return \Illuminate\Http\Response
      */
@@ -58,7 +58,7 @@ class PostController extends BaseController
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохранение нового поста
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -84,18 +84,7 @@ class PostController extends BaseController
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * Вывод формы редактирования поста
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -113,7 +102,7 @@ class PostController extends BaseController
     }
 
     /**
-     * Update the specified resource in storage.
+     * Обновление поста
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -150,16 +139,5 @@ class PostController extends BaseController
                 ->withErrors(['msg' => 'Ошибка сохранения'])
                 ->withInput();
         }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        dd(__METHOD__, $id, request()->all());
     }
 }
