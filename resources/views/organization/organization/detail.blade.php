@@ -65,18 +65,23 @@
         <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/cities/"><span itemprop="name">Все города</span></a>
+                <meta itemprop="position" content="2" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/cities/{{ $city->slug }}"><span itemprop="name">{{ $city->name }}</span></a>
+                <meta itemprop="position" content="3" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/kompanii/{{ $city->slug }}/{{ $category->slug }}/"><span itemprop="name">{{ $category->title }}</span></a>
+                <meta itemprop="position" content="4" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
                 <span itemprop="name">{{ $organization->title }}</span>
+                <meta itemprop="position" content="5" />
             </li>
         </ul>
 

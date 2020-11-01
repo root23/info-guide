@@ -34,12 +34,15 @@
         <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/blog/posts/"><span itemprop="name">Статьи</span></a>
+                <meta itemprop="position" content="2" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
                 <span itemprop="name">{{ $item->title }}</span>
+                <meta itemprop="position" content="3" />
             </li>
         </ul>
 

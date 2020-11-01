@@ -18,9 +18,15 @@
 
 @section('content')
     <div class="container cities-title">
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item active">Контакты</li>
+        <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+                <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
+                <span itemprop="name">Контакты</span>
+                <meta itemprop="position" content="2" />
+            </li>
         </ul>
 
         @if (session('success'))

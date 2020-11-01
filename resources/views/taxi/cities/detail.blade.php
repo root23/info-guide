@@ -44,12 +44,15 @@
         <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/"><span itemprop="name">Главная</span></a>
+                <meta itemprop="position" content="1" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
                 <a itemprop="item" href="/taxi/cities/"><span itemprop="name">Все города</span></a>
+                <meta itemprop="position" content="2" />
             </li>
             <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item active">
                 <span itemprop="name">{{ $city->name }}</span>
+                <meta itemprop="position" content="3" />
             </li>
         </ul>
         <div class="row justify-content-center">
