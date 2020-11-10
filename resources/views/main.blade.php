@@ -204,56 +204,22 @@
             <h2>Последние статьи</h2>
 
             <div class="row">
-                <div class="col-md-4">
-                    <article class="blog-post">
-                        <a href="/blog/posts/kupony-kupony-na-transport-i-uslugi" class="thumbnail-default">
-                            <figure>
-                                <img src="https://info-guide.ru/uploads/1587578286.png" alt="Купоны. Купоны на транспорт и услуги">
-                            </figure>
-                        </a>
-                        <h5 class="post-title"><a href="/blog/posts/kupony-kupony-na-transport-i-uslugi">Купоны. Купоны на транспорт и услуги</a></h5>
-                        <div class="post-date">
-                            <span><i class="far fa-calendar"></i> 2020-04-22</span>
-                        </div>
-                        <p>
-                            С текущим состоянием экономики, потребители начинают тенденцию использования купонов со скидками в большинстве своих покупок. Начиная с наиболее распространенных продуктовых товаров, и продуктов даже для различных видов услуг, потребители теперь используют скидку, когда это возможно.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="blog-post">
-                        <a href="/blog/posts/top-10-vybiraem-avtomobil-dlya-raboty-v-taksi" class="thumbnail-default">
-                            <figure>
-                                <img src="https://info-guide.ru/uploads/1587576710.jpeg" alt="ТОП 10: Выбираем автомобиль для работы в такси">
-                            </figure>
-                        </a>
-                        <h5 class="post-title"><a href="/blog/posts/top-10-vybiraem-avtomobil-dlya-raboty-v-taksi">ТОП 10: Выбираем автомобиль для работы в такси</a></h5>
-                        <div class="post-date">
-                            <span><i class="far fa-calendar"></i> 2020-04-22</span>
-                        </div>
-                        <p>
-                            Несмотря на кризис и самоизоляцию, пассажирские перевозки не остановились.
-                            А значит, это хороший вариант для заработка: достаточно водительского удостоверения и навыков.
-                            Но какую машину выбрать?
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-4">
-                    <article class="blog-post">
-                        <a href="/blog/posts/servis-yandekstaksi-dobavil-kurerskuyu-dostavku-v-prilozenie" class="thumbnail-default">
-                            <figure>
-                                <img src="https://info-guide.ru/uploads/1587233929.jpeg" alt="Сервис «Яндекс.Такси» добавил курьерскую доставку в приложение">
-                            </figure>
-                        </a>
-                        <h5 class="post-title"><a href="/blog/posts/servis-yandekstaksi-dobavil-kurerskuyu-dostavku-v-prilozenie">Сервис «Яндекс.Такси» добавил курьерскую доставку в приложение</a></h5>
-                        <div class="post-date">
-                            <span><i class="far fa-calendar"></i> 2020-04-18</span>
-                        </div>
-                        <p>
-                            Теперь пользователи «Яндекс.Такси» смогут пользоваться услугами курьерской доставки посылок весом до 10 кг. Сама доставка займет от 2 до 3 часов.
-                        </p>
-                    </article>
-                </div>
+                @foreach($latest_posts as $post)
+                    <div class="col-md-4">
+                        <article class="blog-post">
+                            <a href="/blog/posts/{{ $post->slug }}" class="thumbnail-default">
+                                <figure>
+                                    <img src="https://info-guide.ru/uploads/{{ $post->img }}" alt="{{ $post->title }}">
+                                </figure>
+                            </a>
+                            <h5 class="post-title"><a href="/blog/posts/{{ $post->slug }}">{{ $post->title }}</a></h5>
+                            <div class="post-date">
+                                <span><i class="far fa-calendar"></i> {{ $post->published_at }}</span>
+                            </div>
+                            <p>{{ $post->excert }}</p>
+                        </article>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

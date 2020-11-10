@@ -181,6 +181,7 @@ return [
          */
         App\Providers\UserGeoServiceProvider::class,
         App\Providers\SiteStatsProvider::class,
+        App\Providers\LatestNewsProvider::class,
 
     ],
 

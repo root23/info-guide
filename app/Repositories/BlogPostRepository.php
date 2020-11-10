@@ -82,6 +82,13 @@ class BlogPostRepository extends CoreRepository
         return $this->startConditions()->find($id);
     }
 
+    public function getLatestPosts($limit = 3) {
+        $result = $this->startConditions()
+            ->orderBy('id', 'DESC')
+            ->limit(3)
+            ->get();
+    }
+
     public function getAllForIndexPage() {
         $columns = [
             'id',
