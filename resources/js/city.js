@@ -43,6 +43,16 @@ function deleteCookie(name) {
 $(document).ready(function () {
     let user_city_cookie = getCookie('user_city_id');
     console.log(user_city_cookie);
+    if (user_city_cookie == undefined && $('#nav-city').text().trim() != ('Не определен')) {
+        let city_name = $('#nav-city').text().trim();
+        deleteCookie('user_city_id');
+        let date = new Date();
+        let cookieLives = 10 * 24 * 60 * 60 * 1000; // set days
+        date.setTime(date.getTime() + cookieLives);
+
+        console.log(date.toUTCString());
+        document.cookie = "user_city_id=" + city_name + '; path=/; expires=' + date.toUTCString();
+    }
     if (user_city_cookie == undefined && location.pathname != "/cities/") {
         document.getElementById("nav-city").click();
     }
