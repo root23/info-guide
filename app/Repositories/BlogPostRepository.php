@@ -14,6 +14,11 @@ class BlogPostRepository extends CoreRepository
         return Model::class;
     }
 
+    public function getOnePostById(int $id) {
+        $result = $this->startConditions()
+            ->select('*');
+    }
+
     public function getOnePost($slug) {
         $columns = [
             'id',
