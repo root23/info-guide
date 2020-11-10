@@ -11033,6 +11033,7 @@ $(document).ready(function () {
     date.setTime(date.getTime() + cookieLives);
     console.log(date.toUTCString());
     document.cookie = "user_city_id=" + city_name + '; path=/; expires=' + date.toUTCString();
+    user_city_cookie = getCookie('user_city_id');
   }
 
   if (user_city_cookie == undefined && location.pathname != "/cities/") {
