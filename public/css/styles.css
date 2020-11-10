@@ -482,6 +482,9 @@ RESPONSIVE
     .cities-list > li {
         width: 25%;
     }
+    .item-company-image-col img {
+        max-height: fit-content !important;
+    }
 
     .taxi-info .stats-item #map {
         width: 100%;
