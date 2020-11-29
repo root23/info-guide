@@ -168,6 +168,11 @@ Route::group($groupData, function (){
         ->middleware(['auth', 'can:manage-taxis']);
 });
 
+// Admin notifications
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function() {
+    route::post('/mark-as-read', 'HomeController@markNotification')->name('markNotification');
+});
+
 // Sitemap
 Route::get('sitemap.xml', 'SitemapController@sitemap');
 Route::get('/sitemaps/main.xml', 'SitemapController@main');
