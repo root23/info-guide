@@ -4,9 +4,10 @@ namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewUserNotification extends Notification {
+class NewOrganizationNotification extends Notification {
     use Queueable;
 
     /**
@@ -14,9 +15,9 @@ class NewUserNotification extends Notification {
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($organization)
     {
-        $this->user = $user;
+        $this->organization = $organization;
     }
 
     /**
@@ -38,9 +39,9 @@ class NewUserNotification extends Notification {
      */
     public function toArray($notifiable)
     {
-        $message = 'Пользователь <b>' . $this->user->name . '</b> (' . $this->user->email . ') был зарегистрирован.';
+        $message = 'Организация <b>' . $this->organization->title . '</b> (<a href="/admin/organizations/organization/' . $this->organization->id . '/edit">Перейти</a>) была зарегистрирована.';
         return [
-            'id' => $this->user->id,
+            'id' => $this->organization->id,
             'message' => $message,
         ];
     }

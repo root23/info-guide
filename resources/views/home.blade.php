@@ -21,9 +21,9 @@
                     @if (Auth::user()->is_admin)
                         @forelse($notifications as $notification)
                             <div class="alert alert-success" role="alert">
-                                [{{ $notification->created_at }}] Пользователь <b>{{ $notification->data['name'] }}</b> ({{ $notification->data['email'] }}) был зарегистрирован.
+                                [{{ $notification->created_at }}] {!! $notification->data['message'] !!}
                                 <a href="#" class="float-right mark-as-read" data-id="{{ $notification->id }}">
-                                    Прочитано
+                                    Закрыть
                                 </a>
                             </div>
 

@@ -2,8 +2,12 @@
 
 namespace App\Observers;
 
+use App\Events\NewOrganizationCreated;
 use App\Models\Organization;
+use App\Notifications\NewOrganizationNotification;
+use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use GrahamCampbell\Markdown\Facades\Markdown;
 
@@ -13,6 +17,15 @@ class OrganizationObserver
         $this->setPublishedAt($organization);
         $this->setSlug($organization);
         $this->setUser($organization);
+    }
+
+    public function created(Organization $organization) {
+//        $admin_users = User::whereHas('roles', function ($query) {
+//            $query->where('role_id', 1);
+//        })->get();
+//        Notification::send($admin_users, new NewOrganizationNotification($organization));
+        event(new NewOrganizationCreated($organization));
+
     }
 
     public function updating(Organization $organization) {
