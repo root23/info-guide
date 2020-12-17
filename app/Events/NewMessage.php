@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -14,6 +15,7 @@ class NewMessage
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $user;
     public $message;
 
     /**
@@ -21,7 +23,7 @@ class NewMessage
      *
      * @return void
      */
-    public function __construct($message)
+    public function __construct(string $message)
     {
         $this->message = $message;
     }

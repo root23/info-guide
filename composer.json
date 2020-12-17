@@ -16,6 +16,7 @@
         "jeroennoten/laravel-adminlte": "^3.2",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.2",
+        "pusher/pusher-php-server": "~4.0",
         "spatie/laravel-sitemap": "^5.7",
         "torann/geoip": "^1.2"
     },
