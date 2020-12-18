@@ -42,6 +42,7 @@
     </div>
 @stop
 @section('adminlte_js')
+    <script src="{{ asset('js/app.js') }}"></script>
     @if (Auth::user()->is_admin)
         <script>
             function sendMarkRequest(id = null) {
