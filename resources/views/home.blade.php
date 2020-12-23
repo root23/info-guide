@@ -9,7 +9,7 @@
 @section('content')
     <div class="row">
         <div class="col-12">
-            <div class="card">
+            <div class="card notifications-card">
                 <div class="card-body">
                     <p class="mb-0">You are logged in!</p>
                     @if(session('status'))
@@ -35,6 +35,7 @@
                         @empty
                             There are no new notifications
                         @endforelse
+
                     @endif
                 </div>
             </div>
@@ -45,6 +46,16 @@
     <script src="{{ asset('js/app.js') }}"></script>
     @if (Auth::user()->is_admin)
         <script>
+
+            Echo.channel('private-App.User.{{ Auth::user()->id }}')
+                .notification((notification) => {
+                   console.log(notification);
+                   var notification_html = '<div class="alert alert-success" role="alert">' +
+                       '[' + notification.created_at + '] ' + notification.message + '<a href="#" class="float-right mark-as-read" data-id="' +
+                       + notification.id.toString() + '">Закрыть</a></div>';
+                   $('.notifications-card .card-body').append(notification_html);
+                });
+
             function sendMarkRequest(id = null) {
                 return $.ajax("{{ route('admin.markNotification') }}", {
                     method: 'POST',

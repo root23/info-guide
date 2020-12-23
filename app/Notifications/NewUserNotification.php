@@ -5,6 +5,7 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
 class NewUserNotification extends Notification {
     use Queueable;
@@ -27,7 +28,7 @@ class NewUserNotification extends Notification {
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -43,5 +44,13 @@ class NewUserNotification extends Notification {
             'id' => $this->user->id,
             'message' => $message,
         ];
+    }
+
+    public function toBroadcast($notifiable) {
+        $message = 'Пользователь <b>' . $this->user->name . '</b> (' . $this->user->email . ') был зарегистрирован.';
+        return new BroadcastMessage([
+            'id' => $this->user->id,
+            'message' => $message,
+        ]);
     }
 }

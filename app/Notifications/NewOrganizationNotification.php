@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
 class NewOrganizationNotification extends Notification {
     use Queueable;
@@ -28,7 +29,7 @@ class NewOrganizationNotification extends Notification {
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -44,5 +45,14 @@ class NewOrganizationNotification extends Notification {
             'id' => $this->organization->id,
             'message' => $message,
         ];
+    }
+
+    public function toBroadcast($notifiable) {
+        $message = 'Организация <b>' . $this->organization->title . '</b> (<a href="/admin/organizations/organization/' . $this->organization->id . '/edit">Перейти</a>) была зарегистрирована.';
+        return new BroadcastMessage([
+            'id' => $this->organization->id,
+            'message' => $message,
+            'created_at' => $this->organization->created_at,
+        ]);
     }
 }
