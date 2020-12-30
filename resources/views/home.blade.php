@@ -51,8 +51,8 @@
                 .notification((notification) => {
                    console.log(notification);
                    var notification_html = '<div class="alert alert-success" role="alert">' +
-                       '[' + notification.created_at + '] ' + notification.message + '<a href="#" class="float-right mark-as-read" data-id="' +
-                       + notification.id.toString() + '">Закрыть</a></div>';
+                       '[' + notification.created_at + '] ' + notification.message + '<a href="#" class="float-right mark-as-read" data-id="'
+                       + notification.id + '">Закрыть</a></div>';
                    $('.notifications-card .card-body').append(notification_html);
                 });
 
