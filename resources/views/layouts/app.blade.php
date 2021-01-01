@@ -56,9 +56,10 @@
     </script>
 
     <script src="{{ asset('js/city.js') }}"></script>
-
+    <script src="{{ asset('js/site_search.js') }}"></script>
 </head>
 <body>
+    <div class="overlay hide-block"></div>
     <div id="app">
         <div class="modal fade" id="geoApproveModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">

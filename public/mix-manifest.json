@@ -5,5 +5,6 @@
     "/js/city_detail.js": "/js/city_detail.js",
     "/js/lazyload.js": "/js/lazyload.js",
     "/js/live_search.js": "/js/live_search.js",
-    "/js/main_slider.js": "/js/main_slider.js"
+    "/js/main_slider.js": "/js/main_slider.js",
+    "/js/site_search.js": "/js/site_search.js"
 }
