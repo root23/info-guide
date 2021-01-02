@@ -68,4 +68,8 @@ class Organization extends Model
     public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
+
+    public function getLinkAttribute(): string {
+        return '/kompanii/' . $this->city->slug . '/' . $this->category->slug . '/' . $this->slug . '/';
+    }
 }

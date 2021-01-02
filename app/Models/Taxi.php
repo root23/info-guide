@@ -30,4 +30,8 @@ class Taxi extends Model
     public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
+
+    public function getLinkAttribute(): string {
+        return '/taxi/taxis/' . $this->id . '/';
+    }
 }

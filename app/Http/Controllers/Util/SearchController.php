@@ -70,11 +70,12 @@ class SearchController extends Controller {
 
                 $modelRecord->setAttribute('match', $sliced ?? mb_substr($serializedValues, 0, 20) . '...');
                 $modelRecord->setAttribute('model', $classname);
-//                $modelRecord->setAttribute('view_link', $this->resolveModelViewLink($modelRecord));
+                //$modelRecord->setAttribute('view_link', $this->resolveModelViewLink($modelRecord));
                 return $modelRecord;
             });
         })->flatten(1);
 
         return SearchResource::collection($results);
     }
+
 }
