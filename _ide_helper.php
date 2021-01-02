@@ -13893,6 +13893,31 @@
         class Str {
          
     }
+            /**
+     * 
+     *
+     */ 
+        class Collection {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function searchable()
+        {
+                        return \Illuminate\Support\Collection::searchable();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function unsearchable()
+        {
+                        return \Illuminate\Support\Collection::unsearchable();
+        }
+         
+    }
      
 }
 

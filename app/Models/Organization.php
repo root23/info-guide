@@ -5,6 +5,7 @@ namespace App\Models;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * Class BlogPost
@@ -18,9 +19,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Organization extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Searchable;
 
     const UNKNOWN_USER = 1;
+    const SEARCHABLE_FIELDS = ['id', 'title', 'content_raw'];
 
     protected $fillable = ['category_id', 'slug', 'title',
         'is_published', 'published_at', 'user_id', 'city_id',
@@ -63,4 +65,7 @@ class Organization extends Model
         return $this->hasMany(OrganizationReview::class);
     }
 
+    public function toSearchableArray() {
+        return $this->only(self::SEARCHABLE_FIELDS);
+    }
 }
