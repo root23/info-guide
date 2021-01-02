@@ -15,6 +15,7 @@
         "guzzlehttp/guzzle": "^6.5",
         "jeroennoten/laravel-adminlte": "^3.2",
         "laravel/framework": "^7.0",
+        "laravel/scout": "^8.5",
         "laravel/tinker": "^2.2",
         "pusher/pusher-php-server": "~4.0",
         "spatie/laravel-sitemap": "^5.7",
