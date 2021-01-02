@@ -10991,7 +10991,15 @@ return jQuery;
       $('body').css({
         overflow: 'hidden',
         height: '100%'
-      });
+      }); // mobile version
+
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        $('.navbar-brand').hide();
+        $('.navbar-toggler').hide();
+        $('.search-close').show();
+        $('.search-form-block .form-controls').css('right', '50px');
+      }
+
       return;
     } // Клик вне поиска - убрать подсказки
 
@@ -11001,7 +11009,14 @@ return jQuery;
     $('body').css({
       overflow: 'auto',
       height: 'auto%'
-    });
+    }); // mobile version
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      $('.navbar-brand').show();
+      $('.navbar-toggler').show();
+      $('.search-close').hide();
+      $('.search-form-block .form-controls').css('right', '0');
+    }
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

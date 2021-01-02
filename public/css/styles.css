@@ -50,6 +50,11 @@ Header styles
     box-sizing: border-box;
     font-size: 1.3em;
 }
+.header-search-form .search-close {
+    padding-top: 0.2rem;
+    left: 8px;
+    position: relative;
+}
 .header-search-form .search-form-block .search-form-input {
     overflow: hidden;
     -webkit-box-flex: 1;
@@ -146,6 +151,7 @@ Header styles
     text-decoration: none;
     background: rgba(0,0,0,.06);
 }
+
 
 
 /*
@@ -653,6 +659,13 @@ RESPONSIVE
     }
     .header-search-form {
         margin: 0;
+        display: flex;
+        margin: 1em 0 1em 0;
+    }
+    .search-suggestions-block {
+        height: 100vh;
+        max-height: none;
+        top: 80px;
     }
 }
 @media only screen and (max-width: 640px) {
