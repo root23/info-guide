@@ -14913,6 +14913,27 @@
      
 }
 
+    namespace Laravel\Scout { 
+            /**
+     * 
+     *
+     */ 
+        class Builder {
+                    /**
+         * 
+         *
+         * @param mixed $constraints
+         * @static 
+         */ 
+        public static function constrain($constraints)
+        {
+                        return \Laravel\Scout\Builder::constrain($constraints);
+        }
+         
+    }
+     
+}
+
 
 namespace  { 
             class App extends \Illuminate\Support\Facades\App {}
