@@ -173,6 +173,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     route::post('/mark-as-read', 'HomeController@markNotification')->name('markNotification');
 });
 
+// Search
+Route::get('/search', [\App\Http\Controllers\Util\SearchController::class, 'search']);
+
 // Sitemap
 Route::get('sitemap.xml', 'SitemapController@sitemap');
 Route::get('/sitemaps/main.xml', 'SitemapController@main');
