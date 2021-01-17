@@ -2,9 +2,8 @@
 
 namespace App\Repositories;
 
-//use Your Model
-use App\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class UserRepository.
@@ -14,16 +13,19 @@ class UserRepository extends CoreRepository {
         return Model::class;
     }
 
-    public function getUserById(int $id): User {
-        $user = \DB::table('users')
+    public function getUserById(int $id) {
+        $user = DB::table('users')
             ->where('id', $id)
-            ->first()
-            ->get();
+            ->first();
+
+        return $user;
     }
 
     public function getAllWithPagination(int $perPage = 40) {
-        $users = \DB::table('users')
+        $users = DB::table('users')
             ->orderBy('id', 'ASC')
             ->paginate($perPage);
+
+        return $users;
     }
 }
