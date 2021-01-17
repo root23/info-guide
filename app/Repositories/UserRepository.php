@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
+use App\User as Model;
 use Illuminate\Support\Facades\DB;
 
 /**

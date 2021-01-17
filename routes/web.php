@@ -168,6 +168,20 @@ Route::group($groupData, function (){
         ->middleware(['auth', 'can:manage-taxis']);
 });
 
+// Admin users -- START --
+$groupData = [
+    'namespace' => 'User\Admin',
+    'prefix' => 'admin/',
+];
+Route::group($groupData, function () {
+    $methods = ['index',];
+    Route::resource('users', 'UserController')
+        ->only($methods)
+        ->names('admin.users')
+        ->middleware(['auth', 'can:manage-users']);
+});
+// Admin users -- END --
+
 // Admin notifications
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function() {
     route::post('/mark-as-read', 'HomeController@markNotification')->name('markNotification');
