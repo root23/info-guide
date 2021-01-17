@@ -1,5 +1,8 @@
 <div class="search-suggestions-block hide-block">
     <div class="search-suggestions-container">
+        <div class="suggest-search-result hide-block">
+            <ul class="list-results"></ul>
+        </div>
         <div class="suggest-search-result-empty">
             <p>Для поиска введите имя организации, адрес, район и другие ключевые слова</p>
             <ul class="suggest-list">

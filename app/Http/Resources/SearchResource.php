@@ -19,6 +19,7 @@ class SearchResource extends JsonResource
             'match' => $this->match,
             'model' => $this->model,
             'link' => $this->link,
+            'title' => $this->title,
         ];
     }
 }

@@ -1,4 +1,46 @@
 $(document).ready(function () {
+
+    // Ввод в поисковую строку
+    $('.search-form-input input').on("change paste keyup", function () {
+        console.log($(this).val());
+        console.log($(this).val().length);
+
+        let query = $(this).val();
+
+        if (query.length < 2) {
+            $('.suggest-search-result').addClass('hide-block');
+            return;
+        }
+
+        $.ajax({
+            url: '/search',
+            data: {
+                search: query,
+            },
+            success: function (data) {
+                let items = data.data;
+                if (items.length > 0) {
+                    console.log('>0');
+                    $('.suggest-search-result').removeClass('hide-block');
+                } else {
+                    console.log('0');
+                    if (!$('.suggest-search-result').hasClass('hide-block')) {
+                        $('.suggest-search-result').addClass('hide-block');
+                    }
+                }
+                for (var i = 0; i < items.length; i++) {
+                    var obj = items[i];
+                    let html = '<li class="result-item">';
+                    html += '<a href="' + items[i].link + '" class="result-item-link">';
+                    html += '<span class="result-icon"><i class="fa fa-search"></i></span>';
+                    html += '<span class="result-text">' + items[i].title + '</span></a></li>';
+                    $('.list-results').append(html);
+                }
+            }
+
+        });
+    });
+
     $(document).click(function (e) {
         // Ничего не делать (клик по строке поиска)
         if ($(e.target).closest('.search-suggestions-block').length && !$('.search-suggestions-block').hasClass('hide-block')) {
