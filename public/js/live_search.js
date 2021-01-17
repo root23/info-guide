@@ -11019,7 +11019,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/dev.info-guide.ru/resources/js/live_search.js */"./resources/js/live_search.js");
+module.exports = __webpack_require__(/*! /Users/username/sites/info-guide/resources/js/live_search.js */"./resources/js/live_search.js");
 
 
 /***/ })

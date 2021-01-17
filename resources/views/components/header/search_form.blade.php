@@ -1,4 +1,4 @@
-<form class="header-search-form" action="/search/" method="POST">
+<form class="header-search-form" action="/search/" method="POST" onsubmit="event.preventDefault();">
     @csrf
     <label class="search-form-block">
         <div class="start-search">

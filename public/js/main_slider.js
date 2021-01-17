@@ -11026,7 +11026,7 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/dev.info-guide.ru/resources/js/main_slider.js */"./resources/js/main_slider.js");
+module.exports = __webpack_require__(/*! /Users/username/sites/info-guide/resources/js/main_slider.js */"./resources/js/main_slider.js");
 
 
 /***/ })

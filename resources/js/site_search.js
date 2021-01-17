@@ -2,13 +2,12 @@ $(document).ready(function () {
 
     // Ввод в поисковую строку
     $('.search-form-input input').on("change paste keyup", function () {
-        console.log($(this).val());
-        console.log($(this).val().length);
-
         let query = $(this).val();
 
         if (query.length < 2) {
             $('.suggest-search-result').addClass('hide-block');
+            $('.list-results').empty();
+            query = $('.search-form-input input').val();
             return;
         }
 
@@ -20,14 +19,14 @@ $(document).ready(function () {
             success: function (data) {
                 let items = data.data;
                 if (items.length > 0) {
-                    console.log('>0');
                     $('.suggest-search-result').removeClass('hide-block');
                 } else {
-                    console.log('0');
                     if (!$('.suggest-search-result').hasClass('hide-block')) {
                         $('.suggest-search-result').addClass('hide-block');
+                        return;
                     }
                 }
+                $('.list-results').empty();
                 for (var i = 0; i < items.length; i++) {
                     var obj = items[i];
                     let html = '<li class="result-item">';
@@ -41,9 +40,15 @@ $(document).ready(function () {
         });
     });
 
+    // Очистка поля ввода
+    $('.form-controls .reset .fa-times').click(function () {
+       $('.search-form-input input').val('');
+    });
+
     $(document).click(function (e) {
         // Ничего не делать (клик по строке поиска)
-        if ($(e.target).closest('.search-suggestions-block').length && !$('.search-suggestions-block').hasClass('hide-block')) {
+        if (($(e.target).closest('.search-suggestions-block').length || $(e.target).closest('.navbar').length)
+            && !$('.search-suggestions-block').hasClass('hide-block')) {
             return;
         }
 

@@ -11064,7 +11064,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/dev.info-guide.ru/resources/js/city.js */"./resources/js/city.js");
+module.exports = __webpack_require__(/*! /Users/username/sites/info-guide/resources/js/city.js */"./resources/js/city.js");
 
 
 /***/ })

@@ -10980,12 +10980,12 @@ return jQuery;
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
   // Ввод в поисковую строку
   $('.search-form-input input').on("change paste keyup", function () {
-    console.log($(this).val());
-    console.log($(this).val().length);
     var query = $(this).val();
 
     if (query.length < 2) {
       $('.suggest-search-result').addClass('hide-block');
+      $('.list-results').empty();
+      query = $('.search-form-input input').val();
       return;
     }
 
@@ -10998,15 +10998,15 @@ return jQuery;
         var items = data.data;
 
         if (items.length > 0) {
-          console.log('>0');
           $('.suggest-search-result').removeClass('hide-block');
         } else {
-          console.log('0');
-
           if (!$('.suggest-search-result').hasClass('hide-block')) {
             $('.suggest-search-result').addClass('hide-block');
+            return;
           }
         }
+
+        $('.list-results').empty();
 
         for (var i = 0; i < items.length; i++) {
           var obj = items[i];
@@ -11018,10 +11018,14 @@ return jQuery;
         }
       }
     });
+  }); // Очистка поля ввода
+
+  $('.form-controls .reset .fa-times').click(function () {
+    $('.search-form-input input').val('');
   });
   $(document).click(function (e) {
     // Ничего не делать (клик по строке поиска)
-    if ($(e.target).closest('.search-suggestions-block').length && !$('.search-suggestions-block').hasClass('hide-block')) {
+    if (($(e.target).closest('.search-suggestions-block').length || $(e.target).closest('.navbar').length) && !$('.search-suggestions-block').hasClass('hide-block')) {
       return;
     } // Отобразить форму с поисковыми подсказками
 
@@ -11071,7 +11075,7 @@ return jQuery;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/dev.info-guide.ru/resources/js/site_search.js */"./resources/js/site_search.js");
+module.exports = __webpack_require__(/*! /Users/username/sites/info-guide/resources/js/site_search.js */"./resources/js/site_search.js");
 
 
 /***/ })
