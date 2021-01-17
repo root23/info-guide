@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Инфо-гид',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -208,11 +208,16 @@ return [
     */
 
     'menu' => [
+        ['header' => 'Администрирование'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-categories',
+            'text'        => 'Пользователи',
+            'url'         => 'admin/users',
+            'icon'        => 'far fa-fw fa-user',
+//            'label'       => 4,
+            'label_color' => 'success',
+            'can'         => 'manage-users',
         ],
+        ['header' => 'Такси'],
         [
             'text'        => 'Города',
             'url'         => 'admin/cities',
@@ -222,7 +227,7 @@ return [
             'can'         => 'manage-cities',
         ],
         [
-            'text'        => 'Такси',
+            'text'        => 'Перевозчики',
             'url'         => 'admin/taxis',
             'icon'        => 'fa fa-car',
 //            'label'       => 4,
@@ -254,7 +259,7 @@ return [
             'label_color' => 'success',
             'can'         => 'manage-reviews',
         ],
-        ['header' => 'Статьи'],
+        ['header' => 'Модули'],
         [
             'text'    => 'Блог',
             'icon'    => 'fas fa-fw fa-share',
@@ -270,10 +275,11 @@ return [
                 ],
             ],
         ],
+        ['header' => ''],
         [
             'text'        => 'Перейти на сайт',
             'url'         => '/',
-            'icon'        => 'far fa-fw fa-www',
+            'icon'        => 'fas fa-fw fa-walking',
 //            'label'       => 4,
             'label_color' => 'success',
         ],
