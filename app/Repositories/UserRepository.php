@@ -13,7 +13,7 @@ class UserRepository extends CoreRepository {
         return Model::class;
     }
 
-    public function getUserById(int $id) {
+    public function getById(int $id) {
         $user = DB::table('users')
             ->where('id', $id)
             ->first();

@@ -26,4 +26,19 @@ class UserController extends BaseController {
         $paginator = $this->userRepository->getAllWithPagination();
         return view('user.admin.index', compact('paginator'));
     }
+
+    /**
+     * Load specific user for editing
+     * @param int $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit(int $id) {
+        $user = $this->userRepository->getById($id);
+
+        if (empty($user)) {
+            abort(404);
+        }
+
+        return view('user.admin.edit', compact('user'));
+    }
 }
