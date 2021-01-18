@@ -47,7 +47,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Есть ли роли у пользователя     *
+     * Есть ли роли у пользователя
      * @param $roles
      *
      * @return bool
@@ -65,8 +65,8 @@ class User extends Authenticatable
      *
      * @return bool
      */
-    public function hasRole($role) {
-        if ($this->roles()->where('name', $role)->first()) {
+    public function hasRole(string $roleName) {
+        if ($this->roles()->where('name', $roleName)->first()) {
             return true;
         }
         return false;

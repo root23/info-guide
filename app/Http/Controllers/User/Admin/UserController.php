@@ -4,6 +4,8 @@ namespace App\Http\Controllers\User\Admin;
 
 use App\Http\Controllers\Blog\Admin\BaseController;
 use App\Repositories\UserRepository;
+use DB;
+use App\User;
 
 class UserController extends BaseController {
 
@@ -39,6 +41,7 @@ class UserController extends BaseController {
             abort(404);
         }
 
-        return view('user.admin.edit', compact('user'));
+        $roleList = DB::table('roles')->get();
+        return view('user.admin.edit', compact(['user', 'roleList']));
     }
 }

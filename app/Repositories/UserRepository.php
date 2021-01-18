@@ -14,9 +14,10 @@ class UserRepository extends CoreRepository {
     }
 
     public function getById(int $id) {
-        $user = DB::table('users')
+        $user = $this->startConditions()
+            ->select('*')
             ->where('id', $id)
-            ->first();
+            ->get()->first();
 
         return $user;
     }

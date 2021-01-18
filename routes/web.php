@@ -174,7 +174,7 @@ $groupData = [
     'prefix' => 'admin/',
 ];
 Route::group($groupData, function () {
-    $methods = ['index',];
+    $methods = ['index', 'edit', 'store', 'update', 'create', 'destroy'];
     Route::resource('users', 'UserController')
         ->only($methods)
         ->names('admin.users')

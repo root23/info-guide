@@ -38,7 +38,9 @@
                                 @php /** @var \App\User $user */ @endphp
                                 <tr>
                                     <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
+                                    <td>
+                                        <a href="/admin/users/{{ $user->id }}/edit/">{{ $user->name }}</a>
+                                    </td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->created_at ? \Carbon\Carbon::parse($user->created_at)->format('d.M.H:i') : '' }}</td>
                                     <td>{{ $user->updated_at ? \Carbon\Carbon::parse($user->updated_at)->format('d.M.H:i') : '' }}</td>
