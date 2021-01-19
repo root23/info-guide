@@ -75,4 +75,30 @@ class User extends Authenticatable
     public function getIsAdminAttribute() {
         return $this->roles()->where('role_id', 1)->exists();
     }
+
+    /**
+     * Get user top role (ordered by ASC -- e.g. admin is 0, default user is 3)
+     * @return string
+     */
+    public function getRoleNameAttribute(): string {
+        return $this->roles()
+            ->where('user_id', $this->id)
+            ->orderBy('role_id', 'ASC')
+            ->get()
+            ->first()
+            ->name;
+    }
+
+    public function setRole(int $id) {
+        // Очистка предыдущих ролей пользователя
+        \DB::table('user_roles')
+            ->where('user_id', $this->id)
+            ->delete();
+        // Установка новой роли
+        \DB::table('user_roles')
+            ->insert([
+                'user_id' => $this->id,
+                'role_id' => $id,
+            ]);
+    }
 }

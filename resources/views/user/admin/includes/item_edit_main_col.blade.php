@@ -32,8 +32,8 @@
                                    required>
                         </div>
                         <div class="form-group">
-                            <label for="name">E-mail</label>
-                            <input name="name" value="{{ $user->email }}"
+                            <label for="email">E-mail</label>
+                            <input name="email" value="{{ $user->email }}"
                                    id="email"
                                    type="email"
                                    class="form-control"
@@ -51,7 +51,7 @@
                                     required>
                                 @foreach ($roleList as $role)
                                     <option value="{{ $role->id }}"
-                                            @if ($role->name == $user->hasRole($role->name)) selected @endif>
+                                            @if ($role->name == $user->role_name) selected @endif>
                                         {{ $role->name }}
                                     </option>
                                 @endforeach
