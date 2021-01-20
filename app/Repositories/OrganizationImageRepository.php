@@ -19,5 +19,6 @@ class OrganizationImageRepository extends CoreRepository
             ->select('*')
             ->where('organization_id', $organization_id)
             ->get();
+        return $result;
     }
 }

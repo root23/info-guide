@@ -19,6 +19,7 @@ class CreateOrganizationImagesTable extends Migration
             $table->boolean('is_main')->default(false);
             $table->foreignId('organization_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Organization;
 use App\Http\Controllers\Blog\BaseController;
 use App\Models\City;
 use App\Models\OrganizationCategory;
+use App\Repositories\OrganizationImageRepository;
 use App\Repositories\OrganizationRepository;
 
 class OrganizationController extends BaseController
@@ -14,10 +15,16 @@ class OrganizationController extends BaseController
      */
     private $organizationRepository;
 
+    /**
+     * @var OrganizationImageRepository
+     */
+    private $organizationImageRepository;
+
     public function __construct() {
         parent::__construct();
 
         $this->organizationRepository = app(OrganizationRepository::class);
+        $this->organizationImageRepository = app(OrganizationImageRepository::class);
     }
 
     /**
@@ -31,6 +38,8 @@ class OrganizationController extends BaseController
         $organization = $this->organizationRepository->getOrganizationBySlug($organization_slug);
         $category = OrganizationCategory::where('slug', $category_slug)->first();
         $city = City::where('slug', $city_slug)->first();
+        $images = $this->organizationImageRepository->getOrganizationImages($organization->id);
+        dd($images);
 
         if (!$organization || !$category || !$city) {
             abort(404);
