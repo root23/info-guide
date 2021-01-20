@@ -15,3 +15,5 @@ public/google975afa55167c3e65.html
 public/uploads
 public/img
 config/database.php
+.DS_Store
+public/.DS_Store

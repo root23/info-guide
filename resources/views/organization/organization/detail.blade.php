@@ -117,7 +117,7 @@
 
             </div>
             <div class="col-md-4">
-                @include('taxi.cities.includes.right-col-default')
+                @include('organization.organization.includes.right-col')
             </div>
         </div>
 
