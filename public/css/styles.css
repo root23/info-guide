@@ -866,6 +866,19 @@ RESPONSIVE
 }
 /* CITY DETAIL PAGE -- END -- */
 
+/* ORGANIZATION GALLERY BLOCK -- START -- */
+.organization-gallery-block {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+    grid-gap: 15px;
+    margin-top: 20px;
+    grid-auto-flow: column;
+}
+.organization-gallery-block .perfundo img {
+    width: 100%;
+}
+/* ORGANIZATION GALLERY BLOCK -- END -- */
+
 /* GEO POP-UP -- START -- */
 #geoApproveModal {
     top: 15em;

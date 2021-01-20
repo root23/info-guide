@@ -1,8 +1,18 @@
 <div class="block-title">
-    <span>Поиск трансфера</span>
+    <span>Телефон</span>
 </div>
 <div class="block-content">
-    <div id="kiwitaxi_search_form_wrapper" style="display: block; width: 100%;"></div>
+    <a href="tel:{{ $organization->phone }}">{{ $organization->phone }}</a>
+</div>
+
+<div class="block-title">
+    <span>Адрес</span>
+</div>
+<div class="block-content">
+    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ $organization->address }}</p>
+    <div class="map-wrapper" style="height: 400px">
+        @include('taxi.taxi.includes.map-block')
+    </div>
 </div>
 
 <div class="block-title">

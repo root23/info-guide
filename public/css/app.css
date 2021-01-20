@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);/*!
- * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -204,9 +204,6 @@ readers do not read off random characters that represent icons */
 
 .fa-adn:before {
   content: "\F170"; }
-
-.fa-adobe:before {
-  content: "\F778"; }
 
 .fa-adversal:before {
   content: "\F36A"; }
@@ -996,6 +993,9 @@ readers do not read off random characters that represent icons */
 
 .fa-cloud-upload-alt:before {
   content: "\F382"; }
+
+.fa-cloudflare:before {
+  content: "\E07D"; }
 
 .fa-cloudscale:before {
   content: "\F383"; }
@@ -1990,6 +1990,9 @@ readers do not read off random characters that represent icons */
 .fa-grunt:before {
   content: "\F3AD"; }
 
+.fa-guilded:before {
+  content: "\E07E"; }
+
 .fa-guitar:before {
   content: "\F7A6"; }
 
@@ -2164,6 +2167,9 @@ readers do not read off random characters that represent icons */
 .fa-history:before {
   content: "\F1DA"; }
 
+.fa-hive:before {
+  content: "\E07F"; }
+
 .fa-hockey-puck:before {
   content: "\F453"; }
 
@@ -2293,11 +2299,17 @@ readers do not read off random characters that represent icons */
 .fa-info-circle:before {
   content: "\F05A"; }
 
+.fa-innosoft:before {
+  content: "\E080"; }
+
 .fa-instagram:before {
   content: "\F16D"; }
 
 .fa-instagram-square:before {
   content: "\E055"; }
+
+.fa-instalod:before {
+  content: "\E081"; }
 
 .fa-intercom:before {
   content: "\F7AF"; }
@@ -2818,6 +2830,9 @@ readers do not read off random characters that represent icons */
 .fa-object-ungroup:before {
   content: "\F248"; }
 
+.fa-octopus-deploy:before {
+  content: "\E082"; }
+
 .fa-odnoklassniki:before {
   content: "\F263"; }
 
@@ -2955,6 +2970,9 @@ readers do not read off random characters that represent icons */
 
 .fa-pepper-hot:before {
   content: "\F816"; }
+
+.fa-perbyte:before {
+  content: "\E083"; }
 
 .fa-percent:before {
   content: "\F295"; }
@@ -4126,6 +4144,9 @@ readers do not read off random characters that represent icons */
 .fa-umbrella-beach:before {
   content: "\F5CA"; }
 
+.fa-uncharted:before {
+  content: "\E084"; }
+
 .fa-underline:before {
   content: "\F0CD"; }
 
@@ -4279,6 +4300,12 @@ readers do not read off random characters that represent icons */
 .fa-venus-mars:before {
   content: "\F228"; }
 
+.fa-vest:before {
+  content: "\E085"; }
+
+.fa-vest-patches:before {
+  content: "\E086"; }
+
 .fa-viacoin:before {
   content: "\F237"; }
 
@@ -4369,6 +4396,9 @@ readers do not read off random characters that represent icons */
 .fa-warehouse:before {
   content: "\F494"; }
 
+.fa-watchman-monitoring:before {
+  content: "\E087"; }
+
 .fa-water:before {
   content: "\F773"; }
 
@@ -4443,6 +4473,9 @@ readers do not read off random characters that represent icons */
 
 .fa-wizards-of-the-coast:before {
   content: "\F730"; }
+
+.fa-wodu:before {
+  content: "\E088"; }
 
 .fa-wolf-pack-battalion:before {
   content: "\F514"; }
@@ -4544,8 +4577,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?0fabb6606be4c45acfeedd115d0caca4);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?0fabb6606be4c45acfeedd115d0caca4?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?cac68c831145804808381a7032fdc7c2) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?dc0bd022735ed218df547742a1b2f172) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?085b1dd8427dbeff10bd55410915a3f6) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?ccfdb9dc442be0c629d331e94497428b#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?d28c96cabe5302f1b2c90275cd3f4e69);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?d28c96cabe5302f1b2c90275cd3f4e69?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?0c9f225e8f69c622f681cf1ed973cc3d) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?0ce1e868452204695c8ac1c70f693c2d) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?dfe5aa4344a2d8a29aec8d83fb3fb14e) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?5d10d00980077f67990f73b1961bc46e#fontawesome) format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands';
@@ -4555,8 +4588,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?ad3a7c0d77e09602f4ab73db3660ffd8);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?ad3a7c0d77e09602f4ab73db3660ffd8?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?3a3398a6ef60fc64eacf45665958342e) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?05b53beb21e3ef13d28244545977152d) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?1a78af4105d4d56e6c34f76dc70bf1bc) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?e75dfd904d366a2560c63c23cfc98ef8#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?0232fe8b09de812c88e6cc27f57a3a88);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?0232fe8b09de812c88e6cc27f57a3a88?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?847712aaabbeba674afdda86d31cab17) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?3cace4a04d941b5981ba32c6ce9afae1) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?398be22b2308585b84da8e858e2d7b60) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?d0fdc7c20b0b0b1aaf27327547735fa3#fontawesome) format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4566,8 +4599,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?89bd2e38475e441a5cd70f663f921d61);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?89bd2e38475e441a5cd70f663f921d61?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?c500da19d776384ba69573ae6fe274e7) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?ee09ad7553b8ad3d81150d609d5341a0) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?781e85bb50c8e8301c30de56b31b1f04) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?03ba7cb710104df27f1c9c46d64bee4e#fontawesome) format("svg"); }
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?00bb62bc33034479d5e82a0fd1c5efe3);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?00bb62bc33034479d5e82a0fd1c5efe3?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?9ae050d1876ac1763eb6afe4264e6d5a) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?4bfbf7eb4b19d9ff9293eb177b6d0070) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?260d033f79f75d670fd09d8cf7c8bf8d) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?2306f642b31b774ba1d8b6b784539e19#fontawesome) format("svg"); }
 
 .fa,
 .fas {
@@ -4576,7 +4609,7 @@ readers do not read off random characters that represent icons */
 @charset "UTF-8";
 
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -4808,6 +4841,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -8514,6 +8548,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.44rem;
   padding-left: 1.5rem;
+  -webkit-print-color-adjust: exact;
+          color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -10093,6 +10129,7 @@ a.badge-dark.focus {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
@@ -15361,7 +15398,7 @@ a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 .text-reset {
@@ -15472,5 +15509,173 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+/**
+ * 1. Hide the overlay by default and show it when it is targeted or active.
+ * 2. Make the overlay full width and height.
+ */
+
+.perfundo__overlay {
+  display: flex;
+  visibility: hidden;
+  /* [1] */
+  position: fixed;
+  /* [2] */
+  top: 0;
+  /* [2] */
+  right: 0;
+  /* [2] */
+  bottom: 0;
+  /* [2] */
+  left: 0;
+  /* [2] */
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.perfundo__overlay:target,
+.perfundo__overlay.is-active {
+  visibility: visible;
+  /* [1] */
+}
+
+/**
+ * 1. Add a scrollbar if the content doesn't fit vertically.
+ * 2. Inherit the animation name (e.g. animate.css class) from the parent.
+ */
+
+.perfundo__content {
+  max-height: 100%;
+  /* [1] */
+  overflow: auto;
+  /* [1] */
+}
+
+:target > .perfundo__content,
+.is-active > .perfundo__content {
+  -webkit-animation: 0.4s ease-out 0.2s both;
+          animation: 0.4s ease-out 0.2s both;
+  -webkit-animation-name: inherit;
+          animation-name: inherit;
+  /* [2] */
+}
+
+.perfundo__html {
+  padding: 2em;
+  max-width: 42em;
+  background-color: #fff;
+}
+
+/**
+ * 1. Prevent the full sized image from loading initially.
+ * 2. Trigger loading of the full sized image when the lightbox is opened.
+ */
+
+.perfundo__figure {
+  display: none;
+  /* [1] */
+  margin: 1.5em;
+}
+
+:target > .perfundo__figure,
+.is-active > .perfundo__figure {
+  display: block;
+  /* [2] */
+}
+
+.perfundo__figure img {
+  display: block;
+  height: 0;
+}
+
+.perfundo__figcaption {
+  color: #fff;
+}
+
+/**
+ * 1. Make the image container responsive.
+ * 2. Scale the background image to match the size of the image container.
+ */
+
+.perfundo__image {
+  max-width: 100%;
+  /* [1] */
+  background-size: 100%;
+  /* [2] */
+}
+
+/**
+ * 1. Make the icons as big as the control element.
+ * 2. Hide the control text visually, but have it available for screen readers.
+ * 3. Make the control links readable depending on the overlay color.
+ */
+
+.perfundo__control {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  background-position: center center;
+  /* [1] */
+  background-size: cover;
+  /* [1] */
+  text-indent: -999em;
+  /* [2] */
+}
+
+.perfundo__close {
+  top: 1em;
+  right: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%2032%2032%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M21.7%2010.3c-0.4-0.4-1-0.4-1.4%200l-4.3%204.3-4.2-4.2c-0.4-0.4-1-0.4-1.4%200-0.4%200.4-0.4%201%200%201.4l4.2%204.2-4.3%204.3c-0.4%200.4-0.4%201%200%201.4%200.4%200.4%201%200.4%201.4%200l4.3-4.3%204.2%204.2c0.4%200.4%201%200.4%201.4%200%200.4-0.4%200.4-1%200-1.4l-4.2-4.2%204.3-4.3C22.1%2011.3%2022.1%2010.7%2021.7%2010.3zM16%200C7.2%200%200%207.2%200%2016s7.2%2016%2016%2016c8.8%200%2016-7.2%2016-16S24.8%200%2016%200zM16%2030C8.3%2030%202%2023.7%202%2016S8.3%202%2016%202s14%206.3%2014%2014S23.7%2030%2016%2030z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/**
+ * 1. Rotate the control element so it is possible to use the same icon for
+ *    prev and next.
+ */
+
+.perfundo__prev {
+  left: 2em;
+  transform: rotate(180deg);
+  /* [1] */
+}
+
+.perfundo__next {
+  right: 2em;
+}
+
+/**
+ * 1. Move the untarget anchor to the top of the screen to prevent "jumping".
+ */
+
+.perfundo__untarget {
+  position: fixed;
+  /* [1] */
+  top: 0;
+  /* [1] */
+}
+
+/**
+ * 1. Vertically center the prev / next controls.
+ */
+
+.perfundo__prev,
+.perfundo__next {
+  top: 50%;
+  /* [1] */
+  margin-top: -1.5em;
+  /* [1] */
+  opacity: 0.2;
+  transition: opacity 0.2s;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2244.1%22%20height%3D%2294.7%22%20viewBox%3D%220%200%2044.1%2094.7%22%20enable-background%3D%22new%200%200%2044.088%2094.67%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M44.1%2047.3L1.5%2094.7%200%2093.3l41.4-46L0%201.3%201.5%200%2044.1%2047.3z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.perfundo__prev:hover,
+.perfundo__prev:focus,
+.perfundo__next:hover,
+.perfundo__next:focus {
+  opacity: 1;
 }
 

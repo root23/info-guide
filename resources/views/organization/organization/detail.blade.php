@@ -86,29 +86,46 @@
         </ul>
 
         <div class="row justify-content-center">
-            <div class="col-md-8" itemscope itemtype="http://schema.org/Organization">
+            <div class="col-md-7" itemscope itemtype="http://schema.org/Organization">
                 <h1 itemprop="name">{{ $organization->title }}</h1>
                 <p>{{ $organization->title }} в городе {{ $city->name_for_display }}. Ниже представлена детальная информация об организации.
                     Работает по адресу {{ $organization->address }}. Телефон(ы) для связи:
                     <a href="tel:{{ $organization->phone }}">{{ $organization->phone }}</a>
                 </p>
 
-                {!! $organization->content_raw !!}
-
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"><i class="fa fa-map-marker"></i> Адрес:</h4>
-                        <p class="card-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{{ $organization->address }}</p>
-                        <h4 class="card-title"><i class="fa fa-phone"></i> Телефоны:</h4>
-                        <p class="card-text" itemprop="telephone">
-                            <a href="tel:{{ $organization->phone }}">{{ $organization->phone }}</a>
-                        </p>
-                        <h4 class="card-title"><i class="fa fa-map"></i> На карте:</h4>
-                        <div class="map-wrapper" style="height: 400px">
-                            @include('taxi.taxi.includes.map-block')
+                <div class="organization-gallery-block">
+                    <div class="perfundo">
+                        <a class="perfundo__link" href="#perfundo-img1">
+                            <img src="/uploads/160373817915.jpg" alt="Demo image">
+                        </a>
+                        <div id="perfundo-img1" class="perfundo__overlay fadeIn">
+                            <figure class="perfundo__content perfundo__figure">
+                                <img src="/uploads/160373817915.jpg" alt="Demo image">
+                                <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(/uploads/160373817915.jpg);"></div>
+                            </figure>
+                            <a href="#perfundo-untarget" class="perfundo__close perfundo__control">Закрыть</a>
+                            <a class="perfundo__next perfundo__control" href="#perfundo-img2">След.</a>
                         </div>
                     </div>
+
+                    <div class="perfundo">
+                        <a class="perfundo__link" href="#perfundo-img2">
+                            <img src="/uploads/160373817915.jpg" alt="Demo image">
+                        </a>
+                        <div id="perfundo-img2" class="perfundo__overlay fadeIn">
+                            <figure class="perfundo__content perfundo__figure">
+                                <img src="/uploads/160373817915.jpg" alt="Demo image">
+                                <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(/uploads/160373817915.jpg);"></div>
+                            </figure>
+                            <a href="#perfundo-untarget" class="perfundo__close perfundo__control">Закрыть</a>
+                            <a class="perfundo__next perfundo__control" href="#perfundo-img3">След.</a>
+                            <a class="perfundo__prev perfundo__control" href="#perfundo-img1">Пред.</a>
+                        </div>
+                    </div>
+
                 </div>
+
+                {!! $organization->content_raw !!}
 
                 <h2 id="reviews-title">Отзывы</h2>
                 @include('organization.reviews.add-review-form')
@@ -116,7 +133,7 @@
                 </div>
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 @include('organization.organization.includes.right-col')
             </div>
         </div>
