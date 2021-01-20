@@ -65,6 +65,10 @@ class Organization extends Model
         return $this->hasMany(OrganizationReview::class);
     }
 
+    public function images() {
+        return $this->hasMany(OrganizationImage::class);
+    }
+
     public function toSearchableArray() {
         return $this->only(self::SEARCHABLE_FIELDS);
     }
