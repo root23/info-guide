@@ -9,7 +9,7 @@ class OrganizationImage extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['filename', 'organization_id'];
+    protected $fillable = ['filename', 'organization_id', 'is_main'];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

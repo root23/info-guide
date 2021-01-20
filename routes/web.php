@@ -92,6 +92,18 @@ Route::group($groupData, function () {
         ->names('contacts');
 });
 
+// Organization Images
+$groupData = [
+    'namespace' => 'Organization',
+    'prefix' => 'organization'
+];
+Route::group($groupData, function () {
+    $methods = ['index'];
+    Route::resource('images', 'OrganizationImageController')
+        ->only($methods)
+        ->names('organization.images');
+});
+
 // About page
 Route::get('taxi/about', 'Taxi\ContactController@about');
 
