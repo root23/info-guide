@@ -31,6 +31,10 @@ class OrganizationImageService {
                 $organization = Organization::where('city_id', $city->id)
                                 ->where('slug', $slug)->get()->first();
 
+                if (!$organization) {
+                    continue;
+                }
+
                 $organization_images = File::files(app()->basePath() . '/public/uploads/organizations/' .
                     $item . '/' . $slug);
 
