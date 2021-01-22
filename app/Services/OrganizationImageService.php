@@ -53,10 +53,9 @@ class OrganizationImageService {
 
                 $result[] = $organization;
             }
-            dd($result);
         }
 
-
+        dd('the end');
 
     }
 }
