@@ -20,6 +20,7 @@
     <script src="{{ asset('js/ya_maps_company.js') }}" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/ajax/organization_comments.js') }}"></script>
+    <script src="https://raw.githubusercontent.com/maoberlehner/perfundo/master/demo/vendor/perfundo/perfundo.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LemMuoUAAAAAL7NRjBrt95YbDrSspYIzr6rg7VX"></script>
     <script>
         function getRecaptcha() {
@@ -53,6 +54,11 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(kw, s);
         })();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery").lightGallery();
+        });
     </script>
 @endsection
 
@@ -94,35 +100,14 @@
                 </p>
 
                 <div class="organization-gallery-block">
-                    <div class="perfundo">
-                        <a class="perfundo__link" href="#perfundo-img1">
-                            <img src="/uploads/160373817915.jpg" alt="Demo image">
+                    <div id="lightgallery">
+                    @foreach($images as $image)
+                        <a href="/uploads/{{ $image->filename }}" class="gallery-item"
+                           style="@if (!($loop->last || $loop->first)) display:none; @endif ">
+                            <img src="/uploads/{{ $image->filename }}" />
                         </a>
-                        <div id="perfundo-img1" class="perfundo__overlay fadeIn">
-                            <figure class="perfundo__content perfundo__figure">
-                                <img src="/uploads/160373817915.jpg" alt="Demo image">
-                                <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(/uploads/160373817915.jpg);"></div>
-                            </figure>
-                            <a href="#perfundo-untarget" class="perfundo__close perfundo__control">Закрыть</a>
-                            <a class="perfundo__next perfundo__control" href="#perfundo-img2">След.</a>
-                        </div>
+                    @endforeach
                     </div>
-
-                    <div class="perfundo">
-                        <a class="perfundo__link" href="#perfundo-img2">
-                            <img src="/uploads/160373817915.jpg" alt="Demo image">
-                        </a>
-                        <div id="perfundo-img2" class="perfundo__overlay fadeIn">
-                            <figure class="perfundo__content perfundo__figure">
-                                <img src="/uploads/160373817915.jpg" alt="Demo image">
-                                <div class="perfundo__image" style="width: 800px; padding-top: 66.25%; background-image: url(/uploads/160373817915.jpg);"></div>
-                            </figure>
-                            <a href="#perfundo-untarget" class="perfundo__close perfundo__control">Закрыть</a>
-                            <a class="perfundo__next perfundo__control" href="#perfundo-img3">След.</a>
-                            <a class="perfundo__prev perfundo__control" href="#perfundo-img1">Пред.</a>
-                        </div>
-                    </div>
-
                 </div>
 
                 {!! $organization->content_raw !!}

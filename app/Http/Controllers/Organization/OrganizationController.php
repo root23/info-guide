@@ -39,7 +39,6 @@ class OrganizationController extends BaseController
         $category = OrganizationCategory::where('slug', $category_slug)->first();
         $city = City::where('slug', $city_slug)->first();
         $images = $this->organizationImageRepository->getOrganizationImages($organization->id);
-        dd($images);
 
         if (!$organization || !$category || !$city) {
             abort(404);
@@ -48,6 +47,7 @@ class OrganizationController extends BaseController
         return view('organization.organization.detail')
             ->with('organization', $organization)
             ->with('category', $category)
-            ->with('city', $city);
+            ->with('city', $city)
+            ->with('images', $images);
     }
 }

@@ -39,6 +39,8 @@ class OrganizationImageService {
                     $filename = explode('/', $organization_image);
                     $filename = $filename[sizeof($filename) - 1];
 
+                    $move = File::move($organization_image, app()->basePath() . '/public/uploads/' . $filename);
+
                     $organizationImage = new OrganizationImage();
                     $organizationImage->organization_id = $organization->id;
                     $organizationImage->filename = $filename;

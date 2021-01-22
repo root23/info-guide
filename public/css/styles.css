@@ -727,6 +727,9 @@ RESPONSIVE
     .taxi-info .stats-item #map {
         width: 100%;
     }
+    .perfundo {
+        display: none;
+    }
 }
 @media only screen and (max-width: 480px) {
     .cities-list > li {
@@ -867,15 +870,18 @@ RESPONSIVE
 /* CITY DETAIL PAGE -- END -- */
 
 /* ORGANIZATION GALLERY BLOCK -- START -- */
-.organization-gallery-block {
+.organization-gallery-block #lightgallery {
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
     grid-gap: 15px;
     margin-top: 20px;
     grid-auto-flow: column;
+    grid-auto-columns: 1fr;
 }
-.organization-gallery-block .perfundo img {
+.organization-gallery-block .gallery-item img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* ORGANIZATION GALLERY BLOCK -- END -- */
 
