@@ -33,7 +33,10 @@
                 </metrics>
                 <yandex:related></yandex:related>
                 <turbo:content>
-                    <![CDATA[{!! $item->summary !!}]]>
+                    <![CDATA[
+                    <h1>{{ $item->title }}</h1>
+                    {!! $item->summary !!}
+                    ]]>
                 </turbo:content>
             </item>
         @endforeach
