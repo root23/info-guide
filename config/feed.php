@@ -11,12 +11,12 @@ return [
              * You can also pass an argument to that method:
              * ['App\Model@getAllFeedItems', 'argument']
              */
-            'items' => '',
+            'items' => 'App\Models\RSS\OrganizationItem@getFeedItems',
 
             /*
              * The feed will be available on this url.
              */
-            'url' => '/turbo',
+            'url' => '/turbo.rss',
 
             'title' => 'Инфо-гид RSS',
             'description' => 'Инфо-гид - актуальный справочник компаний в городах России',
