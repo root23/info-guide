@@ -12,8 +12,6 @@
         <link><![CDATA[{{ url($meta['link']) }}]]></link>
         <description><![CDATA[{{ $meta['description'] }}]]></description>
         <language>{{ $meta['language'] }}</language>
-        <turbo:analytics></turbo:analytics>
-        <turbo:adNetwork></turbo:adNetwork>
 
         @foreach($items as $item)
             <item turbo="true">
