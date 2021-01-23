@@ -34,7 +34,10 @@
                 <yandex:related></yandex:related>
                 <turbo:content>
                     <![CDATA[
-                    <h1>{{ $item->title }}</h1>
+                    <header>
+                        <h1>{{ $item->title }}</h1>
+                    </header>
+
                     {!! $item->summary !!}
                     ]]>
                 </turbo:content>
