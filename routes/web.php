@@ -202,6 +202,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
 // Search
 Route::get('/search', [\App\Http\Controllers\Util\SearchController::class, 'search']);
 
+// RSS (for turbo pages)
+Route::feeds();
+
 // Sitemap
 Route::get('sitemap.xml', 'SitemapController@sitemap');
 Route::get('/sitemaps/main.xml', 'SitemapController@main');

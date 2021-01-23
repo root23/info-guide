@@ -10912,6 +10912,17 @@
                     /**
          * 
          *
+         * @see \Spatie\Feed\FeedServiceProvider::registerRouteMacro()
+         * @param mixed $baseUrl
+         * @static 
+         */ 
+        public static function feeds($baseUrl = '')
+        {
+                        return \Illuminate\Routing\Router::feeds($baseUrl);
+        }
+                    /**
+         * 
+         *
          * @see \Laravel\Ui\AuthRouteMethods::auth()
          * @param mixed $options
          * @static 
@@ -14916,6 +14927,17 @@
      * @mixin \Illuminate\Routing\RouteRegistrar
      */ 
         class Router {
+                    /**
+         * 
+         *
+         * @see \Spatie\Feed\FeedServiceProvider::registerRouteMacro()
+         * @param mixed $baseUrl
+         * @static 
+         */ 
+        public static function feeds($baseUrl = '')
+        {
+                        return \Illuminate\Routing\Router::feeds($baseUrl);
+        }
                     /**
          * 
          *
