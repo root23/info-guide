@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->group(function () {
     Route::resource('organizations', 'Api\Organization\OrganizationController');
 });
+
+Route::post('/login', 'Api\Auth\LoginController@login');
