@@ -38,5 +38,6 @@
                     <![CDATA[{!! $item->summary !!}]]>
                 </turbo:content>
             </item>
+        @endforeach
     </channel>
 </rss>
