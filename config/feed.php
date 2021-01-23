@@ -16,11 +16,11 @@ return [
             /*
              * The feed will be available on this url.
              */
-            'url' => '',
+            'url' => '/turbo',
 
-            'title' => 'My feed',
-            'description' => 'The description of the feed.',
-            'language' => 'en-US',
+            'title' => 'Инфо-гид RSS',
+            'description' => 'Инфо-гид - актуальный справочник компаний в городах России',
+            'language' => 'ru-RU',
 
             /*
              * The view that will render the feed.
