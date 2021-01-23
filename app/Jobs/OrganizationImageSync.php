@@ -2,6 +2,8 @@
 
 namespace App\Jobs;
 
+use App\Models\OrganizationImage;
+use App\Services\OrganizationImageService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -15,7 +17,7 @@ class OrganizationImageSync implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @return void
+     * @param OrganizationImage $image
      */
     public function __construct()
     {
@@ -29,6 +31,8 @@ class OrganizationImageSync implements ShouldQueue
      */
     public function handle()
     {
-        //
+        logs()->info('Запущена работа ]');
+//        OrganizationImageService::loadImagesFromFolders();
+        OrganizationImageService::testJob();
     }
 }

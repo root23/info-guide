@@ -3,21 +3,18 @@
 namespace App\Http\Controllers\Organization;
 
 use App\Http\Controllers\Blog\BaseController;
-use App\Http\Controllers\Controller;
-use App\Services\OrganizationImageService;
-use Illuminate\Http\Request;
+use App\Jobs\OrganizationImageSync;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 
 class OrganizationImageController extends BaseController
 {
-    private OrganizationImageService $organizationImageService;
-
+    use DispatchesJobs;
     public function __construct() {
         parent::__construct();
-
-        $this->organizationImageService = app(OrganizationImageService::class);
     }
 
     public function index() {
-        return $this->organizationImageService->loadImagesFromFolders();
+        $job = new OrganizationImageSync();
+        $this->dispatch($job);
     }
 }

@@ -9,7 +9,12 @@ use App\Models\City;
 use App\Models\OrganizationImage;
 
 class OrganizationImageService {
-    public function loadImagesFromFolders() {
+
+    public static function testJob() {
+        return 'success!';
+    }
+
+    public static function loadImagesFromFolders() {
         $dirs = File::directories(app()->basePath() . '/public/uploads/organizations');
 
         // Поиск папок с городами
