@@ -12,6 +12,7 @@ use App\Observers\OrganizationCategoryObserver;
 use App\Observers\OrganizationObserver;
 use App\Observers\UserObserver;
 use App\User;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -33,6 +34,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Paginator::defaultView('components.paginator.bootstrap-4');
+
         BlogPost::observe(BlogPostObserver::class);
         BlogCategory::observe(BlogCategoryObserver::class);
         OrganizationCategory::observe(OrganizationCategoryObserver::class);

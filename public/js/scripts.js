@@ -26,7 +26,5 @@ $(document).ready(function () {
         fetch_data(1, query, $(this).hasClass('for_company'));
     });
 
-    $('.pagination').addClass('justify-content-center');
-    $('.pagination').addClass('flex-wrap');
 
 });
