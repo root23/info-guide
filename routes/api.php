@@ -18,3 +18,5 @@ Route::middleware('auth:api')->group(function () {
 });
 
 Route::post('/login', 'Api\Auth\LoginController@login');
+
+Route::get('index', 'Api\IndexController@index');
