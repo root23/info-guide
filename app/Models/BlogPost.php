@@ -20,7 +20,7 @@ class BlogPost extends Model
 
     const UNKNOWN_USER = 1;
 
-    protected $fillable = ['category_id', 'slug', 'title', 'excert', 'content_raw', 'content_html', 'is_published', 'published_at','img', 'view_count', 'meta_description', 'meta_keywords'];
+    protected $fillable = ['category_id', 'slug', 'title', 'excert', 'cogitntent_raw', 'content_html', 'is_published', 'published_at','img', 'view_count', 'meta_description', 'meta_keywords'];
 
     /**
      * Категория статьи
